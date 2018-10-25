@@ -1,22 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpService } from '../http/http';
 import { $url } from '../config/config';
 
 import { Log } from '../tools/console';
+import { UserInfo, TokenInfo } from '../interface/login';
 const console = new Log('login');
 
 const loginApi = '/api/resul.json';
 const reLoginApi = '';
-
-interface UserInfo {
-    userName: string;
-    password: string;
-}
-
-interface TokenInfo {
-    userId: number;
-    token: string;
-}
 
 @Injectable()
 export class LoginService {
@@ -27,7 +19,7 @@ export class LoginService {
     private userName = '';
     private password = '';
 
-    constructor(private http: HttpService) {}
+    constructor(private http: HttpService,private router: Router) {}
 
     async login() {
         if (localStorage.getItem(this.userId.toString()) !== null) { this.reLogin(); }
@@ -48,15 +40,20 @@ export class LoginService {
         return loginRes;
     }
 
+    /**
+     * 如果用户有本地的信息存储，那么进行的是reLogin
+     * 如果token已经失效，跳转到主界面并执行login
+     */
     async reLogin() {
         const userInfo: TokenInfo = this.getTokenInfo();
         const loginRes = await this.http.request(reLoginApi, userInfo);
         if (loginRes['status'] === 0) {
             console.log('已在别处登录，3s后自动重新登录');
-            // navigato
+            this.router.navigate(['/home']);
             this.login();
             return;
         }
+        return this.isLogin;
     }
 
     getTokenInfo() {

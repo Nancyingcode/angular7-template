@@ -2,7 +2,7 @@ import { Component, Injectable } from '@angular/core';
 // import { Injectable } from '@angular/core';
 
 @Component({
-  selector: 'app-nav',
+  selector: 'nav',
   templateUrl: './nav.html',
   styleUrls: ['./nav.less']
 })

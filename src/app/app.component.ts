@@ -13,7 +13,7 @@ import { LoginService } from './service/login.service';
 
 export class AppComponent {
   title = 'app';
-
+  template = '<div>sadads</div>'
 
   constructor(private loginS: LoginService) { }
 
