@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpsModule } from './http/http.module';
 import { HttpService } from './http/http';
+import { LoginService } from './service/login.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HttpService } from './http/http';
     HttpsModule,
   ],
   providers: [
-    HttpService
+    HttpService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

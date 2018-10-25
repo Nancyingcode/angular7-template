@@ -49,7 +49,9 @@ export class HttpService {
 
     async request(api: string, data: any, options?: any) {
         const body = Object.assign(data, {});
-        console.log('send:' + JSON.stringify(body));
-        return await this.http.post(api, body, options || {}).toPromise();
+        console.log('sendTo:' + api, 'data:' + JSON.stringify(body));
+        const res = await this.httpc.post(api, body, options || {}).toPromise();
+        console.log('get:', JSON.stringify(res));
+        return res;
     }
 }
