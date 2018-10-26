@@ -3,6 +3,11 @@
     npm run starts
 ```
 
+# 用到的一些内容
+
+- ngx-bootstrap
+- boostrap4
+
 # component
 
 ### Table
@@ -20,3 +25,21 @@
 #### default-pagination
 - selector `app-default-pagination`
 - data ``
+
+### DatePick
+
+#### default-datepick
+- selector app-default-datepick
+- data 
+
+### Timepick
+
+#### default-timepick
+- selector app-default-timepick
+
+### tip
+
+#### default-tip
+- selector app-default-tip
+- data
+
