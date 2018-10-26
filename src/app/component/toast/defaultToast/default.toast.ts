@@ -11,7 +11,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Injectable()
 export class DefaultToastComponent implements OnInit {
-
+    @Input() template: string; // 输入的模板string
 
     modalRef: BsModalRef;
     constructor(private modalService: BsModalService) { setTheme('bs4'); }

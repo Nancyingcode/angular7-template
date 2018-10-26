@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.less",
-              "src/assets/bootstrap.less"
+              "src/assets/bootstrap.less",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ],
             "scripts": []
           },
@@ -89,7 +90,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
             ]
           }
         },

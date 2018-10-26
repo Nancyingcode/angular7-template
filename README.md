@@ -1,4 +1,4 @@
-需要使用Angular代理跨域 
+# 需要使用Angular代理跨域 
 ```javascript
     npm run starts
 ```
@@ -14,3 +14,9 @@
 #### default-toast
 - selector `app-default-toast`
 - data `text = 要插入模板的字符串`
+
+### Pagination
+
+#### default-pagination
+- selector `app-default-pagination`
+- data ``
