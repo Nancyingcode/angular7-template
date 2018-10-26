@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http/http';
+import { LoginInterceptor } from '../interceptor/login.interceptor';
 import { $url } from '../config/config';
 
 import { Log } from '../tools/console';
 import { UserInfo, TokenInfo } from '../interface/login';
 const console = new Log('login');
-
 const loginApi = '/api/resul.json';
 const reLoginApi = '';
 
@@ -19,7 +19,7 @@ export class LoginService {
     private userName = '';
     private password = '';
 
-    constructor(private http: HttpService,private router: Router) {}
+    constructor(private http: HttpService, private router: Router) { }
 
     async login() {
         if (localStorage.getItem(this.userId.toString()) !== null) { this.reLogin(); }
@@ -29,14 +29,15 @@ export class LoginService {
         if (loginRes['status'] !== 1) {
             this.timer++;
             if (this.timer > 30) {
-               console.err('服务器异常,请稍后再试');
-               return;
+                console.err('服务器异常,请稍后再试');
+                return;
             }
             await this.login();
             return;
         }
         localStorage.setItem(this.userId.toString(), JSON.stringify(loginRes));
         this.isLogin = true;
+        // this.inceptor.intercept();
         return loginRes;
     }
 

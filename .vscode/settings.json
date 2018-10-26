@@ -1,2 +1,5 @@
 {
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
 }

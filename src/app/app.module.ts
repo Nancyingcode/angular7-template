@@ -3,23 +3,24 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './module/app-routing.module';
 import { HttpsModule } from './http/http.module';
+import { ComponentModule } from './module/component-module';
 import { HttpService } from './http/http';
 import { LoginService } from './service/login.service';
 
+
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     HttpsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ComponentModule
   ],
   providers: [
     HttpService,
-    LoginService
+    LoginService,
   ],
   bootstrap: [AppComponent]
 })
