@@ -2,14 +2,14 @@ import { Component, Injectable, Input, OnInit, TemplateRef } from '@angular/core
 
 @Component({
     selector: 'app-manager',
-    templateUrl: './user.manager.html',
-    styleUrls: ['./user.manager.less']
+    templateUrl: './manager.html',
+    styleUrls: ['./manager.less']
 })
 
-export class UserManagerComponent {
+export class ManagerComponent {
 
     public data: any[] = [
-        ['ID', '姓名', '地址'], ['id', 'name', 'addr'], [{
+        ['ID', '姓名', '地址', '操作'], ['id', 'name', 'addr'], [{
             id: 1,
             name: 'nancying1',
             addr: 'baoan'

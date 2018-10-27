@@ -1,4 +1,16 @@
-<tabset [vertical]="true" type="pills">
-    <tab heading="Vertical 1">Vertical content 1</tab>
-    <tab heading="Vertical 2">Vertical content 2</tab>
-</tabset>
+<!-- <tabset [vertical]="true" type="pills">
+    <tab *ngFor="let item of menuList">{{item}}</tab>
+    <router-outlet></router-outlet>
+</tabset> -->
+
+<div class="row t">
+    <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <p class="nav-link" data-toggle="pill" role="tab" aria-selected="true" *ngFor="let menu of menuList"
+                [class.selected]="menu === selectedMenu" (click)="onSelect(menu)">{{menu.name}}</p>
+        </div>
+    </div>
+    <div class="col-8 shadow p-3 mb-5 bg-white rounded">
+        <router-outlet></router-outlet>
+    </div>
+</div>

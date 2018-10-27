@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="table table-striped" style="text-align:center">
     <thead>
         <tr>
             <th scope="col" *ngFor="let title of tabTitles">{{title}}</th>
@@ -8,7 +8,7 @@
         <tr>
             <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
             <td>
-                <app-button-group [buttonProps]="['add','del','edi']"></app-button-group>
+                <app-button-group [buttonProps]="buttonProps"></app-button-group>
             </td>
         </tr>
     </tbody>

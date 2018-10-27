@@ -2,6 +2,13 @@
 ```javascript
     npm run starts
 ```
+### console
+> 在组件内引用 tools/console 的 Log类
+> const console = new Log('能代表当前组件的信息，类名即可');
+> 然后通过console对象的方法打印信息
+- 蓝色内容为测试打印内容 log
+- 绿色为日志打印内容 info
+- 红色是错误信息 err
 
 # 用到的一些内容
 
@@ -37,9 +44,6 @@
 #### default-timepick
 - selector app-default-timepick
 
-### tip
-
-#### default-tip
-- selector app-default-tip
-- data
-
+### Menu
+- selector app-menu
+- data none
