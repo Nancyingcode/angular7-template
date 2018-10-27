@@ -1,6 +1,7 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, TemplateRef, ViewChild } from '@angular/core';
 // import { Injectable } from '@angular/core';
 
+import { DefaultToastComponent } from './component/toast/defaultToast/default.toast';
 import { LoginService } from './service/login.service';
 
 @Component({
@@ -12,11 +13,17 @@ import { LoginService } from './service/login.service';
 
 export class AppComponent {
   title = 'app';
-  template = '<div>sadads</div>';
+  template: any;
 
+  @ViewChild(DefaultToastComponent)
+  private toast: DefaultToastComponent;
   constructor(private loginS: LoginService) { }
 
   async login() {
     this.loginS.login();
+  }
+
+  showToast() {
+    this.toast.showModal();
   }
 }

@@ -4,6 +4,7 @@ import { ModalModule } from 'ngx-bootstrap';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AppRoutingModule } from './app-routing.module';
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { AppComponent } from '../app.component';
 import { NavComponent } from '../component/nav/nav';
 import { TableComponent } from '../component/table/table';
@@ -35,10 +36,12 @@ import { FormsModule } from '@angular/forms';
         ModalModule.forRoot(),
         BsDatepickerModule.forRoot(),
         TabsModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        NgZorroAntdModule
     ],
     providers: [
-        BsModalService
+        BsModalService,
+        { provide: NZ_I18N, useValue: en_US }
     ]
 })
 export class ComponentModule { }

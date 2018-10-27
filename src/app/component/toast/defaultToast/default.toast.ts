@@ -1,7 +1,11 @@
-import { Component, Injectable, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, Injectable, Input, OnInit, TemplateRef, Output, EventEmitter, AfterViewInit, ViewChild } from '@angular/core';
 import { setTheme } from 'ngx-bootstrap/utils';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+
+import { NzCarouselComponent } from 'ng-zorro-antd';
+import { Log } from '../../../tools/console';
+const console = new Log('DefaultToastComponent');
 
 @Component({
     selector: 'app-default-toast',
@@ -11,17 +15,26 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Injectable()
 export class DefaultToastComponent implements OnInit {
-    @Input() template: string; // 输入的模板string
-
+    @Input() templateStr: string; // 输入的模板string
     modalRef: BsModalRef;
+    isVisible = false;
     constructor(private modalService: BsModalService) { setTheme('bs4'); }
 
     ngOnInit() {
-        console.log('');
+        // this.getTemplate();
     }
 
-    openModal(template: TemplateRef<any>) {
-        this.modalRef = this.modalService.show(template);
+    showModal(): void {
+        this.isVisible = true;
     }
 
+    handleOk(): void {
+        console.log('Button ok clicked!');
+        this.isVisible = false;
+    }
+
+    handleCancel(): void {
+        console.log('Button cancel clicked!');
+        this.isVisible = false;
+    }
 }

@@ -23,9 +23,7 @@ export class ManagerComponent {
             addr: 'baoan'
         }]
     ];
-    constructor() {
-        console.log(this.data);
-    }
+    constructor() { }
 
 
     async add() { }

@@ -31,7 +31,10 @@ export class TableComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log('props', this.props);
+        this.setState();
+    }
+
+    setState() {
         this.tabTitles = this.props[0];
         this.tabProps = this.props[1];
         this.list = this.props[2];

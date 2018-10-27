@@ -51,6 +51,7 @@ export class MenuComponent implements OnInit {
 
     setDefaultButton() {
         this.selectedMenu = this.getFirstMenu();
+        this.go(this.selectedMenu.url);
     }
 
     getFirstMenu() {

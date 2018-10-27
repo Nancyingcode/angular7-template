@@ -22,11 +22,10 @@ export class LoginService {
     constructor(private http: HttpService, private router: Router) { }
 
     async login() {
-        if (localStorage.getItem(this.userId.toString()) !== null) { this.reLogin(); }
-        console.log('start login');
+        if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
         const userInfo: UserInfo = { userName: this.userName, password: this.password };
         const loginRes = await this.http.request(loginApi, userInfo);
-        if (loginRes['status'] !== 1) {
+        if (loginRes['code'] !== 200) {
             this.timer++;
             if (this.timer > 30) {
                 console.err('服务器异常,请稍后再试');
@@ -48,9 +47,9 @@ export class LoginService {
     async reLogin() {
         const userInfo: TokenInfo = this.getTokenInfo();
         const loginRes = await this.http.request(reLoginApi, userInfo);
-        if (loginRes['status'] === 0) {
+        if (loginRes['code'] !== 200) {
             console.log('已在别处登录，3s后自动重新登录');
-            this.router.navigate(['/home']);
+            this.router.navigate(['/app-root']);
             this.login();
             return;
         }
