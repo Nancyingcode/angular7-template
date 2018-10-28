@@ -14,19 +14,20 @@ export class TableComponent implements OnInit {
     public tabTitles = ['ID', '姓名', '地址']; // 表格的标题
     public tabProps: any = ['id', 'name', 'addr']; // 表格显示的字段
     public buttonProps: any[] = ['add', 'del', 'edi'];
-    public list: any[] = [{
-        id: 1,
-        name: 'nancying1',
-        addr: 'baoan'
-    }, {
-        id: 2,
-        name: 'nancying2',
-        addr: 'baoan'
-    }, {
-        id: 3,
-        name: 'nancying3',
-        addr: 'baoan'
-    }];
+    public list: any[] = [
+        {
+            id: 1,
+            name: 'nancying1',
+            addr: 'baoan'
+        }, {
+            id: 2,
+            name: 'nancying2',
+            addr: 'baoan'
+        }, {
+            id: 3,
+            name: 'nancying3',
+            addr: 'baoan'
+        }];
     constructor() {
     }
 
