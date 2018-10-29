@@ -1,7 +1,9 @@
-import { Component, Injectable, TemplateRef, ViewChild } from '@angular/core';
-
+import { Component, Injectable, TemplateRef, ViewChild, Injector, OnInit } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { DefaultToastComponent } from './component/toast/defaultToast/default.toast';
 import { LoginService } from './service/login.service';
+import { ToastService } from './service/toast.service';
+import { TextToastComponent } from './component/toast/textToast/text.toast';
 
 @Component({
   selector: 'app-root',
@@ -10,19 +12,24 @@ import { LoginService } from './service/login.service';
 })
 
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   template: any;
 
-  @ViewChild(DefaultToastComponent)
-  private toast: DefaultToastComponent;
-  // constructor(private loginS: LoginService) { }
+  constructor(private loginS: LoginService, injector: Injector, public toasts: ToastService) {
+    const ToastElement = createCustomElement(TextToastComponent, { injector });
+    customElements.define('popup-element', ToastElement);
+  }
 
-  // async login() {
-  //   this.loginS.login();
-  // }
+  ngOnInit() {
+    this.show();
+  }
 
-  showToast() {
-    this.toast.showModal();
+  async login() {
+    this.loginS.login();
+  }
+
+  show() {
+    this.toasts.showAsElement('');
   }
 }

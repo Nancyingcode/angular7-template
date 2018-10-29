@@ -16,6 +16,7 @@ import { ManagerComponent } from '../pages/user/manager';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { FormsModule } from '@angular/forms';
+import { TextToastComponent } from '../component/toast/textToast/text.toast';
 
 
 
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,
-        ManagerComponent
+        ManagerComponent,
+        TextToastComponent
     ],
     imports: [
         BrowserModule,
@@ -37,11 +39,11 @@ import { FormsModule } from '@angular/forms';
         BsDatepickerModule.forRoot(),
         TabsModule.forRoot(),
         AppRoutingModule,
-        NgZorroAntdModule
+        NgZorroAntdModule,
     ],
     providers: [
         BsModalService,
         { provide: NZ_I18N, useValue: en_US }
-    ]
+    ],
 })
 export class ComponentModule { }
