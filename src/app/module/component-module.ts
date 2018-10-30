@@ -16,6 +16,7 @@ import { DefaultToastComponent } from '../component/toast/defaultToast/default.t
 import { DefaultDatePickComponent } from '../component/datepick/defaultDatepick/default.datepick';
 import { DefaultTimePickComponent } from '../component/timepick/defaultTimepick/default.timepick';
 import { FileUploadComponent } from '../component/upload/fileUpload/file.upload';
+import { MessageToastComponent } from '../component/toast/messageToast/message.toast';
 import { ManagerComponent } from '../pages/user/manager';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
@@ -26,7 +27,6 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
 
 @NgModule({
     declarations: [
-
         NavComponent,
         TableComponent,
         ButtonComponent,
@@ -38,7 +38,8 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         DefaultPaginationComponent,
         RangePaginationComponent,
         DefaultTimePickComponent,
-        FileUploadComponent
+        FileUploadComponent,
+        MessageToastComponent
     ],
     imports: [
         BrowserModule,

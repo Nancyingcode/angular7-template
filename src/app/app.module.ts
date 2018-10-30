@@ -24,9 +24,9 @@ import { ToastService } from './service/toast.service';
     HttpsModule,
     AppRoutingModule,
     FormsModule,
+    ServiceModule,
     InterceptorModule,
     BrowserAnimationsModule,
-    ServiceModule
   ],
   providers: [
     HttpService,

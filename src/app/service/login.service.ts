@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http/http';
-import { LoginInterceptor } from '../interceptor/login.interceptor';
-import { $url } from '../config/config';
 
 import { Log } from '../tools/console';
 import { UserInfo, TokenInfo } from '../interface/login';
 import { HttpResult } from '../interface/http';
+import { Config } from '../config/config';
+const config = new Config();
+const { home, login } = config.routerList;
 const console = new Log('login');
 const loginApi = '/api/angular7-template/result.json';
 const reLoginApi = '';
@@ -41,12 +42,12 @@ export class LoginService {
         }
         localStorage.setItem(this.userId.toString(), JSON.stringify(loginRes));
         this.isLogin = true;
-        this.router.navigate([homeUrl]);
+        this.router.navigate([home]);
         return loginRes;
     }
 
     /**
-     * 如果用户有本地的信息存储，那么进行的是reLogin
+     * 如果用户有本地的信息存储，那么进行的是re`Login
      * 如果token已经失效，跳转到主界面并执行login
      */
     async reLogin() {
@@ -55,10 +56,10 @@ export class LoginService {
         if (loginRes.code !== '200') {
             console.log('已在别处登录，3s后返回登录界面');
             this.isLogin = false;
-            this.router.navigate([loginUrl]);
+            this.router.navigate([login]);
             return;
         }
-        this.router.navigate([homeUrl]);
+        this.router.navigate([home]);
         this.isLogin = true;
         return;
     }
@@ -69,7 +70,7 @@ export class LoginService {
         if (registorRes.code !== '200') { return; }
         localStorage.setItem(this.userName, registorRes.data);
         this.isLogin = true;
-        this.router.navigate([homeUrl]);
+        this.router.navigate([home]);
         return;
     }
 

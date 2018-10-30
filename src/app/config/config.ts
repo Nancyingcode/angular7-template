@@ -4,3 +4,9 @@ const host = 'localhost:80';
 
 export const $url = http + host;
 
+export class Config {
+    public routerList = {
+        home: '/home',
+        login: '/login'
+    };
+}
