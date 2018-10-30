@@ -9,7 +9,7 @@ import { setTheme } from 'ngx-bootstrap/utils';
 
 @Injectable()
 export class DefaultDatePickComponent implements OnInit {
-
+    bsValue: string;
     constructor() { setTheme('bs4'); }
 
     ngOnInit() {

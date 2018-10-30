@@ -73,6 +73,19 @@ export class AppComponent {
 ```html
     <app-default-toast></app-default-toast>
 ```
+
+#### text-toast
+
+在要使用的地方这样定义 constructor
+```javascript
+    constructor(private loginS: LoginService, injector: Injector, public toasts: ToastService) {
+        const ToastElement = createCustomElement(TextToastComponent, { injector });
+        customElements.define('popup-element', ToastElement);
+    }
+```
+然后调用`ToastService`中的`showToast`方法
+
+
 ### Pagination
 ---
 

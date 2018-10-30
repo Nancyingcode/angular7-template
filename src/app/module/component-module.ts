@@ -9,9 +9,13 @@ import { AppComponent } from '../app.component';
 import { NavComponent } from '../component/nav/nav';
 import { TableComponent } from '../component/table/table';
 import { MenuComponent } from '../component/menu/menu';
+import { DefaultPaginationComponent } from '../component/pagination/defaultPagination/default.pagination';
 import { ButtonComponent } from '../component/button/buttonGroup/button.group';
+import { RangePaginationComponent } from '../component/datepick/rangeDatepick/range.pick';
 import { DefaultToastComponent } from '../component/toast/defaultToast/default.toast';
 import { DefaultDatePickComponent } from '../component/datepick/defaultDatepick/default.datepick';
+import { DefaultTimePickComponent } from '../component/timepick/defaultTimepick/default.timepick';
+import { FileUploadComponent } from '../component/upload/fileUpload/file.upload';
 import { ManagerComponent } from '../pages/user/manager';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
@@ -22,7 +26,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
 
 @NgModule({
     declarations: [
-        AppComponent,
+
         NavComponent,
         TableComponent,
         ButtonComponent,
@@ -30,7 +34,11 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         DefaultToastComponent,
         DefaultDatePickComponent,
         ManagerComponent,
-        TextToastComponent
+        TextToastComponent,
+        DefaultPaginationComponent,
+        RangePaginationComponent,
+        DefaultTimePickComponent,
+        FileUploadComponent
     ],
     imports: [
         BrowserModule,

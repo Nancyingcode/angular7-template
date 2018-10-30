@@ -10,8 +10,7 @@ import { setTheme } from 'ngx-bootstrap/utils';
 @Injectable()
 export class RangePaginationComponent implements OnInit {
 
-
-    constructor() { setTheme('bs4'); }
+    bsRangeValue: string;
 
     ngOnInit() {
 

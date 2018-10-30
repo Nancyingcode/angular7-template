@@ -5,36 +5,46 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 @Component({
     selector: 'app-text-toast',
     templateUrl: './text.toast.html',
-    animations: [
-        trigger('state', [
-            state('opened', style({ transform: 'translateY(0%)' })),
-            state('void, closed', style({ transform: 'translateY(100%)', opacity: 0 })),
-            transition('* => *', animate('100ms ease-in')),
-        ])
-    ],
     styleUrls: ['./text.toast.less']
 })
 export class TextToastComponent {
-    private state: 'opened' | 'closed' = 'closed';
     public isVisible = true;
+    private callbackOk: any;
+    private callbackCancel: any;
     @Input()
-    set message(message: string) {
-        this._message = message;
-        this.state = 'opened';
+    set Title(title: string) { this.title = title; }
+    get Title(): string { return this.title; }
+    title: string;
+
+    @Input()
+    set Message(message: string) {
+        this.message = message;
     }
-    get message(): string { return this._message; }
-    _message: string;
+    get Message(): string { return this.message; }
+    message: string;
+
+    @Input()
+    set confirm(callback: any) {
+        this.callbackOk = callback;
+    }
+
+    @Input()
+    set close(callback: any) {
+        this.callbackCancel = callback;
+    }
 
     @Output()
     closed = new EventEmitter();
 
-    handleOk(): void {
-        console.log('Button ok clicked!');
+    handleOk() {
         this.isVisible = false;
+        this.callbackOk();
     }
 
-    handleCancel(): void {
-        console.log('Button cancel clicked!');
+
+    handleCancel() {
         this.isVisible = false;
+        this.callbackCancel();
+        this.closed.next();
     }
 }

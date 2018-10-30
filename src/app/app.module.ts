@@ -10,6 +10,7 @@ import { HttpsModule } from './http/http.module';
 import { InterceptorModule } from './module/interceptor-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageModule } from './module/page-module';
+import { ServiceModule } from './module/service-module';
 import { HttpService } from './http/http';
 import { LoginService } from './service/login.service';
 import { ToastService } from './service/toast.service';
@@ -24,7 +25,8 @@ import { ToastService } from './service/toast.service';
     AppRoutingModule,
     FormsModule,
     InterceptorModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ServiceModule
   ],
   providers: [
     HttpService,

@@ -5,3 +5,16 @@
 .show {
   display: inline-block !important;
 }
+.page {
+  position: relative;
+  height: 100vh;
+  font-size: 0;
+  letter-spacing: -3px;
+  overflow: hidden;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

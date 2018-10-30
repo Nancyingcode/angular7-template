@@ -5,6 +5,8 @@ import { LoginService } from './service/login.service';
 import { ToastService } from './service/toast.service';
 import { TextToastComponent } from './component/toast/textToast/text.toast';
 
+import { Log } from './tools/console';
+const console = new Log('AppComponent');
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.show();
+    // this.show();
   }
 
   async login() {
@@ -30,6 +32,10 @@ export class AppComponent implements OnInit {
   }
 
   show() {
-    this.toasts.showAsElement('');
+    this.toasts.showToast('Confirm', 'Are u sure?', function () {
+      console.log('ok');
+    }, function () {
+      console.log('cancel');
+    });
   }
 }

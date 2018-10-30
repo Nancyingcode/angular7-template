@@ -5,14 +5,16 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
 
 @Injectable()
 export class ToastService {
-    constructor(private injector: Injector,
-        private applicationRef: ApplicationRef,
-        private componentFactoryResolver: ComponentFactoryResolver) { }
 
-    showAsElement(message: string) {
-        const popupEl: NgElement & WithProperties<TextToastComponent> = document.createElement('popup-element') as any;
-        popupEl.addEventListener('closed', () => document.body.removeChild(popupEl));
-        popupEl.message = message;
-        document.body.appendChild(popupEl);
+    showToast(title: string, message: string, callbackOk: any, callbackCancel: any) {
+        const ele: NgElement & WithProperties<TextToastComponent> = document.createElement('popup-element') as any;
+        ele.addEventListener('closed', function () {
+            document.body.removeChild(ele);
+        });
+        ele.Title = title;
+        ele.Message = message;
+        ele.confirm = callbackOk;
+        ele.close = callbackCancel;
+        document.body.appendChild(ele);
     }
 }
