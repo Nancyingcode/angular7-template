@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { RegisterService } from '../service/register.service';
+// import { RegisterService } from '../service/register.service';
 
 
 @NgModule({
-    providers: [RegisterService]
+    providers: []
 })
 export class ServiceModule { }

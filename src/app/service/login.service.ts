@@ -10,6 +10,9 @@ import { HttpResult } from '../interface/http';
 const console = new Log('login');
 const loginApi = '/api/angular7-template/result.json';
 const reLoginApi = '';
+const registrpApi = '';
+const homeUrl = '/home';
+const loginUrl = '/app-login';
 
 @Injectable()
 export class LoginService {
@@ -23,7 +26,7 @@ export class LoginService {
     constructor(private http: HttpService, private router: Router) { }
 
     async login() {
-        // if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
+        if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
         const userInfo: UserInfo = { userName: this.userName, password: this.password };
         const loginRes = await this.http.req('post', loginApi, userInfo);
         console.log('loginRes:' + this.getJson(loginRes));
@@ -38,6 +41,7 @@ export class LoginService {
         }
         localStorage.setItem(this.userId.toString(), JSON.stringify(loginRes));
         this.isLogin = true;
+        this.router.navigate([homeUrl]);
         return loginRes;
     }
 
@@ -49,12 +53,31 @@ export class LoginService {
         const userInfo: TokenInfo = this.getTokenInfo();
         const loginRes = await this.http.req('post', reLoginApi, userInfo);
         if (loginRes.code !== '200') {
-            console.log('已在别处登录，3s后自动重新登录');
+            console.log('已在别处登录，3s后返回登录界面');
             this.isLogin = false;
-            this.router.navigate(['/login']);
+            this.router.navigate([loginUrl]);
             return;
         }
-        return this.isLogin;
+        this.router.navigate([homeUrl]);
+        this.isLogin = true;
+        return;
+    }
+
+    async registor() {
+        const userInfo: UserInfo = this.getUserInfo();
+        const registorRes: HttpResult = await this.http.req('post', registrpApi, userInfo);
+        if (registorRes.code !== '200') { return; }
+        localStorage.setItem(this.userName, registorRes.data);
+        this.isLogin = true;
+        this.router.navigate([homeUrl]);
+        return;
+    }
+
+    getUserInfo() {
+        return {
+            userName: this.userName,
+            password: this.password
+        };
     }
 
     getTokenInfo() {
