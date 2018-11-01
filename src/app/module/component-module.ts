@@ -17,6 +17,8 @@ import { DefaultDatePickComponent } from '../component/datepick/defaultDatepick/
 import { DefaultTimePickComponent } from '../component/timepick/defaultTimepick/default.timepick';
 import { FileUploadComponent } from '../component/upload/fileUpload/file.upload';
 import { MessageToastComponent } from '../component/toast/messageToast/message.toast';
+import { NormalButtonComponent } from '../component/button/buttonNormal/normal.button';
+import { DashComponent } from '../component/dashborad/dash'
 import { ManagerComponent } from '../pages/user/manager';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
@@ -39,7 +41,9 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         RangePaginationComponent,
         DefaultTimePickComponent,
         FileUploadComponent,
-        MessageToastComponent
+        MessageToastComponent,
+        NormalButtonComponent,
+        DashComponent
     ],
     imports: [
         BrowserModule,
@@ -63,7 +67,9 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         RangePaginationComponent,
         DefaultTimePickComponent,
         FileUploadComponent,
-        MessageToastComponent
+        MessageToastComponent,
+        NormalButtonComponent,
+        DashComponent
     ],
     providers: [
         BsModalService,

@@ -6,7 +6,8 @@ import { Component, Injectable } from '@angular/core';
 @Component({
     selector: 'app-login',
     templateUrl: './login.html',
-    styleUrls: ['./login.less']
+    styleUrls: ['./login.less'],
+    animations: []
 })
 
 
