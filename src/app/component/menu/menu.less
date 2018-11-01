@@ -1,24 +1,22 @@
 @import '../../../styles.less';
-// .selected::before {
-//     position: absolute;
-//     content: "";
-//     font-size: 0;
-//     letter-spacing: -3;
-//     display: block;
-//     left:0;
-//     height: @nav-height;
-//     width: 1px;
-//     background: @color-blue;
-//     background: #666;
-//     color: #fff;
-// }
+.selected::before {
+    position: absolute;
+    content: "";
+    font-size: 0;
+    letter-spacing: -3;
+    display: block;
+    left:0;
+    height: @nav-height;
+    width: 5px;
+    background: @color-blue;
+}
 
 // *, ::after ::before {
 //     box-sizing: unset;
 // }
-.selected {
-    border-left-color: @color-blue !important;
-}
+// .selected {
+//     border-left-color: @color-blue !important;
+// }
 
 // .selected {
 //     border-color: @color-blue;
@@ -29,6 +27,8 @@
     width: 100%;
     height: 100vh - @nav-height;
     overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .cus-pill {
@@ -43,11 +43,6 @@
     background: @color-gray-pill;
     clear: both;
     overflow: hidden;
-    // span {
-    //     display: inline-block;
-    //     letter-spacing: -3;
-    //     vertical-align: middle;
-    // }
 }
 
 .cus-tab {
@@ -75,7 +70,13 @@
 }
 
 .base-body {
-    background: @color-gray;
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 15px;
+    background: @color-white;
 }
 
 .col-left {

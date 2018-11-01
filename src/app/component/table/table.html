@@ -1,15 +1,15 @@
-<table class="table table-striped" style="text-align:center">
-    <thead>
-        <tr>
-            <th scope="col" *ngFor="let title of tabTitles">{{title}}</th>
-        </tr>
-    </thead>
-    <tbody *ngFor="let item of list">
-        <tr>
-            <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
-            <td>
-                <app-button-group [buttonProps]="buttonProps"></app-button-group>
-            </td>
-        </tr>
-    </tbody>
+<table class="table table table-borderless" style="text-align:center">
+  <thead>
+    <tr>
+      <th scope="col" *ngFor="let title of tabTitles">{{title}}</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of list">
+    <tr class="row-pill">
+      <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
+      <td>
+        <app-button-group [buttonProps]="buttonProps"></app-button-group>
+      </td>
+    </tr>
+  </tbody>
 </table>
