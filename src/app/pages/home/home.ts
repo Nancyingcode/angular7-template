@@ -4,13 +4,13 @@ import { Component, Injectable } from '@angular/core';
 // import { LoginService } from './service/login.service';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.html',
-    styleUrls: ['./login.less']
+    selector: 'app-home',
+    templateUrl: './home.html',
+    styleUrls: ['./home.less']
 })
 
 
-export class LoginComponent {
+export class HomeComponent {
     public jumper = '../../../assets/pic/login-jumper.png';
     public items = [
         {

@@ -18,14 +18,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.hover {
-  cursor: pointer;
-  background: #F4F4F4;
-  transition: background 0.3s linear;
-}
-.rlt {
-  position: relative;
-}
-.clear-pd {
-  padding: 0;
+.nav {
+  background: #20BDFF;
+  height: 7vh;
 }

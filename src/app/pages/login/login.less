@@ -1,8 +1,8 @@
-// @import '../../../styles.less';
+@import '../../../styles.less';
 .form {
     width: 80%;
     height: auto;
-    // #global.center();
+    letter-spacing: normal;
 }
 
 .div {
@@ -36,15 +36,35 @@
     vertical-align: middle;
     position: relative;
     display: inline-block;
-    height: 70%;
-    width: 70%;
-    background: #F4F4F4;
+    height: 40%;
+    width: 50%;
+    background:@color-gray;
 }
 
 .right {
     text-align: right;
 }
 
-.font-size {
-    
+.jumper {
+    height: 30%;
+    width: auto;
+}
+
+.input-title {
+    background-color: @color-white
+}
+
+.title {
+    background: @color-gray;
+    font-weight: bold;
+    font-family: Helvetica Neue;
+}
+
+.clear-bor{
+    border: none;
+}
+
+.btn-login {
+    background: @color-blue;
+    border: 1px solid @color-blue;
 }

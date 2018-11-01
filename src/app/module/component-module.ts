@@ -50,6 +50,21 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         AppRoutingModule,
         NgZorroAntdModule,
     ],
+    exports: [
+        NavComponent,
+        TableComponent,
+        ButtonComponent,
+        MenuComponent,
+        DefaultToastComponent,
+        DefaultDatePickComponent,
+        ManagerComponent,
+        TextToastComponent,
+        DefaultPaginationComponent,
+        RangePaginationComponent,
+        DefaultTimePickComponent,
+        FileUploadComponent,
+        MessageToastComponent
+    ],
     providers: [
         BsModalService,
         { provide: NZ_I18N, useValue: en_US }

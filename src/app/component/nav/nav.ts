@@ -1,5 +1,4 @@
 import { Component, Injectable } from '@angular/core';
-// import { Injectable } from '@angular/core';
 
 @Component({
     selector: 'app-nav',
@@ -7,5 +6,5 @@ import { Component, Injectable } from '@angular/core';
     styleUrls: ['./nav.less']
 })
 
-
+@Injectable()
 export class NavComponent { }

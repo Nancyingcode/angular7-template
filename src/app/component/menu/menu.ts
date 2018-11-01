@@ -16,19 +16,30 @@ const console = new Log('MenuComponet');
 export class MenuComponent implements OnInit {
     public menuList: Menu[] = [
         {
-            name: 'Home',
+            name: '管理员管理',
             url: '/app-manager'
         }, {
-            name: 'Profile',
+            name: '账号管理',
             url: '/app-manager'
         }, {
-            name: 'User',
+            name: '管理员管理',
             url: '/app-manager'
-        },
-        {
-            name: 'Settings',
+        }, {
+            name: '账号管理',
             url: '/app-manager'
         }];
+    public menuPics = ['../../../assets/pic/menu-user.png',
+        '../../../assets/pic/menu-mana.png'];
+    public firstMenu = [
+        {
+            pic: '../../../assets/pic/menu-user.png',
+            title: '用户管理'
+        },
+        {
+            pic: '../../../assets/pic/menu-mana.png',
+            title: '系统管理'
+        }
+    ];
     public selectedMenu: Menu = undefined;
     constructor(private router: Router) { setTheme('bs4'); }
 

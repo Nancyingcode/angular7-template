@@ -1,30 +1,30 @@
 <div class="container-fluid page div">
-    <div class="form-body shadow-lg  bg-white rounded">
-        <div class="row">
-            <div class="col-sm-8">
-                <img src="../../../favicon.ico" class="img-thumbnail" alt="...">
+  <div class="form-body shadow-lg  bg-white rounded">
+    <div class="row">
+      <div class="col-sm-8">
+        <img src={{jumper}} class="rounded jumper" alt="...">
+      </div>
+      <div class="col-sm-4 div-right">
+        <div class="form-pill rounded">
+          <form class="form center">
+            <div class="input-group mb-4">
+              <div class="input-group-prepend mc">
+                <span class="input-group-text title clear-bor" id="basic-addon1">{{title}}</span>
+              </div>
             </div>
-            <div class="col-sm-4 div-right">
-                <div class="form-pill">
-                    <form class="form center">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3 right">
-                            <button class="btn btn-primary" type="submit">Sign in</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="input-group mb-4" *ngFor="let item of items">
+              <div class="input-group-prepend">
+                <span class="input-group-text input-title clear-bor" id="basic-addon1">{{item.title}}</span>
+              </div>
+              <input type={{item.type}} class="form-control clear-bor" placeholder={{item.placeholder}} aria-label="item.label"
+                aria-describedby="basic-addon1">
             </div>
+            <div class="input-group mb-3 right">
+              <button type="button" class="btn btn-primary btn-block btn-login">{{loginBtn}}</button>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 </div>

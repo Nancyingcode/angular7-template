@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { ComponentModule } from './module/component-module';
 import { TextToastComponent } from './component/toast/textToast/text.toast';
 import { AppRoutingModule } from './module/app-routing.module';
 import { HttpsModule } from './http/http.module';
@@ -15,12 +16,18 @@ import { HttpService } from './http/http';
 import { LoginService } from './service/login.service';
 import { ToastService } from './service/toast.service';
 
+import { NavComponent } from './component/nav/nav';
+
 
 
 @NgModule({
+  declarations: [
+    // NavComponent,
+  ],
   imports: [
+    // ComponentModule,
     PageModule,
-    BrowserModule.withServerTransition({ appId: 'my-app' }),
+    // BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpsModule,
     AppRoutingModule,
     FormsModule,

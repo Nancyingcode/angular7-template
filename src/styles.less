@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-    .active {
-        background: #007bff;
-    }
+    // .active {
+    //     background: #007bff;
+    // }
     
     .show {
         display: inline-block !important;
@@ -12,7 +12,6 @@
     .page {
         position: relative;
         height: 100vh;
-        // font-size: 0;
         letter-spacing: -3px;
         overflow: hidden;
     }
@@ -22,4 +21,29 @@
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
+    }
+
+    @color-white: #fff;
+    @color-gray: #F4F4F4;
+    @color-gray-pill: #EFEFEF;
+    @color-blue: #20BDFF;
+    @nav-height: 7vh;
+    @color-black: #292929;
+    .mc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hover {
+        cursor: pointer;
+        background: @color-gray;
+        transition: background 0.3s linear;
+    }
+
+    .rlt {
+        position: relative;
+    }
+
+    .clear-pd {
+        padding: 0;
     }

@@ -1,16 +1,22 @@
-<!-- <tabset [vertical]="true" type="pills">
-    <tab *ngFor="let item of menuList">{{item}}</tab>
-    <router-outlet></router-outlet>
-</tabset> -->
-
-<div class="row t">
-    <div class="col-3">
-        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <p class="nav-link" data-toggle="pill" role="tab" aria-selected="true" *ngFor="let menu of menuList"
-                [class.selected]="menu === selectedMenu" (click)="onSelect(menu)">{{menu.name}}</p>
+<div class="row t clearfix">
+  <div class="clear-pd col-left">
+    <ul class="nav nav-pills mb-3 cus-tab" id="pills-tab" role="tablist">
+      <li class="nav-item cus-tab-pill" *ngFor="let item of firstMenu; let i = index">
+        <div class="center">
+          <img src={{item.pic}} alt="..." class="mb-2">
+          <h6>{{item.title}}</h6>
         </div>
+      </li>
+    </ul>
+    <div class="">
+      <div class="cus-pill" [class.selected]="menu === selectedMenu" *ngFor="let menu of menuList" (click)="onSelect(menu)">
+        {{menu.name}}
+      </div>
     </div>
-    <div class="col-8 shadow p-3 mb-5 bg-white rounded">
-        <router-outlet></router-outlet>
+  </div>
+  <div class="clear-pd col-right">
+    <div class="base-body">
+      <router-outlet></router-outlet>
     </div>
+  </div>
 </div>
