@@ -20,7 +20,7 @@ import { ToastService } from './service/toast.service';
 @NgModule({
   imports: [
     PageModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpsModule,
     AppRoutingModule,
     FormsModule,

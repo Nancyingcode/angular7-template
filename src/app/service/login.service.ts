@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http/http';
 
@@ -12,17 +12,16 @@ const console = new Log('login');
 const loginApi = '/api/angular7-template/result.json';
 const reLoginApi = '';
 const registrpApi = '';
-const homeUrl = '/home';
-const loginUrl = '/app-login';
 
 @Injectable()
 export class LoginService {
     public isLogin = false;
     public redirUrl = '';
-    private userName = '';
-    private password = '';
     private timer = 0;
     private userId = 0;
+
+    @Input() userName: string;
+    @Input() password: string;
 
     constructor(private http: HttpService, private router: Router) { }
 
