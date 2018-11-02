@@ -17,16 +17,10 @@ export class MenuComponent implements OnInit {
     public menuList: Menu[] = [
         {
             name: '管理员管理',
-            url: '/user-manager'
+            url: '/admin-mana'
         }, {
             name: '账号管理',
-            url: '/app-manager'
-        }, {
-            name: '管理员管理',
-            url: '/app-manager'
-        }, {
-            name: '账号管理',
-            url: '/app-manager'
+            url: '/account-mana'
         }];
     public menuPics = ['../../../assets/pic/menu-user.png',
         '../../../assets/pic/menu-mana.png'];

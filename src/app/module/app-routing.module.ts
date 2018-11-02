@@ -9,13 +9,11 @@ import { AccountManaComponent } from '../pages/userMana/acountMana/account.mana'
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'admin-mana', component: ManagerComponent },
   {
-    path: 'user-manager', component: ManagerComponent, children: [
-      {
-        path: 'account-mana',
-        component: AccountManaComponent
-      }
-    ]
+    path: 'account-mana',
+    loadChildren: './user.mana.module#UserManaModule',
+    data: { preload: true }
   },
   { path: 'login', component: LoginComponent },
   { path: 'data-table', component: TableComponent }

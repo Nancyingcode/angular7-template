@@ -5,6 +5,9 @@ import { LoginComponent } from '../pages/login/login';
 import { AppComponent } from '../app.component';
 import { HomeComponent } from '../pages/home/home';
 import { AccountManaComponent } from '../pages/userMana/acountMana/account.mana';
+import { UserManaRoutingModule } from './user.mana.routing.module';
+import { AccountInfoComponent } from '../pages/userMana/acountMana/account.info/account.info';
+import { UserManaModule } from './user.mana.module';
 
 
 
@@ -13,12 +16,14 @@ import { AccountManaComponent } from '../pages/userMana/acountMana/account.mana'
     declarations: [
         LoginComponent,
         HomeComponent,
+        AccountManaComponent,
+        AccountInfoComponent,
         AppComponent,
-        AccountManaComponent
     ],
     imports: [
         BrowserModule,
-        ComponentModule
+        ComponentModule,
+        UserManaModule
     ],
     exports: [
         LoginComponent,
