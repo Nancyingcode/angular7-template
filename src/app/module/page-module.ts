@@ -4,6 +4,7 @@ import { ComponentModule } from '../module/component-module';
 import { LoginComponent } from '../pages/login/login';
 import { AppComponent } from '../app.component';
 import { HomeComponent } from '../pages/home/home';
+import { AccountManaComponent } from '../pages/userMana/acountMana/account.mana';
 
 
 
@@ -12,10 +13,18 @@ import { HomeComponent } from '../pages/home/home';
     declarations: [
         LoginComponent,
         HomeComponent,
-        AppComponent
+        AppComponent,
+        AccountManaComponent
     ],
     imports: [
         BrowserModule,
+        ComponentModule
+    ],
+    exports: [
+        LoginComponent,
+        HomeComponent,
+        AppComponent,
+        AccountManaComponent,
         ComponentModule
     ]
 })

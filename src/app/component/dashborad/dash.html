@@ -1,1 +1,8 @@
-<app-normal-button *ngFor="let item of items" [buttonProp]='item'></app-normal-button>
+<div class="clearfix">
+  <div class="btn-group">
+    <app-normal-button *ngFor="let item of items" [buttonProp]='item' class="mr"></app-normal-button>
+  </div>
+  <div class="input">
+    <app-search-input></app-search-input>
+  </div>
+</div>

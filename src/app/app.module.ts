@@ -29,11 +29,10 @@ import { NavComponent } from './component/nav/nav';
     PageModule,
     // BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpsModule,
-    AppRoutingModule,
     FormsModule,
     ServiceModule,
     InterceptorModule,
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
   ],
   providers: [
     HttpService,

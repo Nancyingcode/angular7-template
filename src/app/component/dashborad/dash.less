@@ -1,0 +1,77 @@
+@import '../../../assets/bootstrap.less';
+
+.mr {
+    margin-right: 30px;
+}
+
+.mr:last-child {
+    margin-right: 0;
+}
+
+.desktops {
+    .btn-group {
+        width: auto;
+        .float-left();
+    }
+    
+    .input {
+        width: auto;
+        .float-right();
+    }
+}
+
+.tablets {
+    .btn-group {
+        display: inline-block;
+        width: auto;
+    }
+
+    .mr {
+        margin-bottom: 30px !important;
+    }
+    
+    .input {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+.mobiles {
+    .btn-group {
+        display: inline-block;
+        width: auto;
+    }
+
+    .mr {
+        margin-bottom: 30px;
+    }
+    
+    .input {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+@media(max-width: 576px) {
+    .mobiles();
+}
+
+@media (min-width: 576px) { 
+    .tablets();
+ }
+
+// @media screen and (max-width: 768px){
+//     .tablets();
+// }
+
+// @media screen and (min-width: 1500px){
+//     .tablets();
+// }
+
+@media (min-width: 992px) { 
+    .tablets();
+}
+
+@media (min-width: 1500px) { 
+    .desktops();
+}

@@ -28,6 +28,21 @@ export class TableComponent implements OnInit {
             name: 'nancying3',
             addr: 'baoan'
         }];
+    private res: any[] = [
+        ['ID', '姓名', '地址', '操作'], ['id', 'name', 'addr'], [{
+            id: 1,
+            name: 'nancying1',
+            addr: 'baoan'
+        }, {
+            id: 2,
+            name: 'nancying2',
+            addr: 'baoan'
+        }, {
+            id: 3,
+            name: 'nancying3',
+            addr: 'baoan'
+        }]
+    ];
     constructor() {
     }
 
@@ -36,8 +51,10 @@ export class TableComponent implements OnInit {
     }
 
     setState() {
-        this.tabTitles = this.props[0];
-        this.tabProps = this.props[1];
-        this.list = this.props[2];
+        this.tabTitles = this.res[0];
+        this.tabProps = this.res[1];
+        this.list = this.res[2];
     }
+
+    getData() { }
 }

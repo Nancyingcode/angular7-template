@@ -29,6 +29,9 @@
 .clear-pd {
   padding: 0;
 }
+.clear-bor {
+  border: none;
+}
 .selected::before {
   position: absolute;
   content: "";
@@ -87,7 +90,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  padding: 15px;
+  padding: 30px;
   background: #fff;
 }
 .col-left {

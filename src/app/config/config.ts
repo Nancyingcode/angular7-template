@@ -5,8 +5,9 @@ const host = 'localhost:80';
 export const $url = http + host;
 
 export class Config {
-    public routerList = {
+    public static routerList = {
         home: '/home',
-        login: '/login'
+        login: '/login',
+        actMana: '/user-mana/actMana'
     };
 }

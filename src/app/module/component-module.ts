@@ -18,8 +18,9 @@ import { DefaultTimePickComponent } from '../component/timepick/defaultTimepick/
 import { FileUploadComponent } from '../component/upload/fileUpload/file.upload';
 import { MessageToastComponent } from '../component/toast/messageToast/message.toast';
 import { NormalButtonComponent } from '../component/button/buttonNormal/normal.button';
-import { DashComponent } from '../component/dashborad/dash'
+import { DashComponent } from '../component/dashborad/dash';
 import { ManagerComponent } from '../pages/user/manager';
+import { SearchInputComponent } from '../component/input/search.input';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { FormsModule } from '@angular/forms';
@@ -43,7 +44,8 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         FileUploadComponent,
         MessageToastComponent,
         NormalButtonComponent,
-        DashComponent
+        DashComponent,
+        SearchInputComponent
     ],
     imports: [
         BrowserModule,
@@ -55,6 +57,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         NgZorroAntdModule,
     ],
     exports: [
+        AppRoutingModule,
         NavComponent,
         TableComponent,
         ButtonComponent,
@@ -69,7 +72,8 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         FileUploadComponent,
         MessageToastComponent,
         NormalButtonComponent,
-        DashComponent
+        DashComponent,
+        SearchInputComponent
     ],
     providers: [
         BsModalService,

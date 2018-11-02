@@ -17,7 +17,7 @@ export class MenuComponent implements OnInit {
     public menuList: Menu[] = [
         {
             name: '管理员管理',
-            url: '/app-manager'
+            url: '/user-manager'
         }, {
             name: '账号管理',
             url: '/app-manager'

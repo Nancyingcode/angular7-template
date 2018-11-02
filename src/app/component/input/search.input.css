@@ -32,3 +32,30 @@
 .clear-bor {
   border: none;
 }
+.search-img {
+  height: 24px;
+  width: 25px;
+}
+.cus-input {
+  border-radius: 250px;
+  border: 2px solid #F4F4F4;
+  width: 200px;
+}
+.ilb {
+  display: inline-block;
+}
+.cus-btn {
+  width: 50px;
+  background: #fff;
+  border-right: none;
+  border-top-left-radius: 250px;
+  border-bottom-left-radius: 250px;
+}
+.cus-btn:hover {
+  background: #F4F4F4;
+}
+.cus-bor {
+  border: none;
+  border-top-right-radius: 250px;
+  border-bottom-right-radius: 250px;
+}

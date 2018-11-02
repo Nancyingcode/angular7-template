@@ -32,3 +32,18 @@
 .clear-bor {
   border: none;
 }
+.nor-btn {
+  width: 200px;
+  background: #fff;
+  border: 2px solid #F4F4F4;
+  color: #838383;
+  border-radius: 5px;
+}
+.selected {
+  color: #20BDFF;
+}
+.nor-btn:hover {
+  color: #20BDFF;
+  background: #F4F4F4;
+  transition: background 0.2s linear;
+}
