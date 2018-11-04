@@ -11,7 +11,7 @@ const userManaRoutes: Routes = [
         component: AccountManaComponent,
         children: [
             {
-                path: ':id',
+                path: 'account',
                 component: AccountInfoComponent
             }
 

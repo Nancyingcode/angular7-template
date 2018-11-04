@@ -8,6 +8,6 @@ export class Config {
     public static routerList = {
         home: '/home',
         login: '/login',
-        actMana: '/user-mana/actMana'
+        actMana: '/account-mana/account'
     };
 }

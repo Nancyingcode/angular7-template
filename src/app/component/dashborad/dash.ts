@@ -11,7 +11,7 @@ export class DashComponent implements OnInit {
     @Input() menuList: ButtonProp[];
     public items: ButtonProp[];
 
-
+    public selectedItem: any;
     ngOnInit() {
         this.setItem();
     }
@@ -19,7 +19,7 @@ export class DashComponent implements OnInit {
     setItem() {
         const list = [{
             value: '帐号信息管理',
-            router: '/'
+            router: '/account-mana/account'
         }, {
             value: '帐号信息管理',
             router: '/'
@@ -31,6 +31,10 @@ export class DashComponent implements OnInit {
             router: '/'
         }]
         this.items = list;
+    }
+
+    select(item: any) {
+        this.selectedItem = item;
     }
 
 }

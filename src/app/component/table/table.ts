@@ -11,6 +11,8 @@ const console = new Log('TableComponent');
 @Injectable()
 export class TableComponent implements OnInit {
     @Input() props: any[];
+    @Input() operations: any[];
+    @Input() api: string;
     public tabTitles = ['ID', '姓名', '地址']; // 表格的标题
     public tabProps: any = ['id', 'name', 'addr']; // 表格显示的字段
     public buttonProps: any[] = ['add', 'del', 'edi'];

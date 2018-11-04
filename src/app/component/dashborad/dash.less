@@ -1,7 +1,9 @@
 @import '../../../assets/bootstrap.less';
-
+@import '../../../styles.less';
 .mr {
     margin-right: 30px;
+    margin-bottom: 30px;
+    color: @color-blue;
 }
 
 .mr:last-child {
@@ -24,12 +26,9 @@
     .btn-group {
         display: inline-block;
         width: auto;
+        margin-bottom: 30px;
     }
 
-    .mr {
-        margin-bottom: 30px !important;
-    }
-    
     .input {
         display: inline-block;
         width: auto;
@@ -42,10 +41,6 @@
         width: auto;
     }
 
-    .mr {
-        margin-bottom: 30px;
-    }
-    
     .input {
         display: inline-block;
         width: auto;
@@ -60,9 +55,9 @@
     .tablets();
  }
 
-// @media screen and (max-width: 768px){
-//     .tablets();
-// }
+@media screen and (min-width: 768px){
+    .tablets();
+}
 
 // @media screen and (min-width: 1500px){
 //     .tablets();

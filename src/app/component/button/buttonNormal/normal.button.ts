@@ -11,9 +11,10 @@ import { Router } from '@angular/router';
 @Injectable()
 export class NormalButtonComponent implements OnInit {
     @Input() buttonProp: ButtonProp;
+    @Input() active: boolean;
     public item: ButtonProp;
 
-    constructor(private router: Router) { }
+    constructor() { }
 
     ngOnInit() {
         this.setItem();
@@ -23,11 +24,4 @@ export class NormalButtonComponent implements OnInit {
         this.item = this.buttonProp;
         return this;
     }
-
-    onClick() {
-        const { router } = this.item;
-        this.router.navigate([router]);
-        return;
-    }
-
 }
