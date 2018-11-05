@@ -1,5 +1,10 @@
 import { Component, Injectable, Input } from '@angular/core';
 
+interface Prop {
+    name: string;
+    callback: any;
+}
+
 @Component({
     selector: 'app-button-group',
     templateUrl: './button.group.html',
@@ -7,9 +12,13 @@ import { Component, Injectable, Input } from '@angular/core';
 })
 
 export class ButtonComponent {
-    @Input() buttonProps: any;
+    @Input() props: Prop;
 
-    click(callback: any) {
+    /**
+     * 点击的方法
+     * callback
+     */
+    select(callback) {
         callback();
     }
 }

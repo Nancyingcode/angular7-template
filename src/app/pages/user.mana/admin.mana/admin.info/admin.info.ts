@@ -1,16 +1,22 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Config } from '../../../../config/config';
+const { adminU, adminA, adminD } = Config.userMana;
 
 @Component({
-    selector: 'app-account-info',
-    templateUrl: './account.info.html',
-    styleUrls: ['./account.info.less']
+    selector: 'app-admin-info',
+    templateUrl: './admin.info.html',
+    styleUrls: ['./admin.info.less']
 })
 
 @Injectable()
-export class AccountInfoComponent implements OnInit {
+export class AdminInfoComponent {
 
+    public buttonTotal = '总人数';
+    public img = '../../../../assets/pic/admin-mana-user.png';
+    public buttonAdd = {
+        name: '添加管理员'
+    };
     public data: any[] = [
         ['账号', '密码', '最后登录时间', '管理员属性', '操作'],
         ['id', 'name', 'addr', 'prop'],
@@ -33,15 +39,23 @@ export class AccountInfoComponent implements OnInit {
     ];
     public buttonProps = [{
         name: '修改',
-        router: ''
+        router: adminU
+    },
+    {
+        name: '删除',
+        router: adminD
     }];
     constructor(private router: Router) { }
 
-    ngOnInit() {
-        // this.setDefault();
+    update() {
+        this.router.navigate([adminU]);
     }
 
-    setDefault() {
-        // this.router.navigate([Config.routerList.actMana]);
+    delete() {
+        this.router.navigate([adminU]);
+    }
+
+    add() {
+        this.router.navigate([adminA]);
     }
 }

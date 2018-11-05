@@ -39,14 +39,17 @@ export class MenuComponent implements OnInit {
     constructor(private router: Router) { setTheme('bs4'); }
 
     ngOnInit() {
+        console.log('check1', this.selectedMenu);
         this.onSelect();
     }
 
     onSelect(menu?: Menu) {
         if (this.selectedMenu === undefined) {
+            console.log('check3', this.selectedMenu);
             this.setDefaultButton();
             return;
         }
+        console.log('check2', this.selectedMenu);
         this.selectedMenu = menu;
         this.go(menu.url);
     }

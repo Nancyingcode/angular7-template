@@ -1,8 +1,8 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { Injectable } from '@angular/core';
 import { Config } from '../../../../config/config';
-// import { LoginService } from './service/login.service';
+import { Log } from '../../../../tools/console';
+const console = new Log('AdminAddComponent');
 
 @Component({
     selector: 'app-admin-add',
@@ -12,11 +12,12 @@ import { Config } from '../../../../config/config';
 
 @Injectable()
 export class AdminAddComponent implements OnInit {
-
+    public img = '../../../../../assets/pic/pinter.png';
+    public alert = '您现在所在的位置 - 管理员管理 - 修改密码';
     constructor(private router: Router) { }
 
     ngOnInit() {
-
+        console.log(location.pathname);
     }
 
     setDefault() {

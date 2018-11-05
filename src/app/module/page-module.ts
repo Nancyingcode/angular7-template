@@ -12,6 +12,7 @@ import { AdminManaComponent } from '../pages/user.mana/admin.mana/admin.mana';
 import { AdminAddComponent } from '../pages/user.mana/admin.mana/admin.add/admin.add';
 import { AdminUpdataComponent } from '../pages/user.mana/admin.mana/admin.update/admin.update';
 import { UserManaComponent } from '../pages/user.mana/user.mana';
+import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/admin.info';
 
 
 
@@ -26,6 +27,7 @@ import { UserManaComponent } from '../pages/user.mana/user.mana';
         AdminManaComponent,
         AdminAddComponent,
         AdminUpdataComponent,
+        AdminInfoComponent,
         AppComponent,
     ],
     imports: [
@@ -38,6 +40,13 @@ import { UserManaComponent } from '../pages/user.mana/user.mana';
         HomeComponent,
         AppComponent,
         AccountManaComponent,
+        UserManaComponent,
+        AccountManaComponent,
+        AccountInfoComponent,
+        AdminManaComponent,
+        AdminAddComponent,
+        AdminUpdataComponent,
+        AdminInfoComponent,
         ComponentModule
     ]
 })

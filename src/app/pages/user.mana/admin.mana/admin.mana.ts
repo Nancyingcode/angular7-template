@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Config } from '../../../config/config';
+const { adminU, adminA, adminD, adminI } = Config.userMana;
 @Component({
     selector: 'app-admin-mana',
     templateUrl: './admin.mana.html',
@@ -8,26 +9,15 @@ import { Config } from '../../../config/config';
 })
 
 @Injectable()
-export class AdminManaComponent {
-    public button = '总人数';
-    public img = '../../../../assets/pic/admin-mana-user.png';
-    public add = {
-        value: '添加管理员'
-    };
-    public data: any[] = [
-        ['ID', '姓名', '地址', '操作'], ['id', 'name', 'addr'], [{
-            id: 1,
-            name: 'nancying1',
-            addr: 'baoan'
-        }, {
-            id: 2,
-            name: 'nancying2',
-            addr: 'baoan'
-        }, {
-            id: 3,
-            name: 'nancying3',
-            addr: 'baoan'
-        }]
-    ];
-    constructor() { }
+export class AdminManaComponent implements OnInit {
+
+    constructor(private router: Router) { }
+    ngOnInit() {
+        this.setDefault();
+    }
+
+    setDefault() {
+        this.router.navigate([adminA]);
+    }
+
 }

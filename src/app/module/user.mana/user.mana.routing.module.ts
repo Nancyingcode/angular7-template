@@ -7,6 +7,7 @@ import { AdminAddComponent } from 'src/app/pages/user.mana/admin.mana/admin.add/
 import { AdminUpdataComponent } from 'src/app/pages/user.mana/admin.mana/admin.update/admin.update';
 import { MenuComponent } from 'src/app/component/menu/menu';
 import { UserManaComponent } from 'src/app/pages/user.mana/user.mana';
+import { AdminInfoComponent } from 'src/app/pages/user.mana/admin.mana/admin.info/admin.info';
 
 
 
@@ -29,6 +30,10 @@ const userManaRoutes: Routes = [
                 path: 'admin',
                 component: AdminManaComponent,
                 children: [
+                    {
+                        path: 'info',
+                        component: AdminInfoComponent
+                    },
                     {
                         path: 'add',
                         component: AdminAddComponent

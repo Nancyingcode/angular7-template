@@ -37,15 +37,11 @@
 .clear-bor {
   border: none;
 }
-.row-pill {
-  background: #F5F6FA;
+.img {
+  height: 15px;
+  width: 15px;
+  margin-right: 30px;
 }
-.cus-btn {
-  background: #F4F4F4;
-  color: #292929;
-  border: none;
-}
-.cus-btn:hover {
-  color: #838383;
-  transition: color 0.2s linear;
+.cus-alert {
+  padding-left: 0;
 }

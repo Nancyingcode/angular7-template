@@ -37,15 +37,20 @@
 .clear-bor {
   border: none;
 }
-.row-pill {
-  background: #F5F6FA;
-}
-.cus-btn {
-  background: #F4F4F4;
-  color: #292929;
-  border: none;
-}
-.cus-btn:hover {
+.nor-btn {
+  width: 100px;
+  background: #fff;
+  border: 2px solid #F4F4F4;
   color: #838383;
-  transition: color 0.2s linear;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #20BDFF;
+}
+.selected {
+  color: #20BDFF;
+}
+.nor-btn:hover {
+  color: #20BDFF;
+  background: #F4F4F4;
+  transition: background 0.2s linear;
 }

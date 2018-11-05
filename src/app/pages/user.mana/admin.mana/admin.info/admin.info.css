@@ -37,15 +37,34 @@
 .clear-bor {
   border: none;
 }
-.row-pill {
-  background: #F5F6FA;
+.rule {
+  display: inline-block;
+  height: 25px;
 }
-.cus-btn {
-  background: #F4F4F4;
-  color: #292929;
-  border: none;
+.total-btn {
+  text-align: left;
+  width: 200px;
+  background: #fff;
 }
-.cus-btn:hover {
-  color: #838383;
-  transition: color 0.2s linear;
+.total-btn img {
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 25px;
+}
+.total-btn span {
+  display: inline-block;
+  height: 25px;
+  color: #20BDFF;
+  font-weight: bold;
+  width: auto;
+  vertical-align: middle;
+  font-family: PingFang HK;
+  font-size: 15px;
+}
+.add-btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }

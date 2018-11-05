@@ -21,6 +21,7 @@ import { NormalButtonComponent } from '../component/button/buttonNormal/normal.b
 import { DashComponent } from '../component/dashborad/dash';
 import { ManagerComponent } from '../pages/user/manager';
 import { SearchInputComponent } from '../component/input/search.input';
+import { SmallButtonComponent } from '../component/button/button.small/button.small';
 import { BsModalService } from 'ngx-bootstrap/modal';
 
 import { FormsModule } from '@angular/forms';
@@ -33,6 +34,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         NavComponent,
         TableComponent,
         ButtonComponent,
+        SmallButtonComponent,
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,
@@ -61,6 +63,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         NavComponent,
         TableComponent,
         ButtonComponent,
+        SmallButtonComponent,
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,

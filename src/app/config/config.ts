@@ -14,7 +14,9 @@ export class Config {
         accountI: 'info',
         admin: 'admin',
         adminA: 'add',
-        adminU: 'update'
+        adminU: 'update',
+        adminD: 'delete',
+        adminI: 'info'
     };
     public static routerList = {
         home: Config.div + Config.pathList.home,
@@ -27,5 +29,7 @@ export class Config {
         admin: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin,
         adminA: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminA,
         adminU: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminU,
+        adminD: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminD,
+        adminI: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminI,
     };
 }

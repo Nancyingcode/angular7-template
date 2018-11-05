@@ -8,7 +8,9 @@
     <tr class="row-pill">
       <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
       <td>
-        <app-button-group [buttonProps]="buttonProps"></app-button-group>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary cus-btn" *ngFor="let button of buttonProps" (click)="select(button.callback)">{{button.name}}</button>
+        </div>
       </td>
     </tr>
   </tbody>

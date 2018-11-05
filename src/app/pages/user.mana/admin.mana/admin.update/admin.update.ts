@@ -5,7 +5,7 @@ import { Config } from '../../../../config/config';
 // import { LoginService } from './service/login.service';
 
 @Component({
-    selector: 'app-admin-add',
+    selector: 'app-admin-update',
     templateUrl: './admin.update.html',
     styleUrls: ['./admin.update.less']
 })

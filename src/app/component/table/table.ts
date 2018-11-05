@@ -2,6 +2,11 @@ import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { Log } from '../../tools/console';
 
 const console = new Log('TableComponent');
+
+interface Prop {
+    name: string;
+    callback: any;
+}
 @Component({
     selector: 'app-table',
     templateUrl: './table.html',
@@ -11,47 +16,11 @@ const console = new Log('TableComponent');
 @Injectable()
 export class TableComponent implements OnInit {
     @Input() props: any[];
-    @Input() operations: any[];
     @Input() api: string;
-    @Input() buttonProps: any[] = [{
-        name: '修改',
-        callback: this.getData
-    },
-    {
-        name: '删除',
-        callback: this.getData
-    }];
-    public tabTitles = ['ID', '姓名', '地址']; // 表格的标题
-    public tabProps: any = ['id', 'name', 'addr']; // 表格显示的字段
-    public list: any[] = [
-        {
-            id: 1,
-            name: 'nancying1',
-            addr: 'baoan'
-        }, {
-            id: 2,
-            name: 'nancying2',
-            addr: 'baoan'
-        }, {
-            id: 3,
-            name: 'nancying3',
-            addr: 'baoan'
-        }];
-    private res: any[] = [
-        ['ID', '姓名', '地址', '操作'], ['id', 'name', 'addr'], [{
-            id: 1,
-            name: 'nancying1',
-            addr: 'baoan'
-        }, {
-            id: 2,
-            name: 'nancying2',
-            addr: 'baoan'
-        }, {
-            id: 3,
-            name: 'nancying3',
-            addr: 'baoan'
-        }]
-    ];
+    @Input() buttonProps: Prop[];
+    public tabTitles; // 表格的标题
+    public tabProps: any; // 表格显示的字段
+    public list: any[];
     constructor() {
     }
 
@@ -60,9 +29,10 @@ export class TableComponent implements OnInit {
     }
 
     setState() {
-        this.tabTitles = this.res[0];
-        this.tabProps = this.res[1];
-        this.list = this.res[2];
+        console.log(this.props);
+        this.tabTitles = this.props[0];
+        this.tabProps = this.props[1];
+        this.list = this.props[2];
     }
 
     getData() {
