@@ -7,5 +7,9 @@ import { Component, Injectable, Input } from '@angular/core';
 })
 
 export class ButtonComponent {
-    @Input() buttonProps = ['add', 'del', 'edi'];
+    @Input() buttonProps: any;
+
+    click(callback: any) {
+        callback();
+    }
 }

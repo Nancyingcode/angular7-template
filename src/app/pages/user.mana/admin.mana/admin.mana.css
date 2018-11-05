@@ -37,3 +37,34 @@
 .clear-bor {
   border: none;
 }
+.rule {
+  display: inline-block;
+  height: 25px;
+}
+.total-btn {
+  text-align: left;
+  width: 200px;
+  background: #fff;
+}
+.total-btn img {
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 25px;
+}
+.total-btn span {
+  display: inline-block;
+  height: 25px;
+  color: #20BDFF;
+  font-weight: bold;
+  width: auto;
+  vertical-align: middle;
+  font-family: PingFang HK;
+  font-size: 15px;
+}
+.add-btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}

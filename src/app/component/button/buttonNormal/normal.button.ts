@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class NormalButtonComponent implements OnInit {
     @Input() buttonProp: ButtonProp;
-    @Input() active: boolean;
+    @Input() active = false;
     public item: ButtonProp;
 
     constructor() { }

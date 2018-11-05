@@ -8,6 +8,10 @@
   letter-spacing: -3px;
   overflow: hidden;
 }
+.template {
+  padding: 30px;
+  background: #fff;
+}
 .center {
   position: absolute;
   top: 50%;
@@ -90,8 +94,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  padding: 30px;
-  background: #fff;
+  background: #F4F4F4;
 }
 .col-left {
   display: inline-block;

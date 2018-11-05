@@ -1,4 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit, Input } from '@angular/core';
 import { setTheme } from 'ngx-bootstrap/utils';
 
 import { Router } from '@angular/router';
@@ -14,13 +14,14 @@ const console = new Log('MenuComponet');
 
 @Injectable()
 export class MenuComponent implements OnInit {
+    @Input() list: any[];
     public menuList: Menu[] = [
         {
             name: '管理员管理',
-            url: '/admin-mana'
+            url: '/user-mana/admin'
         }, {
             name: '账号管理',
-            url: '/account-mana'
+            url: '/user-mana/account'
         }];
     public menuPics = ['../../../assets/pic/menu-user.png',
         '../../../assets/pic/menu-mana.png'];

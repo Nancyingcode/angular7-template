@@ -1,8 +1,7 @@
-import { Component, Injectable } from '@angular/core';
-// import { Injectable } from '@angular/core';
-
-// import { LoginService } from './service/login.service';
-
+import { Component, Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Config } from '../../config/config';
+const { userM } = Config.userMana;
 @Component({
     selector: 'app-home',
     templateUrl: './home.html',
@@ -10,22 +9,18 @@ import { Component, Injectable } from '@angular/core';
 })
 
 
-export class HomeComponent {
-    public jumper = '../../../assets/pic/login-jumper.png';
-    public items = [
-        {
-            title: '账号:',
-            placeholder: '',
-            type: 'text',
-            label: '用户名'
-        },
-        {
-            title: '密码:',
-            placeholder: '',
-            type: 'password',
-            label: '密码'
-        }
-    ];
-    public loginBtn = '登录';
-    public title = '后台管理页面';
+@Injectable()
+export class HomeComponent implements OnInit {
+    constructor(private router: Router) { }
+    ngOnInit() {
+        this.setDefaultPage();
+    }
+
+    go(url: string) {
+        this.router.navigate([url]);
+    }
+
+    setDefaultPage() {
+        this.go(userM);
+    }
 }
