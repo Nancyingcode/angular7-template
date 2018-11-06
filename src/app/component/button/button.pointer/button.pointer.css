@@ -40,25 +40,14 @@
 .hover-rule {
   cursor: pointer;
 }
-.ilb {
-  display: inline-block;
-  width: auto;
+.img {
+  height: 15px;
+  width: 15px;
+  margin-right: 30px;
 }
-.flx-md {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cus-alert {
+  padding-left: 0;
 }
-.ml {
-  margin-left: 45px;
-}
-.vm {
-  display: inline-block;
-  vertical-align: middle;
-}
-.wt {
-  color: #dc3545 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.img:hover {
+  cursor: pointer;
 }

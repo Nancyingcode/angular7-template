@@ -12,8 +12,33 @@ const console = new Log('AdminAddComponent');
 
 @Injectable()
 export class AdminAddComponent implements OnInit {
-    public img = '../../../../../assets/pic/pinter.png';
-    public alert = '您现在所在的位置 - 管理员管理 - 修改密码';
+    public alert = ['管理员管理', '添加管理员'];
+    public list = [
+        {
+            title: '用户名',
+            type: 'text',
+            placeholder: 'Username',
+            clz: 'form-control ',
+            readonly: false,
+            rt: '',
+            wt: '用户名格式不正确'
+        }, {
+            title: '密码',
+            type: 'password',
+            placeholder: 'Password',
+            clz: 'form-control',
+            readonly: false,
+            rt: '',
+            wt: '密码格式不正确'
+        }, {
+            title: '确定',
+            type: 'password',
+            placeholder: 'Password',
+            clz: 'form-control',
+            readonly: false,
+            rt: '',
+            wt: '密码不匹配'
+        }];
     constructor(private router: Router) { }
 
     ngOnInit() {
