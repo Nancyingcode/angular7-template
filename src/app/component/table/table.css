@@ -37,15 +37,50 @@
 .clear-bor {
   border: none;
 }
+.hover-rule {
+  cursor: pointer;
+}
+.ilb {
+  display: inline-block;
+  width: auto;
+}
+.flx-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mr {
+  margin-right: 30px;
+}
+.mr:last-child {
+  margin: 0;
+}
+.ct {
+  text-align: center;
+}
+.mt {
+  margin-top: 15px;
+}
 .row-pill {
   background: #F5F6FA;
+  width: 100%;
 }
 .cus-btn {
-  background: #F4F4F4;
-  color: #292929;
+  background: #F5F6FA;
+  color: #20BDFF;
   border: none;
 }
 .cus-btn:hover {
   color: #838383;
   transition: color 0.2s linear;
+}
+.table th,
+.table td {
+  padding-left: 0;
+  padding-right: 0;
+  vertical-align: middle;
+  width: auto;
+}
+.auto {
+  width: auto;
 }

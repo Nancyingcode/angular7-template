@@ -18,6 +18,7 @@ import { DefaultTimePickComponent } from '../component/timepick/defaultTimepick/
 import { FileUploadComponent } from '../component/upload/fileUpload/file.upload';
 import { MessageToastComponent } from '../component/toast/messageToast/message.toast';
 import { NormalButtonComponent } from '../component/button/buttonNormal/normal.button';
+import { ButtonPointerComponent } from '../component/button/button.pointer/button.pointer';
 import { DashComponent } from '../component/dashborad/dash';
 import { ManagerComponent } from '../pages/user/manager';
 import { SearchInputComponent } from '../component/input/search.input';
@@ -34,6 +35,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         NavComponent,
         TableComponent,
         ButtonComponent,
+        ButtonPointerComponent,
         SmallButtonComponent,
         MenuComponent,
         DefaultToastComponent,
@@ -64,6 +66,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         TableComponent,
         ButtonComponent,
         SmallButtonComponent,
+        ButtonPointerComponent,
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,
