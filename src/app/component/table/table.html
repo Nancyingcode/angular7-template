@@ -1,7 +1,7 @@
-<table class="table table-borderless" style="text-align:center">
-  <thead class="l">
+<table class="table table-borderless auto" style="text-align:center">
+  <thead class="">
     <tr>
-      <th scope="col-sm-1" *ngFor="let title of tabTitles">{{title}}</th>
+      <th scope="col-sm-1" *ngFor="let title of tabTitles" class="mr">{{title}}</th>
     </tr>
   </thead>
   <tbody *ngFor="let item of list">
@@ -16,13 +16,15 @@
   </tbody>
 </table>
 
-<!-- <div id="table">
+<script type="text">
+  
+  </script>
+
+<!-- <div id="table" class="cus-table">
   <div id="title">
     <span *ngFor="let title of tabTitles">{{title}}</span>
   </div>
-  <div id="tbody">
-    <div class="row-pill" *ngFor="let item of list">
-      <span *ngFor="let tab of tabProps">{{item[tab]}}</span>
-    </div>
+  <div class="row-pill" *ngFor="let item of list">
+    <span *ngFor="let tab of tabProps">{{item[tab]}}</span>
   </div>
 </div> -->
