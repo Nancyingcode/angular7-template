@@ -17,7 +17,7 @@ export class AdminManaComponent implements OnInit {
     }
 
     setDefault() {
-        this.router.navigate([adminA]);
+        this.router.navigate([adminU]);
     }
 
 }

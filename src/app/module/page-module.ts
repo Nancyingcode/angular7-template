@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ComponentModule } from '../module/component-module';
 import { LoginComponent } from '../pages/login/login';
@@ -33,7 +34,8 @@ import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/adm
     imports: [
         BrowserModule,
         ComponentModule,
-        UserManaModule
+        UserManaModule,
+        ReactiveFormsModule
     ],
     exports: [
         LoginComponent,
@@ -47,7 +49,8 @@ import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/adm
         AdminAddComponent,
         AdminUpdataComponent,
         AdminInfoComponent,
-        ComponentModule
+        ComponentModule,
+        ReactiveFormsModule
     ]
 })
 export class PageModule { }
