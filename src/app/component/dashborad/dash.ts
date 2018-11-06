@@ -1,5 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { ButtonProp } from '../button/buttonNormal/index';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-dash',
@@ -8,10 +9,11 @@ import { ButtonProp } from '../button/buttonNormal/index';
 })
 
 export class DashComponent implements OnInit {
-    @Input() menuList: ButtonProp[];
+    @Input() props: ButtonProp[];
     public items: ButtonProp[];
-
     public selectedItem: any;
+
+    constructor(private router: Router) { }
     ngOnInit() {
         this.setItem();
     }
@@ -29,12 +31,13 @@ export class DashComponent implements OnInit {
         }, {
             value: '帐号信息管理',
             router: '/'
-        }]
+        }];
         this.items = list;
     }
 
     select(item: any) {
         this.selectedItem = item;
+        item.callback(this.router, item.router);
     }
 
 }

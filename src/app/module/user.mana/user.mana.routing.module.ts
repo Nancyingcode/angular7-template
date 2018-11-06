@@ -8,6 +8,10 @@ import { AdminUpdataComponent } from 'src/app/pages/user.mana/admin.mana/admin.u
 import { MenuComponent } from 'src/app/component/menu/menu';
 import { UserManaComponent } from 'src/app/pages/user.mana/user.mana';
 import { AdminInfoComponent } from 'src/app/pages/user.mana/admin.mana/admin.info/admin.info';
+import { AdminDeleteComponent } from 'src/app/pages/user.mana/admin.mana/admin.delete/admin.delete';
+import { AccountWealComponent } from 'src/app/pages/user.mana/acount.mana/account.weal/account.weal';
+import { AccountDrawComponent } from 'src/app/pages/user.mana/acount.mana/account.draw/account.draw';
+import { AccountRechargeComponent } from 'src/app/pages/user.mana/acount.mana/account.recharge/account.recharge';
 
 
 
@@ -23,6 +27,18 @@ const userManaRoutes: Routes = [
                     {
                         path: 'info',
                         component: AccountInfoComponent
+                    },
+                    {
+                        path: 'weal',
+                        component: AccountWealComponent
+                    },
+                    {
+                        path: 'draw',
+                        component: AccountDrawComponent
+                    },
+                    {
+                        path: 'recharge',
+                        component: AccountRechargeComponent
                     }
                 ]
             },
@@ -41,6 +57,10 @@ const userManaRoutes: Routes = [
                     {
                         path: 'update',
                         component: AdminUpdataComponent
+                    },
+                    {
+                        path: 'delete',
+                        component: AdminDeleteComponent
                     }
                 ]
             }

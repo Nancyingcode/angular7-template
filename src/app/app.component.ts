@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
   template: any;
 
   constructor(private loginS: LoginService, injector: Injector, public toasts: ToastService) {
-    const ToastElement = createCustomElement(TextToastComponent, { injector });
-    customElements.define('popup-element', ToastElement);
+    // const ToastElement = createCustomElement(TextToastComponent, { injector });
+    // customElements.define('popup-element', ToastElement);
   }
 
   ngOnInit() {
@@ -32,10 +32,10 @@ export class AppComponent implements OnInit {
   }
 
   show() {
-    this.toasts.showToast('Confirm', 'Are u sure?', function () {
-      console.log('ok');
-    }, function () {
-      console.log('cancel');
-    });
+    // this.toasts.showToast('Confirm', 'Are u sure?', function () {
+    //   console.log('ok');
+    // }, function () {
+    //   console.log('cancel');
+    // });
   }
 }

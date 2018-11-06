@@ -61,26 +61,3 @@
 .mt {
   margin-top: 15px;
 }
-.row-pill {
-  background: #F5F6FA;
-  width: 100%;
-}
-.cus-btn {
-  background: #F5F6FA;
-  color: #20BDFF;
-  border: none;
-}
-.cus-btn:hover {
-  color: #838383;
-  transition: color 0.2s linear;
-}
-.table th,
-.table td {
-  padding-left: 0;
-  padding-right: 0;
-  vertical-align: middle;
-  width: auto;
-}
-.auto {
-  width: auto;
-}

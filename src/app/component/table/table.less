@@ -1,12 +1,13 @@
 @import '../../../styles.less';
 
 .row-pill {
-  background: #F5F6FA;
+  background: @color-gray-table;
+  width: 100%;
 }
 
 .cus-btn {
-  background: @color-gray;
-  color: @color-black;
+  background: @color-gray-table;
+  color: @color-blue;
   border: none;
 }
 
@@ -14,3 +15,18 @@
   color: @color-gray-text;
   transition: color 0.2s linear;
 }
+
+.table th, .table td {
+  padding-left: 0;
+  padding-right: 0;
+  vertical-align: middle;
+  width: auto;
+}
+
+
+.auto {
+  width: auto;
+}
+
+@height: 50px;
+

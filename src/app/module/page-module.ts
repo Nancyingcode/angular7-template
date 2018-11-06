@@ -14,6 +14,10 @@ import { AdminAddComponent } from '../pages/user.mana/admin.mana/admin.add/admin
 import { AdminUpdataComponent } from '../pages/user.mana/admin.mana/admin.update/admin.update';
 import { UserManaComponent } from '../pages/user.mana/user.mana';
 import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/admin.info';
+import { AdminDeleteComponent } from '../pages/user.mana/admin.mana/admin.delete/admin.delete';
+import { AccountWealComponent } from '../pages/user.mana/acount.mana/account.weal/account.weal';
+import { AccountDrawComponent } from '../pages/user.mana/acount.mana/account.draw/account.draw';
+import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account.recharge/account.recharge';
 
 
 
@@ -25,10 +29,14 @@ import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/adm
         UserManaComponent,
         AccountManaComponent,
         AccountInfoComponent,
+        AccountWealComponent,
+        AccountDrawComponent,
+        AccountRechargeComponent,
         AdminManaComponent,
         AdminAddComponent,
         AdminUpdataComponent,
         AdminInfoComponent,
+        AdminDeleteComponent,
         AppComponent,
     ],
     imports: [
@@ -45,10 +53,14 @@ import { AdminInfoComponent } from '../pages/user.mana/admin.mana/admin.info/adm
         UserManaComponent,
         AccountManaComponent,
         AccountInfoComponent,
+        AccountWealComponent,
+        AccountDrawComponent,
+        AccountRechargeComponent,
         AdminManaComponent,
         AdminAddComponent,
         AdminUpdataComponent,
         AdminInfoComponent,
+        AdminDeleteComponent,
         ComponentModule,
         ReactiveFormsModule
     ]

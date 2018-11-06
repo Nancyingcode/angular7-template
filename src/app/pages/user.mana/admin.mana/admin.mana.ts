@@ -17,7 +17,11 @@ export class AdminManaComponent implements OnInit {
     }
 
     setDefault() {
-        this.router.navigate([adminU]);
+        this.router.navigate([adminI]);
+    }
+
+    delete() {
+
     }
 
 }

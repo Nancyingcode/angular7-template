@@ -12,11 +12,14 @@ export class Config {
         userM: 'user-mana',
         account: 'account',
         accountI: 'info',
+        accountW: 'weal',
+        accountR: 'recharge',
+        accountD: 'draw',
         admin: 'admin',
         adminA: 'add',
         adminU: 'update',
         adminD: 'delete',
-        adminI: 'info'
+        adminI: 'info',
     };
     public static routerList = {
         home: Config.div + Config.pathList.home,
@@ -26,6 +29,9 @@ export class Config {
         userM: Config.div + Config.pathList.userM,
         account: Config.div + Config.pathList.userM + Config.div + Config.pathList.account,
         accountI: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountI,
+        accountW: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountW,
+        accountR: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountR,
+        accountD: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountD,
         admin: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin,
         adminA: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminA,
         adminU: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminU,
