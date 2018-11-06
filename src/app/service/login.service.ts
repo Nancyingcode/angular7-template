@@ -8,7 +8,7 @@ import { HttpResult } from '../interface/http';
 import { Config } from '../config/config';
 const { home, login } = Config.routerList;
 const console = new Log('login');
-const loginApi = '/api/angular7-template/result.json';
+const loginApi = 'http://localhost:80/api/result.json';
 const reLoginApi = '';
 const registrpApi = '';
 
@@ -25,7 +25,7 @@ export class LoginService {
     constructor(private http: HttpService, private router: Router) { }
 
     async login() {
-        if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
+        // if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
         const userInfo: UserInfo = { userName: this.userName, password: this.password };
         const loginRes = await this.http.req('post', loginApi, userInfo);
         console.log('loginRes:' + this.getJson(loginRes));

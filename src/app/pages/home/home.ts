@@ -1,7 +1,10 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Config } from '../../config/config';
+import { Log } from '../../tools/console';
+import { LoginService } from '../../service/login.service';
 const { userM } = Config.userMana;
+const console = new Log('Home');
 @Component({
     selector: 'app-home',
     templateUrl: './home.html',
@@ -11,8 +14,10 @@ const { userM } = Config.userMana;
 
 @Injectable()
 export class HomeComponent implements OnInit {
-    constructor(private router: Router) { }
+    constructor(private router: Router, private logins: LoginService) { }
     ngOnInit() {
+        // this.logins.login();
+        // console.log('Home finished');
         this.setDefaultPage();
     }
 
