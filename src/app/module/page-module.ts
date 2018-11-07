@@ -18,6 +18,8 @@ import { AdminDeleteComponent } from '../pages/user.mana/admin.mana/admin.delete
 import { AccountWealComponent } from '../pages/user.mana/acount.mana/account.weal/account.weal';
 import { AccountDrawComponent } from '../pages/user.mana/acount.mana/account.draw/account.draw';
 import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account.recharge/account.recharge';
+import { SystemManaComponent } from '../pages/system.mana/system.mana';
+import { SystemMarketComponent } from '../pages/system.mana/system.market/system.market';
 
 
 
@@ -37,6 +39,8 @@ import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account
         AdminUpdataComponent,
         AdminInfoComponent,
         AdminDeleteComponent,
+        SystemManaComponent,
+        SystemMarketComponent,
         AppComponent,
     ],
     imports: [
@@ -61,6 +65,8 @@ import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account
         AdminUpdataComponent,
         AdminInfoComponent,
         AdminDeleteComponent,
+        SystemManaComponent,
+        SystemMarketComponent,
         ComponentModule,
         ReactiveFormsModule
     ]

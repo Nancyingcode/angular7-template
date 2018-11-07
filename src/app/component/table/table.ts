@@ -24,20 +24,12 @@ export class TableComponent implements OnInit, AfterViewInit {
     public tabTitles; // 表格的标题
     public tabProps: any; // 表格显示的字段
     public list: any[];
-    constructor(private renderer: Renderer2) {
-    }
 
-    @ViewChildren('table') tb: ElementRef;
     ngOnInit() {
         this.setState();
     }
 
     ngAfterViewInit() {
-        // const tableW = this.tb.nativeElement.offsetWidth;
-        // console.log(Object.keys(this.td));
-        // this.td.map(item => {
-        //     console.log(item);
-        // });
 
     }
 

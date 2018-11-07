@@ -11,6 +11,11 @@ const routes: Routes = [
     loadChildren: './user.mana/user.mana.module#UserManaModule',
     data: { preload: true }
   },
+  {
+    path: 'sys-mana',
+    loadChildren: './system.mana/system.mana.module#SystemManaModule',
+    data: { preload: true }
+  },
   { path: 'login', component: LoginComponent },
   { path: 'data-table', component: TableComponent }
 ];

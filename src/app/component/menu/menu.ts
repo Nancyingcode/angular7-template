@@ -43,7 +43,7 @@ const secondMenu = {
 
 @Injectable()
 export class MenuComponent implements OnInit {
-    @Input() list: any[];
+    @Input() default: any[];
     public menuList: List[];
     public firstMenu =
         [
