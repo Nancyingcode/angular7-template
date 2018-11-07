@@ -1,25 +1,21 @@
-<table class="table table-borderless auto" style="text-align:center">
+<table class="table auto" #table>
   <thead class="">
     <tr>
-      <th scope="col-sm-1" *ngFor="let title of tabTitles" class="mr">{{title}}</th>
+      <th scope="col-sm-1" *ngFor="let title of tabTitles" class="mr  th">{{title}}</th>
     </tr>
   </thead>
-  <tbody *ngFor="let item of list">
-    <tr class="row-pill l">
+  <tbody>
+    <tr class="row-pill" *ngFor="let item of list">
       <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
-      <td>
+      <th>
         <div class="btn-group" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-secondary cus-btn" *ngFor="let button of buttonProps" (click)="select(button.callback)">{{button.name}}</button>
         </div>
-      </td>
+      </th>
+      <td></td>
     </tr>
   </tbody>
 </table>
-
-<script type="text">
-  
-  </script>
-
 <!-- <div id="table" class="cus-table">
   <div id="title">
     <span *ngFor="let title of tabTitles">{{title}}</span>

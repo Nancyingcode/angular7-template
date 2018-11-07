@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 .show {
   display: inline-block !important;
 }
@@ -9,6 +8,7 @@
   overflow: hidden;
 }
 .template {
+  position: relative;
   padding: 30px;
   background: #fff;
 }
@@ -36,6 +36,30 @@
 .clear-bor {
   border: none;
 }
+.hover-rule {
+  cursor: pointer;
+}
+.ilb {
+  display: inline-block;
+  width: auto;
+}
+.flx-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mr {
+  margin-right: 30px;
+}
+.mr:last-child {
+  margin: 0;
+}
+.ct {
+  text-align: center;
+}
+.mt {
+  margin-top: 15px;
+}
 .selected::before {
   position: absolute;
   content: "";
@@ -46,6 +70,12 @@
   height: 7vh;
   width: 5px;
   background: #20BDFF;
+}
+.selectedText {
+  color: #292929 !important;
+}
+.h6 {
+  color: #C7C7C7;
 }
 .t {
   width: 100%;
@@ -67,6 +97,11 @@
   clear: both;
   overflow: hidden;
 }
+.cus-pill:hover {
+  cursor: pointer;
+  background: #c0c1c9;
+  transition: background 0.3s ease-in-out;
+}
 .cus-tab {
   text-align: center;
 }
@@ -85,8 +120,6 @@
 }
 .cus-tab-pill:hover {
   cursor: pointer;
-  background: #F4F4F4;
-  transition: background 0.3s linear;
 }
 .base-body {
   width: 95%;

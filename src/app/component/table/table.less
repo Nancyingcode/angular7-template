@@ -1,35 +1,62 @@
 @import '../../../styles.less';
-@import "~element-angular/theme/index.css";
+
+.flex-col {
+  display: flex;
+}
 
 .row-pill {
+  // .flex-col();
   background: @color-gray-table;
   width: 100%;
+  border: @default-pd/3 solid @color-white;
+  border-left: none;
+  border-right: none;
+  border-radius: @radius;
+}
+
+.row-pill:hover {
+  .hover-rule();
+  background: @hover-gray;
+  transition: @transiton-bg-3;
 }
 
 .cus-btn {
-  background: @color-gray-table;
+  background: rgba(0,0,0,0);
   color: @color-blue;
+  font-size: @default-fontz;
   border: none;
 }
 
 .cus-btn:hover {
-  color: @color-gray-text;
-  transition: color 0.2s linear;
+  color: @color-white;
+  transition: @transiton-cl-3;
 }
 
 .table th, .table td {
-  // padding-left: 0;
-  // padding-right: 0;
+  margin: 0;
   vertical-align: middle;
   width: auto;
+  border-top: none;
+}
+
+.table th {
+  min-width: 150px;
 }
 
 .table td {
-  width: 200px;
+  width: 100%;
+  text-align: left;
 }
 
+.table {
+  text-align: center;
+  font-family: @default-font;
+  font-size: @default-fontz;
+  font-weight: 400 !important;
+}
 
 .auto {
+  border-collapse: collapse;
   width: auto;
 }
 

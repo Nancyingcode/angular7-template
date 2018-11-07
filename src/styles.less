@@ -1,96 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+
+@color-white: #fff;
+@color-gray: #F4F4F4;
+@color-gray-table: #F5F6FA;
+@color-gray-pill: #EFEFEF;
+@color-gray-text: #838383;
+@hover-gray: rgb(192, 193, 201);
+@color-blue: #20BDFF;
+@color-blue-d: rgb(17, 140, 192);
+@color-red: #dc3545;
+@nav-height: 7vh;
+@color-black: #292929;
+@default-pd: 30px;
+@transiton-bg-3: background 0.3s ease-in-out;
+@transiton-cl-3: color 0.3s ease-in-out;
+@default-fontw: 400;
+@default-fontz: 14px;
+@default-font: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+@radius: 5px;
+@img-sm: 15px;
+
+.show {
+    display: inline-block !important;
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+    letter-spacing: -3px;
+    overflow: hidden;
+}
 
 
-    // .active {
-    //     background: #007bff;
-    // }
-    
-    .show {
-        display: inline-block !important;
-    }
-    
-    .page {
-        position: relative;
-        height: 100vh;
-        letter-spacing: -3px;
-        overflow: hidden;
-    }
+.template {
+    position: relative;
+    padding: @default-pd;
+    background: @color-white;
+}
 
+.center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
-    .template {
-        position: relative;
-        padding: @default-pd;
-        background: @color-white;
-    }
-    
-    .center{
-        position: absolute;
-        top:50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
+.mc {
+    margin-left: auto; 
+    margin-right: auto;
+}
 
-    @color-white: #fff;
-    @color-gray: #F4F4F4;
-    @color-gray-table: #F5F6FA;
-    @color-gray-pill: #EFEFEF;
-    @color-gray-text: #838383;
-    @color-blue: #20BDFF;
-    @color-red: #dc3545;
-    @nav-height: 7vh;
-    @color-black: #292929;
-    @default-pd: 30px;
-    @img-sm: 15px;
-    .mc {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.hover {
+    cursor: pointer;
+    background: @color-gray;
+    transition: background 0.3s linear;
+}
 
-    .hover {
-        cursor: pointer;
-        background: @color-gray;
-        transition: background 0.3s linear;
-    }
+.rlt {
+    position: relative;
+}
 
-    .rlt {
-        position: relative;
-    }
+.clear-pd {
+    padding: 0;
+}
 
-    .clear-pd {
-        padding: 0;
-    }
+.clear-bor {
+    border: none;
+}
 
-    .clear-bor {
-        border: none;
-    }
+.hover-rule{
+    cursor: pointer;
+}
 
-    .hover-rule{
-        cursor: pointer;
-    }
+.ilb{
+    display: inline-block;
+    width: auto;
+}
 
-    .ilb{
-        display: inline-block;
-        width: auto;
-    }
+.flx-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .flx-md {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.mr {
+    margin-right: @default-pd;
+}
 
-    .mr {
-        margin-right: @default-pd;
-    }
+.mr:last-child{
+    margin: 0;
+}
 
-    .mr:last-child{
-        margin: 0;
-    }
+.ct{
+    text-align: center;
+}
 
-    .ct{
-        text-align: center;
-    }
-    
-    .mt {
-        margin-top: @default-pd/2;
-    }
+.mt {
+    margin-top: @default-pd/2;
+}
