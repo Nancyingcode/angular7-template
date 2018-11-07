@@ -68,7 +68,7 @@ export class MenuComponent implements OnInit {
 
     ngOnInit() {
         this.setDefaultMenu();
-        this.setDefaultButton();
+        this.setDefaultList();
         console.log('menu:', JSON.stringify(this.menuList));
     }
 
@@ -86,7 +86,7 @@ export class MenuComponent implements OnInit {
         this.router.navigate([url]);
     }
 
-    setDefaultButton() {
+    setDefaultList() {
         this.selectedList = this.getFirstObj(this.menuList);
         this.go(this.selectedList.url);
     }
