@@ -6,6 +6,10 @@ import { SystemHomeComponent } from 'src/app/pages/system.mana/system.home/syste
 import { SystemInvitationComponent } from 'src/app/pages/system.mana/system.invitation/system.invitation';
 import { SystemMineComponent } from 'src/app/pages/system.mana/system.mine/system.mine';
 import { SystemTradeComponent } from 'src/app/pages/system.mana/system.trade/system.trade';
+import { MarketItemComponent } from 'src/app/pages/system.mana/system.market/market.item/market.item';
+import { MarketOrderComponent } from 'src/app/pages/system.mana/system.market/market.order/market.order';
+import { HomeCarouselComponent } from 'src/app/pages/system.mana/system.home/home.carousel/home.carousel';
+import { HomePostComponent } from 'src/app/pages/system.mana/system.home/home.post/home.post';
 
 
 
@@ -16,11 +20,31 @@ const systemManaRoutes: Routes = [
         children: [
             {
                 path: 'market',
-                component: SystemMarketComponent
+                component: SystemMarketComponent,
+                children: [
+                    {
+                        path: 'item',
+                        component: MarketItemComponent
+                    },
+                    {
+                        path: 'order',
+                        component: MarketOrderComponent
+                    },
+                ]
             },
             {
                 path: 'home',
-                component: SystemHomeComponent
+                component: SystemHomeComponent,
+                children: [
+                    {
+                        path: 'carousel',
+                        component: HomeCarouselComponent
+                    },
+                    {
+                        path: 'order',
+                        component: HomePostComponent
+                    },
+                ]
             },
             {
                 path: 'invitation',

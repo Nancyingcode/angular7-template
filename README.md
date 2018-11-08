@@ -15,7 +15,7 @@
     }
 }
 ```
-### console
+# console
 > 在组件内引用 tools/console 的 Log类
 > const console = new Log('能代表当前组件的信息，类名即可');
 > 然后通过console对象的方法打印信息
@@ -30,11 +30,11 @@
 
 # Component
 
-### Table
+# Table
 - selector `app-table`
 - data `[标题数组string[],字段数组string[],列表数据(json数组)]`
 
-### Toast
+# Toast
 
 #### default-toast
 - selector `app-default-toast`
@@ -82,24 +82,24 @@ export class AppComponent {
 然后调用`ToastService`中的`showToast`方法
 
 
-### Pagination
+# Pagination
 
 #### default-pagination
 - selector `app-default-pagination`
 - data ``
 
-### DatePick
+# DatePick
 
 #### default-datepick
 - selector `app-default-datepick`
 - data 
 
-### Timepick
+# Timepick
 
 #### default-timepick
 - selector `app-default-timepick`
 
-### Menu
+# Menu
 
 - selector `app-menu`
 - data none
