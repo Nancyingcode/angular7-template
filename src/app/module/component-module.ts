@@ -26,6 +26,7 @@ import { SmallButtonComponent } from '../component/button/button.small/button.sm
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { FormsModule } from '@angular/forms';
 import { TextToastComponent } from '../component/toast/textToast/text.toast';
+import { ListComponent } from '../component/menu/list/list';
 
 
 
@@ -36,6 +37,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         ButtonComponent,
         ButtonPointerComponent,
         SmallButtonComponent,
+        ListComponent,
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,
@@ -66,6 +68,7 @@ import { TextToastComponent } from '../component/toast/textToast/text.toast';
         ButtonComponent,
         SmallButtonComponent,
         ButtonPointerComponent,
+        ListComponent,
         MenuComponent,
         DefaultToastComponent,
         DefaultDatePickComponent,

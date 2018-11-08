@@ -20,6 +20,11 @@ export class Config {
         adminU: 'update',
         adminD: 'delete',
         adminI: 'info',
+        market: 'market',
+        sHome: 'home',
+        invitation: 'invitation',
+        mine: 'mine',
+        trade: 'trade'
     };
     public static routerList = {
         home: Config.div + Config.pathList.home,
@@ -37,5 +42,13 @@ export class Config {
         adminU: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminU,
         adminD: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminD,
         adminI: Config.div + Config.pathList.userM + Config.div + Config.pathList.admin + Config.div + Config.pathList.adminI,
+    };
+
+    public static sysMana = {
+        market: Config.div + Config.pathList.market,
+        sHome: Config.div + Config.pathList.sHome,
+        invitation: Config.div + Config.pathList.invitation,
+        mine: Config.div + Config.pathList.mine,
+        trade: Config.div + Config.pathList.trade
     };
 }

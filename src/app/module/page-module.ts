@@ -20,6 +20,10 @@ import { AccountDrawComponent } from '../pages/user.mana/acount.mana/account.dra
 import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account.recharge/account.recharge';
 import { SystemManaComponent } from '../pages/system.mana/system.mana';
 import { SystemMarketComponent } from '../pages/system.mana/system.market/system.market';
+import { SystemInvitationComponent } from '../pages/system.mana/system.invitation/system.invitation';
+import { SystemHomeComponent } from '../pages/system.mana/system.home/system.home';
+import { SystemMineComponent } from '../pages/system.mana/system.mine/system.mine';
+import { SystemTradeComponent } from '../pages/system.mana/system.trade/system.trade';
 
 
 
@@ -41,6 +45,10 @@ import { SystemMarketComponent } from '../pages/system.mana/system.market/system
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        SystemInvitationComponent,
+        SystemHomeComponent,
+        SystemMineComponent,
+        SystemTradeComponent,
         AppComponent,
     ],
     imports: [
@@ -67,6 +75,10 @@ import { SystemMarketComponent } from '../pages/system.mana/system.market/system
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        SystemInvitationComponent,
+        SystemHomeComponent,
+        SystemMineComponent,
+        SystemTradeComponent,
         ComponentModule,
         ReactiveFormsModule
     ]

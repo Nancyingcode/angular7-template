@@ -9,10 +9,8 @@
         </div>
       </li>
     </ul>
-    <div class="">
-      <div class="cus-pill" [class.selected]="menu === selectedList" *ngFor="let menu of menuList" (click)="onSelect(menu)">
-        {{menu.name}}
-      </div>
+    <div>
+      <app-list [list]="list"></app-list>
     </div>
   </div>
   <div class="clear-pd col-right">

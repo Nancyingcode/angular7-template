@@ -1,0 +1,3 @@
+<div class="cus-pill" [class.selected]="item === selectedList" *ngFor="let item of list" (click)="select(item)">
+  {{item.name}}
+</div>

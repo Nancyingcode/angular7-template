@@ -7,4 +7,7 @@ import { Component, Injectable } from '@angular/core';
 })
 
 @Injectable()
-export class NavComponent { }
+export class NavComponent {
+    public img = '../../../assets/pic/start.png';
+    public logOut = '退出登录';
+}

@@ -5,6 +5,7 @@ import { Log } from '../../tools/console';
 import { List } from './index';
 import { Config } from '../../config/config';
 const { admin, account } = Config.userMana;
+const { market, mine, invitation, trade, sHome } = Config.sysMana;
 const console = new Log('MenuComponet');
 const secondMenu = {
     0: [
@@ -18,20 +19,20 @@ const secondMenu = {
     1: [
         {
             name: '商城管理',
-            url: ''
+            url: market
         }, {
             name: '关于我们栏目管理',
-            url: ''
+            url: mine
         }, {
             name: '邀请码管理',
-            url: ''
+            url: invitation
         }, {
             name: '交易中心',
-            url: ''
+            url: trade
         },
         {
             name: '首页设计',
-            url: ''
+            url: sHome
         }
     ]
 };
@@ -43,7 +44,7 @@ const secondMenu = {
 
 @Injectable()
 export class MenuComponent implements OnInit {
-    @Input() default: any[];
+    @Input() list: any[];
     public menuList: List[];
     public firstMenu =
         [
@@ -68,13 +69,6 @@ export class MenuComponent implements OnInit {
 
     ngOnInit() {
         this.setDefaultMenu();
-        this.setDefaultList();
-        console.log('menu:', JSON.stringify(this.menuList));
-    }
-
-    onSelect(menu?: List) {
-        this.selectedList = menu;
-        this.go(menu.url);
     }
 
     selectMenu(item: any) {
@@ -86,10 +80,6 @@ export class MenuComponent implements OnInit {
         this.router.navigate([url]);
     }
 
-    setDefaultList() {
-        this.selectedList = this.getFirstObj(this.menuList);
-        this.go(this.selectedList.url);
-    }
 
     setDefaultMenu() {
         this.selectedMenu = this.getFirstObj(this.firstMenu);
@@ -97,7 +87,7 @@ export class MenuComponent implements OnInit {
     }
 
     setMenuList(index: number) {
-        this.menuList = secondMenu[index];
+        this.list = secondMenu[index];
     }
 
     getFirstObj(obj: any) {
