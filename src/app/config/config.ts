@@ -24,7 +24,7 @@ export class Config {
         market: 'market',
         marketL: 'item',
         marketO: 'order',
-        marketU: '',
+        marketU: 'updateItem',
         sHome: 'home',
         invitation: 'invitation',
         mine: 'mine',
@@ -59,4 +59,11 @@ export class Config {
         mine: Config.div + Config.pathList.sysM + Config.div + Config.pathList.mine,
         trade: Config.div + Config.pathList.sysM + Config.div + Config.pathList.trade
     };
+
+    public static apis = {
+        login: '',
+        adminInfo: '',
+        adminAdd: '',
+        adminDelete: ''
+    }
 }

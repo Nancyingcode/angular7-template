@@ -1,11 +1,11 @@
 <div class="template">
-  <app-pointer-button [alert]="alert"></app-pointer-button>
+  <app-pointer-button [props]="props"></app-pointer-button>
   <form class="ml" [formGroup]="adminAForm" (ngSubmit)="submit()">
     <div class="form-group row" *ngFor="let item of list">
       <label class="col-sm-1 col-form-label">{{item.title}}</label>
       <div class="col-sm-3">
-        <input type={{item.type}} [readonly]="item.readonly" class={{item.clz}} placeholder={{item.placeholder}}
-          [class.is-invalid]="true" (blur)="validate()" formControlName={{item.name}}>
+        <input type={{item.type}} [readonly]="item.readonly" class={{item.clz}} placeholder={{item.placeholder}} [class.is-invalid]="true"
+          (blur)="validate()" formControlName={{item.name}}>
       </div>
       <small id="passwordHelpInline" class="text-muted wt">
         {{item.wt}}

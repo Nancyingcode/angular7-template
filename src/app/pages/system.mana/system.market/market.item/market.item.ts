@@ -2,7 +2,7 @@ import { Component, Injectable, Input, OnInit, TemplateRef } from '@angular/core
 import { Config } from '../../../../config/config';
 import { Log } from '../../../../tools/console';
 const console = new Log('MarketItemComponent');
-const { marketL } = Config.sysMana;
+const { marketL, marketU } = Config.sysMana;
 import { Router } from '@angular/router';
 
 @Component({
@@ -40,11 +40,11 @@ export class MarketItemComponent {
         callback: this.delete
     }];
 
-    update(router: Router, url: string) {
-        router.navigate([url]);
+    update(router: Router) {
+        router.navigate([marketU]);
     }
 
-    delete(router: Router, url: string) {
-        router.navigate([url]);
+    delete(router: Router) {
+        router.navigate([marketL]);
     }
 }

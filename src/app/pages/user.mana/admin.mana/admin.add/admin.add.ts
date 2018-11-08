@@ -13,7 +13,10 @@ const console = new Log('AdminAddComponent');
 
 @Injectable()
 export class AdminAddComponent implements OnInit {
-    public alert = ['管理员管理', '添加管理员'];
+    public props = {
+        alert: ['管理员管理', '添加管理员'],
+        callback: this.back
+    };
     public buttons = [{
         name: '提交'
     }, {
@@ -61,6 +64,10 @@ export class AdminAddComponent implements OnInit {
 
     setDefault() {
 
+    }
+
+    back(router: Router) {
+        router.navigate(['../']);
     }
 
     validate() { }

@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // this.show();
-    this.login();
+    // this.login();
   }
 
   async login() {

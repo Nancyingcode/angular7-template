@@ -2,7 +2,7 @@ import { Component, Injectable, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Log } from '../../../tools/console';
 import { Config } from '../../../config/config';
-const { marketL } = Config.sysMana;
+const { marketL, marketU } = Config.sysMana;
 import { from } from 'rxjs';
 const console = new Log('ButtonComponent');
 interface Prop {
@@ -24,8 +24,8 @@ export class ButtonComponent {
      * callback
      */
     constructor(private router: Router) { }
-    select(callback) {
-        console.err(callback);
-        callback(this.router, marketL);
+    select(button: any) {
+        console.err(marketL);
+        button.callback(this.router);
     }
 }

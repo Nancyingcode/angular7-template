@@ -1,10 +1,9 @@
 <div class="clearfix">
   <div class="btn-group">
-    <app-normal-button *ngFor="let item of props" [buttonProp]='item' class="mr" [active]="item === selectedItem"
-      (click)="select(item)"></app-normal-button>
+    <app-normal-button *ngFor="let item of props" [buttonProp]='item' class="mr" [active]="item === selectedItem" (click)="select(item)"></app-normal-button>
   </div>
   <div class="input">
     <app-search-input></app-search-input>
   </div>
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

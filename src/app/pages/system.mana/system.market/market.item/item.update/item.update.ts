@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 
 export class ItemUpdateComponent {
     public props = {
-        alter: ['商城管理', '产品列表', '修改产品信息'],
+        alert: ['商城管理', '产品列表', '修改产品信息'],
         callback: this.go
     };
 

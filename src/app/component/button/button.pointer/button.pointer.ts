@@ -29,7 +29,6 @@ export class ButtonPointerComponent implements OnInit {
 
     back() {
         this.props.callback(this.router, marketU);
-        // this.router.navigate(['../']);
     }
 
     setAlter() {
