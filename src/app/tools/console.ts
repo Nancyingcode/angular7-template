@@ -46,7 +46,7 @@ export class Log {
 
     err(...obj) {
         if (Log.errOn) {
-            console.error('%c' + this.content + obj, 'color:' + colors.red);
+            console.log('%c' + this.content + obj, 'color:' + colors.red);
         }
     }
 

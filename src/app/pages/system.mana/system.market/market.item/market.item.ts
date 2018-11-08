@@ -1,5 +1,9 @@
 import { Component, Injectable, Input, OnInit, TemplateRef } from '@angular/core';
 import { Config } from '../../../../config/config';
+import { Log } from '../../../../tools/console';
+const console = new Log('MarketItemComponent');
+const { marketL } = Config.sysMana;
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-market-item',
@@ -30,9 +34,17 @@ export class MarketItemComponent {
     ];
     public buttonProps = [{
         name: '修改',
-        router: ''
+        callback: this.update
     }, {
         name: '下架',
-        router: ''
+        callback: this.delete
     }];
+
+    update(router: Router, url: string) {
+        router.navigate([url]);
+    }
+
+    delete(router: Router, url: string) {
+        router.navigate([url]);
+    }
 }
