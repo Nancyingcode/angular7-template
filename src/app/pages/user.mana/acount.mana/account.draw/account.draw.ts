@@ -16,7 +16,7 @@ const { userM, account, accountI } = Config.userMana;
 @Injectable()
 export class AccountDrawComponent implements OnInit {
     public table = [
-        ['账号', 'ETH数量', 'AECE数量', '普通积分数量', '可兑换积分数量'],
+        ['账号', '币种名称', '数量', '时间', '提币钱包地址'],
         ['usr', 'eth', 'aece', 'nitg', 'aitg'], [{
             usr: 'asda',
             eth: 'dsad',

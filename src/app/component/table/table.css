@@ -60,6 +60,9 @@
 .mt {
   margin-top: 15px;
 }
+.vm {
+  vertical-align: middle;
+}
 .flex-col {
   display: flex;
 }

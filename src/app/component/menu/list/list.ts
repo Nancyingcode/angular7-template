@@ -19,14 +19,18 @@ export class ListComponent implements OnInit, OnChanges {
     constructor(private router: Router) { }
 
     ngOnInit() {
-        this.setDefaultItem();
-        this.go(this.selectedList.url);
+        this.change();
     }
 
     ngOnChanges() {
-        this.setDefaultItem(); // list更新时候也刷新
+        this.change(); // list更新时候也刷新
     }
 
+    /**
+     *
+     * 设置选择的list
+     * 并跳转到它
+     */
     select(list?: List) {
         this.selectedList = list;
         this.go(list.url);
@@ -34,6 +38,12 @@ export class ListComponent implements OnInit, OnChanges {
 
     setDefaultItem() {
         this.selectedList = this.getFirstObj(this.list);
+    }
+
+    change() {
+        this.setDefaultItem();
+        console.log('change method', this.selectedList.url);
+        this.go(this.selectedList.url);
     }
 
     go(url: string) {

@@ -38,7 +38,7 @@ export class AccountManaComponent implements OnInit {
     }
 
     setDefault() {
-        this.router.navigate([accountW]);
+        this.router.navigate([accountI]);
     }
 
     go(router: Router, url: string) {

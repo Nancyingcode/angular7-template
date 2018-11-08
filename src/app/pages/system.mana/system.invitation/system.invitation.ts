@@ -9,13 +9,28 @@ const { admin, account } = Config.userMana;
 })
 
 export class SystemInvitationComponent {
-    public list = [
-        {
-            name: '管理员管理',
-            url: admin
-        },
-        {
-            name: '账号管理',
-            url: account
-        }];
+    public data: any[] = [
+        ['账户', '我的邀请码', '邀请的人'],
+        ['id', 'code', 'inv'],
+        [{
+            id: 1,
+            code: 'nancying1',
+            inv: 'baoan',
+        }, {
+            id: 2,
+            code: 'nancying2',
+            inv: 'baoan',
+        }, {
+            id: 3,
+            code: 'nancying3',
+            inv: 'baoan',
+        }]
+    ];
+    // public buttonauthors = [{
+    //     name: '修改',
+    //     router: ''
+    // }, {
+    //     name: '下架',
+    //     router: ''
+    // }];
 }

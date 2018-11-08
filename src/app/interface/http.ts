@@ -1,5 +1,5 @@
 export interface HttpResult {
-    code: string;
+    code: number;
     msg: string;
     data: any;
 }

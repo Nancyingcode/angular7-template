@@ -8,7 +8,7 @@ import { HttpResult } from '../interface/http';
 import { Config } from '../config/config';
 const { home, login } = Config.routerList;
 const console = new Log('login');
-const loginApi = 'http://localhost:80/api/result.json';
+const loginApi = '/api/bgUserManager/bgLogin';
 const reLoginApi = '';
 const registrpApi = '';
 
@@ -26,10 +26,10 @@ export class LoginService {
 
     async login() {
         // if (localStorage.getItem(this.userName) !== null) { this.reLogin(); }
-        const userInfo: UserInfo = { userName: this.userName, password: this.password };
+        // const userInfo = { account: this.userName, loginPwd: this.password };
+        const userInfo = { account: 'AECE88', loginPwd: '123888' };
         const loginRes = await this.http.req('post', loginApi, userInfo);
-        console.log('loginRes:' + this.getJson(loginRes));
-        if (loginRes.code !== '200') {
+        if (loginRes.code !== 200) {
             this.timer++;
             if (this.timer > 30) {
                 console.err('服务器异常,请稍后再试');
@@ -51,7 +51,7 @@ export class LoginService {
     async reLogin() {
         const userInfo: TokenInfo = this.getTokenInfo();
         const loginRes = await this.http.req('post', reLoginApi, userInfo);
-        if (loginRes.code !== '200') {
+        if (loginRes.code !== 200) {
             console.log('已在别处登录，3s后返回登录界面');
             this.isLogin = false;
             this.router.navigate([login]);
@@ -65,7 +65,7 @@ export class LoginService {
     async registor() {
         const userInfo: UserInfo = this.getUserInfo();
         const registorRes: HttpResult = await this.http.req('post', registrpApi, userInfo);
-        if (registorRes.code !== '200') { return; }
+        if (registorRes.code !== 200) { return; }
         localStorage.setItem(this.userName, registorRes.data);
         this.isLogin = true;
         this.router.navigate([home]);

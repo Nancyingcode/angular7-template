@@ -24,6 +24,12 @@ import { SystemInvitationComponent } from '../pages/system.mana/system.invitatio
 import { SystemHomeComponent } from '../pages/system.mana/system.home/system.home';
 import { SystemMineComponent } from '../pages/system.mana/system.mine/system.mine';
 import { SystemTradeComponent } from '../pages/system.mana/system.trade/system.trade';
+import { MarketItemComponent } from '../pages/system.mana/system.market/market.item/market.item';
+import { MarketOrderComponent } from '../pages/system.mana/system.market/market.order/market.order';
+import { HomeCarouselComponent } from '../pages/system.mana/system.home/home.carousel/home.carousel';
+import { HomePostComponent } from '../pages/system.mana/system.home/home.post/home.post';
+import { SystemManaModule } from './system.mana/system.mana.module';
+import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.item/item.update/item.update';
 
 
 
@@ -45,8 +51,13 @@ import { SystemTradeComponent } from '../pages/system.mana/system.trade/system.t
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        MarketItemComponent,
+        ItemUpdateComponent,
+        MarketOrderComponent,
         SystemInvitationComponent,
         SystemHomeComponent,
+        HomeCarouselComponent,
+        HomePostComponent,
         SystemMineComponent,
         SystemTradeComponent,
         AppComponent,
@@ -55,6 +66,7 @@ import { SystemTradeComponent } from '../pages/system.mana/system.trade/system.t
         BrowserModule,
         ComponentModule,
         UserManaModule,
+        SystemManaModule,
         ReactiveFormsModule
     ],
     exports: [
@@ -75,8 +87,13 @@ import { SystemTradeComponent } from '../pages/system.mana/system.trade/system.t
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        MarketItemComponent,
+        ItemUpdateComponent,
+        MarketOrderComponent,
         SystemInvitationComponent,
         SystemHomeComponent,
+        HomeCarouselComponent,
+        HomePostComponent,
         SystemMineComponent,
         SystemTradeComponent,
         ComponentModule,

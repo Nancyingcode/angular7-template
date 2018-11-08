@@ -10,6 +10,7 @@ export class Config {
         home: 'home',
         login: 'login',
         userM: 'user-mana',
+        sysM: 'sys-mana',
         account: 'account',
         accountI: 'info',
         accountW: 'weal',
@@ -21,6 +22,9 @@ export class Config {
         adminD: 'delete',
         adminI: 'info',
         market: 'market',
+        marketL: 'item',
+        marketO: 'order',
+        marketU: '',
         sHome: 'home',
         invitation: 'invitation',
         mine: 'mine',
@@ -45,10 +49,14 @@ export class Config {
     };
 
     public static sysMana = {
-        market: Config.div + Config.pathList.market,
-        sHome: Config.div + Config.pathList.sHome,
-        invitation: Config.div + Config.pathList.invitation,
-        mine: Config.div + Config.pathList.mine,
-        trade: Config.div + Config.pathList.trade
+        sysM: Config.div + Config.pathList.sysM,
+        market: Config.div + Config.pathList.sysM + Config.div + Config.pathList.market,
+        marketU: Config.div + Config.pathList.sysM + Config.div + Config.pathList.marketU,
+        marketL: Config.div + Config.pathList.sysM + Config.div + Config.pathList.market + Config.div + Config.pathList.marketL,
+        marketO: Config.div + Config.pathList.sysM + Config.div + Config.pathList.market + Config.div + Config.pathList.marketO,
+        sHome: Config.div + Config.pathList.sysM + Config.div + Config.pathList.sHome,
+        invitation: Config.div + Config.pathList.sysM + Config.div + Config.pathList.invitation,
+        mine: Config.div + Config.pathList.sysM + Config.div + Config.pathList.mine,
+        trade: Config.div + Config.pathList.sysM + Config.div + Config.pathList.trade
     };
 }

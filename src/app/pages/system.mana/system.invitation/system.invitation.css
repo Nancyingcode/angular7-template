@@ -63,13 +63,3 @@
 .vm {
   vertical-align: middle;
 }
-.cus-btn {
-  background: rgba(0, 0, 0, 0);
-  color: #20BDFF;
-  font-size: 14px;
-  border: none;
-}
-.cus-btn:hover {
-  color: #fff;
-  transition: color 0.3s ease-in-out;
-}
