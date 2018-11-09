@@ -13,6 +13,7 @@ export class Config {
         sysM: 'sys-mana',
         account: 'account',
         accountI: 'info',
+        accountU: 'update',
         accountW: 'weal',
         accountR: 'recharge',
         accountD: 'draw',
@@ -37,7 +38,8 @@ export class Config {
     public static userMana = {
         userM: Config.div + Config.pathList.userM,
         account: Config.div + Config.pathList.userM + Config.div + Config.pathList.account,
-        accountI: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountI,
+        accountI: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountU,
+        accountU: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountI,
         accountW: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountW,
         accountR: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountR,
         accountD: Config.div + Config.pathList.userM + Config.div + Config.pathList.account + Config.div + Config.pathList.accountD,
@@ -61,9 +63,18 @@ export class Config {
     };
 
     public static apis = {
-        login: '',
-        adminInfo: '',
+        login: '/api/bgUserManager/bgLogin',
+        adminInfo: '/api/bgUserManager/showAllManager',
         adminAdd: '',
-        adminDelete: ''
-    }
+        adminDelete: '',
+        adminUpdate: '',
+        accountInfo: '/api/bgUserManager/userInfoManagerPageShow',
+        accountDraw: '',
+        accountRecharge: '',
+        accountWeal: '',
+        sysHome: '',
+        sysInv: '',
+        sysMarket: '',
+        sysMine: '',
+    };
 }

@@ -25,14 +25,11 @@ import { NavComponent } from './component/nav/nav';
     // NavComponent,
   ],
   imports: [
-    // ComponentModule,
+    ServiceModule,
     PageModule,
-    // BrowserModule.withServerTransition({ appId: 'my-app' }),
     HttpsModule,
     FormsModule,
-    ServiceModule,
     InterceptorModule,
-    // BrowserAnimationsModule,
   ],
   providers: [
     HttpService,

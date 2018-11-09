@@ -1,7 +1,10 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Config } from '../../../../config/config';
+import { AdminService } from 'src/app/service/admin.service';
+import { Log } from '../../../../tools/console';
 const { adminU, adminA, adminD } = Config.userMana;
+const console = new Log('AdminInfoComponent');
 
 @Component({
     selector: 'app-admin-info',
@@ -10,52 +13,49 @@ const { adminU, adminA, adminD } = Config.userMana;
 })
 
 @Injectable()
-export class AdminInfoComponent {
+export class AdminInfoComponent implements OnInit {
 
     public buttonTotal = '总人数';
     public img = '../../../../assets/pic/admin-mana-user.png';
     public buttonAdd = {
         name: '添加管理员'
     };
-    public data: any[] = [
-        ['账号', '密码', '最后登录时间', '管理员属性', '操作'],
-        ['id', 'name', 'addr', 'prop'],
-        [{
-            id: 1,
-            name: 'nancying1',
-            addr: 'baoan',
-            prop: '超级管理员'
-        }, {
-            id: 2,
-            name: 'nancying2',
-            addr: 'baoan',
-            prop: '超级管理员'
-        }, {
-            id: 3,
-            name: 'nancying3',
-            addr: 'baoan',
-            prop: '超级管理员'
-        }]
-    ];
+    public data: any[] = undefined;
     public buttonProps = [{
         name: '修改',
-        router: adminU
+        callback: this.update
     },
     {
         name: '删除',
-        router: adminD
+        callback: this.delete
     }];
-    constructor(private router: Router) { }
+    constructor(private router: Router, private as: AdminService) { }
 
-    update() {
-        this.router.navigate([adminU]);
+    ngOnInit() {
+        this.setData();
     }
 
-    delete() {
-        this.router.navigate([adminU]);
+    async getData() {
+        const data = await this.as.getList();
+        console.logger('getData:', data.content);
+        return data.content;
     }
 
-    add() {
+    async setData() {
+        const data = await this.getData();
+        this.data = [
+            ['账号', '密码', '最后登录时间', '管理员属性'],
+            ['id', 'pwd', 'lastLoginTime', 'level'],
+            data
+        ];
+    }
+
+    async delete(managerId: number) {
+        const res = await this.as.deleteManager(managerId);
+    }
+
+    async update(data: any) {
+        const res = await this.as.updateManager(data);
         this.router.navigate([adminA]);
     }
 }

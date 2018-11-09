@@ -7,11 +7,8 @@ import { UserInfo, TokenInfo } from '../interface/login';
 import { HttpResult } from '../interface/http';
 import { Config } from '../config/config';
 const { home, login } = Config.routerList;
-const { adminInfo, adminAdd, adminDelete } = Config.apis;
+const { adminInfo, adminAdd, adminDelete, adminUpdate } = Config.apis;
 const console = new Log('admin');
-const loginApi = '/api/bgUserManager/bgLogin';
-const reLoginApi = '';
-const registrpApi = '';
 
 @Injectable()
 export class AdminService {
@@ -24,11 +21,15 @@ export class AdminService {
         return res.data;
     }
 
-    async addManager() {
-        const res = await this.http.req('post', adminAdd, '');
+    async addManager(data: any) {
+        return await this.http.req('post', adminAdd, '');
     }
 
-    async deleteManager() {
-        const res = await this.http.req('post', adminAdd, '');
+    async deleteManager(managerId: number) {
+        return await this.http.req('post', adminDelete, '');
+    }
+
+    async updateManager(data: any) {
+        const res = await this.http.req('post', adminUpdate, '');
     }
 }

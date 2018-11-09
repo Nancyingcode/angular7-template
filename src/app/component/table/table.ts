@@ -34,9 +34,12 @@ export class TableComponent implements OnInit, AfterViewInit {
     }
 
     setState() {
-        console.log(this.props);
+        console.logger('props', this.props);
         this.tabTitles = this.props[0];
+        const obj = this.props[2];
+        // this.tabProps = Object.keys(obj[0]);
         this.tabProps = this.props[1];
+        // console.logger(obj[0]);
         this.list = this.props[2];
     }
 

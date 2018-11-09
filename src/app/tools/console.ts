@@ -38,7 +38,7 @@ export class Log {
         }
     }
 
-    info(...obj) {
+    logger(...obj) {
         if (Log.infoOn) {
             console.log('%c' + this.content + obj, 'color:' + colors.green);
             console.log(obj);

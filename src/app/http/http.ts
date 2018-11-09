@@ -25,27 +25,19 @@ const console = new Log('http');
 @Injectable()
 export class HttpService {
 
-    constructor(private http: Http,
-        private httpc: HttpClient
-    ) { }
+    constructor(private http: Http, private httpc: HttpClient) { }
 
     async request(method: string, api: string, data: any, options?: any) {
         const body = Object.assign(data, {});
-        console.log('Method:' + method, 'sendTo:' + api, 'data:' + JSON.stringify(data));
-        const res = await this.httpc.request(method, api, {
-            body: body ? body : {}
-        } || {}).toPromise();
-        console.log('get:', JSON.stringify(res));
+        console.logger('Method:' + method, 'sendTo:' + api, 'data:' + JSON.stringify(data));
+        const res = await this.httpc.request(method, api, { body: body || {} }).toPromise();
+        console.logger('get:', JSON.stringify(res));
         return res;
     }
 
     async req(method: string, api: string, data: any, options?: any) {
         const res = await this.request(method, api, data);
-        const respone: HttpResult = {
-            code: res['code'],
-            msg: res['msg'],
-            data: res['data']
-        };
+        const respone: HttpResult = { code: res['code'], msg: res['msg'], data: res['data'] };
         return respone;
     }
 

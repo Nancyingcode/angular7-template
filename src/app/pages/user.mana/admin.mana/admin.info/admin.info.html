@@ -4,5 +4,5 @@
 </button>
 <div class="template">
   <app-small-button [prop]="buttonAdd" class="add-btn" (click)="add()"></app-small-button>
-  <app-table [props]="data" [buttonProps]="buttonProps"></app-table>
+  <app-table [props]="data" [buttonProps]="buttonProps" *ngIf="data !== undefined"></app-table>
 </div>
