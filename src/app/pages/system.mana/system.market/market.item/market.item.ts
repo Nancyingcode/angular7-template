@@ -40,11 +40,11 @@ export class MarketItemComponent {
         callback: this.delete
     }];
 
-    update(router: Router) {
+    update(item: any, router: Router) {
         router.navigate([marketU]);
     }
 
-    delete(router: Router) {
+    delete(item: any, router: Router) {
         router.navigate([marketL]);
     }
 }

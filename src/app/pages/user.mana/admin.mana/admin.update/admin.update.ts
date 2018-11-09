@@ -2,6 +2,7 @@ import { Component, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { Config } from '../../../../config/config';
+import { AdminService } from 'src/app/service/admin.service';
 
 @Component({
     selector: 'app-admin-update',
@@ -14,9 +15,13 @@ export class AdminUpdataComponent implements OnInit {
 
     public alert = ['管理员管理', '添加管理员'];
     public buttons = [{
-        name: '提交'
+        name: '提交',
+        callback: this.update
     }, {
-        name: '返回'
+        name: '返回',
+        callback: function (item: any, router: Router) {
+            router.navigate(['../']);
+        }
     }];
     public list = [
         {
@@ -62,15 +67,18 @@ export class AdminUpdataComponent implements OnInit {
         pswd: [''],
         repswd: ['']
     });
-    constructor(private router: Router, private fb: FormBuilder) { }
+    constructor(private router: Router, private fb: FormBuilder, private as: AdminService) { }
 
     ngOnInit() {
         console.log(location.pathname);
     }
 
-    setDefault() {
-
+    async update(item: any) {
+        const { account, oldPwd, newPwd } = item;
+        const data = { account, oldPwd, newPwd };
+        return await this.as.updateManager(data);
     }
+    setDefault() { }
 
     validate() { }
 

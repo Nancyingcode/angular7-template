@@ -50,12 +50,14 @@ export class AdminInfoComponent implements OnInit {
         ];
     }
 
-    async delete(managerId: number) {
-        const res = await this.as.deleteManager(managerId);
+    async delete(item: any, router?: Router) {
+        const res = await this.as.deleteManager(item.managerId);
     }
 
     async update(data: any) {
         const res = await this.as.updateManager(data);
         this.router.navigate([adminA]);
     }
+
+    async add() { }
 }

@@ -63,3 +63,16 @@
 .vm {
   vertical-align: middle;
 }
+.ml {
+  margin-left: 45px;
+}
+.vm {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wt {
+  color: #dc3545 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

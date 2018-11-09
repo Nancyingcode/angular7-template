@@ -18,14 +18,16 @@ interface Prop {
 
 export class ButtonComponent {
     @Input() props: Prop;
+    @Input() item: any; // 要操作的对象
 
     /**
      * 点击的方法
      * callback
      */
     constructor(private router: Router) { }
+
     select(button: any) {
         console.err(marketL);
-        button.callback(this.router);
+        button.callback(this.item, this.router);
     }
 }

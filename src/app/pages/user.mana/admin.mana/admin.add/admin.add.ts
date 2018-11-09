@@ -69,7 +69,6 @@ export class AdminAddComponent implements OnInit {
     back(router: Router) {
         router.navigate(['../']);
     }
-
     validate() { }
 
     submit() { }

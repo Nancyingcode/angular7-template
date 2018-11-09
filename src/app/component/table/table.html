@@ -8,7 +8,7 @@
     <tr class="row-pill" *ngFor="let item of list">
       <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>
       <th>
-        <app-button-group [props]="buttonProps"></app-button-group>
+        <app-button-group [props]="buttonProps" [item]="item"></app-button-group>
       </th>
       <td></td>
     </tr>

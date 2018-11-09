@@ -1,21 +1,27 @@
 <div class="template">
   <app-pointer-button [props]="props"></app-pointer-button>
-  <!-- <form class="ml" [formGroup]="adminAForm" (ngSubmit)="submit()">
+  <form class="ml" [formGroup]="itemUpdateForm" (ngSubmit)="submit()">
     <div class="form-group row" *ngFor="let item of list">
       <label class="col-sm-1 col-form-label">{{item.title}}</label>
       <div class="col-sm-3">
         <input type={{item.type}} [readonly]="item.readonly" class={{item.clz}} placeholder={{item.placeholder}}
           [class.is-invalid]="true" (blur)="validate()" formControlName={{item.name}}>
+        <div class="valid-feedback">
+          {{item.rt}}
+        </div>
+        <div class="invalid-feedback">
+          {{item.wt}}
+        </div>
       </div>
-      <small id="passwordHelpInline" class="text-muted wt">
+      <!-- <small id="passwordHelpInline" class="text-muted wt">
         {{item.wt}}
-      </small>
+      </small> -->
     </div>
     <div class="form-group row">
       <label class="col-sm-1 col-form-label"></label>
       <div class="col-sm-3 ct mt">
-        <app-small-button [prop]="item" *ngFor="let item of buttons" class="mr"></app-small-button>
+        <app-small-button [prop]="item" *ngFor="let item of buttons" class="mr" aria-disabled="true"></app-small-button>
       </div>
     </div>
-  </form> -->
+  </form>
 </div>
