@@ -15,15 +15,13 @@ const console = new Log('AccountInfoComponent');
 @Injectable()
 export class AccountInfoComponent implements OnInit, OnChanges {
 
-    public data: any[];
+    public data: any[] = undefined;
     public api = '';
     public buttonProps = [{
         name: '修改',
         callback: this.update
     }];
-    constructor(private router: Router, private as: AccountService) {
-        this.setData();
-    }
+    constructor(private router: Router, private as: AccountService) { }
 
     async ngOnInit() {
         await this.setData();

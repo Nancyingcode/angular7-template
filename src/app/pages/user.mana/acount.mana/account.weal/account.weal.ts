@@ -1,6 +1,8 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { Config } from '../../../../config/config';
 import { Log } from '../../../../tools/console';
+import { ActionSequence } from 'protractor';
+import { AccountService } from '../../../../service/account.service';
 
 const console = new Log('AccountWealComponent');
 
@@ -15,31 +17,29 @@ const { userM, account, accountI } = Config.userMana;
 
 @Injectable()
 export class AccountWealComponent implements OnInit {
-    public table = [
-        ['账号', 'ETH数量', 'AECE数量', '普通积分数量', '可兑换积分数量'],
-        ['usr', 'eth', 'aece', 'nitg', 'aitg'], [{
-            usr: 'asda',
-            eth: 'dsad',
-            aece: 'asda',
-            nitg: 'dsad',
-            aitg: 'sad'
-        }, {
-            usr: 'asda',
-            eth: 'dsad',
-            aece: 'asda',
-            nitg: 'dsad',
-            aitg: 'sad'
-        }, {
-            usr: 'asda',
-            eth: 'dsad',
-            aece: 'asda',
-            nitg: 'dsad',
-            aitg: 'sad'
-        }]];
     public buttons = [{
         name: '修改',
         callback: function () { }
     }];
-    ngOnInit() { }
+    public data = undefined;
+
+    constructor(private as: AccountService) { }
+
+    ngOnInit() {
+        this.setData();
+    }
+
+    async getData() {
+        const data = await this.as.getWealList();
+        return data.content;
+    }
+
+    async setData() {
+        const data = await this.getData();
+        this.data = [
+            ['账号', 'ETH数量', 'AECE数量', '普通积分数量', '可兑换积分数量'],
+            ['usr', 'eth', 'aece', 'nitg', 'aitg'],
+            data];
+    }
 }
 

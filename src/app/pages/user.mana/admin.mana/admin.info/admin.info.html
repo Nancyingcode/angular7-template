@@ -1,8 +1,10 @@
-<button type="button" class="btn total-btn mb-3">
-  <img alt="..." src={{img}}>
-  <span>{{buttonTotal}}</span>
-</button>
-<div class="template">
-  <app-small-button [prop]="buttonAdd" class="add-btn" (click)="add()"></app-small-button>
-  <app-table [props]="data" [buttonProps]="buttonProps" *ngIf="data !== undefined"></app-table>
+<div *ngIf="data !== undefined">
+  <button type="button" class="btn total-btn mb-3">
+    <img alt="..." src={{img}}>
+    <span>{{buttonTotal}}</span>
+  </button>
+  <div class="template">
+    <app-small-button [prop]="buttonAdd" class="add-btn" (click)="add()"></app-small-button>
+    <app-table [props]="data" [buttonProps]="buttonProps"></app-table>
+  </div>
 </div>

@@ -30,7 +30,7 @@ export class ItemUpdateComponent {
         }];
     public list = [
         {
-            title: '用户名',
+            title: '产品编号',
             type: 'text',
             placeholder: 'Username',
             clz: 'form-control ',
@@ -39,8 +39,8 @@ export class ItemUpdateComponent {
             rt: '用户名可用',
             wt: '用户名格式不正确'
         }, {
-            title: '密码',
-            type: 'password',
+            title: '产品名称',
+            type: 'text',
             placeholder: 'Password',
             clz: 'form-control',
             readonly: false,
@@ -48,8 +48,8 @@ export class ItemUpdateComponent {
             rt: '',
             wt: '密码格式不正确'
         }, {
-            title: '确定',
-            type: 'password',
+            title: '产品图片',
+            type: 'text',
             placeholder: 'Password',
             clz: 'form-control',
             readonly: false,
@@ -58,8 +58,8 @@ export class ItemUpdateComponent {
             wt: '密码不匹配'
         },
         {
-            title: '确定',
-            type: 'password',
+            title: '产品价值',
+            type: 'text',
             placeholder: 'Password',
             clz: 'form-control',
             readonly: false,
@@ -68,8 +68,8 @@ export class ItemUpdateComponent {
             wt: '密码不匹配'
         },
         {
-            title: '确定',
-            type: 'password',
+            title: '材质',
+            type: 'text',
             placeholder: 'Password',
             clz: 'form-control',
             readonly: false,
@@ -78,8 +78,18 @@ export class ItemUpdateComponent {
             wt: '密码不匹配'
         },
         {
-            title: '确定',
-            type: 'password',
+            title: '产状',
+            type: 'text',
+            placeholder: 'Password',
+            clz: 'form-control',
+            readonly: false,
+            name: 'repassword',
+            rt: '',
+            wt: '密码不匹配'
+        },
+        {
+            title: '颜色',
+            type: 'text',
             placeholder: 'Password',
             clz: 'form-control',
             readonly: false,
@@ -90,7 +100,11 @@ export class ItemUpdateComponent {
     public itemUpdateForm = this.fb.group({
         userName: ['', Validators.required],
         password: ['', Validators.required],
-        repassword: ['', Validators.required]
+        repassword: ['', Validators.required],
+        userNames: ['', Validators.required],
+        passwords: ['', Validators.required],
+        repasswords: ['', Validators.required],
+        s: ['', Validators.required],
     });
 
     public state = {};

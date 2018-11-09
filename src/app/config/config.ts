@@ -75,8 +75,13 @@ export class Config {
         accountWeal: '',
         accountWealU: '/api/bgUserManager/updateUserAssets',
         sysHome: '',
+        homeCarousel: '',
+        carouselU: '',
+        postU: '',
+        homePost: '',
         sysInv: '',
         sysMarket: '',
         sysMine: '',
+        sysMineU: ''
     };
 }
