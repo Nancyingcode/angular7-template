@@ -9,6 +9,7 @@
 @color-blue: #20BDFF;
 @color-blue-d: rgb(17, 140, 192);
 @color-red: #dc3545;
+@input-border-color: rgb(206, 212, 218);
 @nav-height: 7vh;
 @color-black: #292929;
 @default-pd: 30px;
@@ -41,6 +42,17 @@
     position: relative;
     padding: @default-pd;
     background: @color-white;
+    height: calc(93vh - 2*@default-pd);
+    overflow-y: scroll;
+    .TA {
+        scrollbar-3dlight-color:gold;
+        scrollbar-arrow-color:blue;
+        scrollbar-base-color: #fff;
+        scrollbar-darkshadow-color:blue;
+        scrollbar-face-color: #fff;
+        scrollbar-highlight-color: #fff;
+        scrollbar-shadow-color: #fff;
+    }
 }
 
 .center{
@@ -125,4 +137,8 @@
 
     .ofl {
         overflow-y: scroll;
+    }
+
+    .file-input {
+        border: 1px solid @input-border-color
     }

@@ -27,6 +27,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { FormsModule } from '@angular/forms';
 import { TextToastComponent } from '../component/toast/textToast/text.toast';
 import { ListComponent } from '../component/menu/list/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -54,6 +55,7 @@ import { ListComponent } from '../component/menu/list/list';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         FormsModule,
         ModalModule.forRoot(),
         BsDatepickerModule.forRoot(),
@@ -63,6 +65,8 @@ import { ListComponent } from '../component/menu/list/list';
     ],
     exports: [
         AppRoutingModule,
+        NgZorroAntdModule,
+        BrowserAnimationsModule,
         NavComponent,
         TableComponent,
         ButtonComponent,

@@ -1,9 +1,4 @@
 <table class="table auto" #table>
-  <thead class="">
-    <tr>
-      <th scope="col-sm-1" *ngFor="let title of tabTitles" class="mr  th">{{title}}</th>
-    </tr>
-  </thead>
   <tbody>
     <tr class="row-pill" *ngFor="let item of list">
       <th scope="row" *ngFor="let tab of tabProps">{{item[tab]}}</th>

@@ -1,8 +1,15 @@
-# 需要使用Angular代理跨域 
+# What about this project
+
+- 商城管理
+- 用户管理
+
+# How to use
+
 ```javascript
-    npm run starts
+    npm install
 ```
-- 配置文件与src同级 `proxy.json`
+在根目录的`proxy.config`
+ `proxy.json`
 ```json
 {
     "/api":{
@@ -15,6 +22,7 @@
     }
 }
 ```
+将 `target` 修改为你的服务器地址
 # console
 > 在组件内引用 tools/console 的 Log类
 > const console = new Log('能代表当前组件的信息，类名即可');

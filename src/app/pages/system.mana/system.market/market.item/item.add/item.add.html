@@ -1,6 +1,6 @@
 <div class="template ">
   <app-pointer-button [props]="props"></app-pointer-button>
-  <form class="ml" [formGroup]="itemUpdateForm" (ngSubmit)="submit()">
+  <form class="ml" [formGroup]="itemAddForm" (ngSubmit)="submit()">
     <div class="form-group row" *ngFor="let item of list">
       <label class="col-sm-1 col-form-label">{{item.title}}</label>
       <div class="col-sm-3">
@@ -8,8 +8,8 @@
           [class.is-invalid]="itemUpdateForm.value[item.name] == ''" [class.file-input]="item.type === 'file'" (blur)="validate()"
           formControlName={{item.name}} *ngIf="item.type !== 'file'">
         <div class="clearfix" *ngIf="item.type === 'file'">
-          <nz-upload nzAction="https://jsonplaceholder.typicode.com/posts/" nzListType="picture-card" [(nzFileList)]="fileList"
-            [nzShowButton]="fileList.length < 3" [nzPreview]="handlePreview">
+          <nz-upload nzAction="preImageApi" nzListType="picture-card" [(nzFileList)]="fileList" [nzShowButton]="fileList.length < 3"
+            [nzPreview]="handlePreview">
             <i nz-icon type="plus"></i>
             <div class="ant-upload-text">Upload</div>
           </nz-upload>

@@ -14,9 +14,12 @@ const console = new Log('ItemUpdateComponent');
     styleUrls: ['./item.update.less']
 })
 
-export class ItemUpdateComponent {
+export class ItemAddComponent {
+    public previewImage = '';
+    public previewVisible = false;
+    public preImageApi = 'https://jsonplaceholder.typicode.com/posts/';
     public props = {
-        alert: ['商城管理', '产品列表', '修改产品信息'],
+        alert: ['商城管理', '产品列表', '上架产品'],
         callback: this.go
     };
 
@@ -147,9 +150,7 @@ export class ItemUpdateComponent {
             url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
         }
     ];
-    public previewImage = '';
-    public previewVisible = false;
-    public itemUpdateForm = this.fb.group({
+    public itemAddForm = this.fb.group({
         userName: ['yonghum', Validators.required],
         password: ['', Validators.required],
         repassword: ['', Validators.required],
@@ -168,16 +169,15 @@ export class ItemUpdateComponent {
     }
 
     async submit() {
-        if (this.itemUpdateForm.status === '') { return; }
+        if (this.itemAddForm.status === '') { return; }
         await this.updateItem();
     }
 
     back() { }
 
     async updateItem() {
-        const { } = this.itemUpdateForm.value;
-        const data = {};
-        const res = await this.ms.updateItem(data);
+        const data = this.itemAddForm.value;
+        const res = await this.ms.updateItem(this.itemAddForm.value);
     }
 
     validate(values: any) {

@@ -11,17 +11,6 @@
   position: relative;
   padding: 30px;
   background: #fff;
-  height: calc(33vh);
-  overflow-y: scroll;
-}
-.template .TA {
-  scrollbar-3dlight-color: gold;
-  scrollbar-arrow-color: blue;
-  scrollbar-base-color: #fff;
-  scrollbar-darkshadow-color: blue;
-  scrollbar-face-color: #fff;
-  scrollbar-highlight-color: #fff;
-  scrollbar-shadow-color: #fff;
 }
 .center {
   position: absolute;

@@ -26,6 +26,7 @@ export class Config {
         marketL: 'item',
         marketO: 'order',
         marketU: 'updateItem',
+        marketOD: 'orderDetail',
         sHome: 'home',
         invitation: 'invitation',
         mine: 'mine',
@@ -56,6 +57,7 @@ export class Config {
         marketU: Config.div + Config.pathList.sysM + Config.div + Config.pathList.marketU,
         marketL: Config.div + Config.pathList.sysM + Config.div + Config.pathList.market + Config.div + Config.pathList.marketL,
         marketO: Config.div + Config.pathList.sysM + Config.div + Config.pathList.market + Config.div + Config.pathList.marketO,
+        marketOD: Config.div + Config.pathList.sysM + Config.div + Config.pathList.marketOD,
         sHome: Config.div + Config.pathList.sysM + Config.div + Config.pathList.sHome,
         invitation: Config.div + Config.pathList.sysM + Config.div + Config.pathList.invitation,
         mine: Config.div + Config.pathList.sysM + Config.div + Config.pathList.mine,
@@ -82,6 +84,12 @@ export class Config {
         sysInv: '',
         sysMarket: '',
         sysMine: '',
-        sysMineU: ''
+        sysMineU: '',
+        upload: 'https://jsonplaceholder.typicode.com/posts/'
+    };
+
+    public static page = {
+        page: 1,
+        pageSize: 10
     };
 }
