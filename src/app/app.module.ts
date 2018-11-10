@@ -25,7 +25,6 @@ import { NavComponent } from './component/nav/nav';
     // NavComponent,
   ],
   imports: [
-    ServiceModule,
     PageModule,
     HttpsModule,
     FormsModule,

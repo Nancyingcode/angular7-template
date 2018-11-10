@@ -17,6 +17,7 @@ export class AdminInfoComponent implements OnInit {
 
     public buttonTotal = '总人数';
     public img = '../../../../assets/pic/admin-mana-user.png';
+    public service = this.as;
     public buttonAdd = {
         name: '添加管理员'
     };
@@ -31,14 +32,14 @@ export class AdminInfoComponent implements OnInit {
     }];
     constructor(private router: Router, private as: AdminService) { }
 
-    ngOnInit() {
-        this.setData();
+    async ngOnInit() {
+        await this.setData();
     }
 
     async getData() {
         const data = await this.as.getList();
-        console.logger('getData:', data.content);
-        return data.content;
+        console.logger('getData:', data);
+        return data;
     }
 
     async setData() {
@@ -54,10 +55,8 @@ export class AdminInfoComponent implements OnInit {
         const res = await this.as.deleteManager(item.managerId);
     }
 
-    async update(data: any) {
-        const res = await this.as.updateManager(data);
-        this.router.navigate([adminA]);
+    async update(item: any, router: Router, service: AdminService) {
+        router.navigate([adminU, item.account]);
     }
-
     async add() { }
 }

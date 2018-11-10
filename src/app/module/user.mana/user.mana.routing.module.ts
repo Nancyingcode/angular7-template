@@ -12,6 +12,7 @@ import { AdminDeleteComponent } from 'src/app/pages/user.mana/admin.mana/admin.d
 import { AccountWealComponent } from 'src/app/pages/user.mana/acount.mana/account.weal/account.weal';
 import { AccountDrawComponent } from 'src/app/pages/user.mana/acount.mana/account.draw/account.draw';
 import { AccountRechargeComponent } from 'src/app/pages/user.mana/acount.mana/account.recharge/account.recharge';
+import { WealUpdateComponent } from 'src/app/pages/user.mana/acount.mana/account.weal/weal.update/weal.update';
 
 
 
@@ -43,6 +44,10 @@ const userManaRoutes: Routes = [
                 ]
             },
             {
+                path: 'update/:account',
+                component: WealUpdateComponent
+            },
+            {
                 path: 'admin',
                 component: AdminManaComponent,
                 children: [
@@ -55,7 +60,7 @@ const userManaRoutes: Routes = [
                         component: AdminAddComponent
                     },
                     {
-                        path: 'update',
+                        path: 'update/:account',
                         component: AdminUpdataComponent
                     },
                     {

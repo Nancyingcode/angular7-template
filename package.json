@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "starts": "ng serve --proxy-config proxy.json --aot",
-    "builds": "ng build --aot",
+    "builds": "ng build --prod --aot --output-path=prod --base-href ./",
     "server": "ng run angular7-template:uni"
   },
   "private": true,

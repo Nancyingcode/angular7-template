@@ -45,7 +45,7 @@ export class AccountInfoComponent implements OnInit, OnChanges {
         ];
     }
 
-    update(router: Router) {
-        this.router.navigate([accountU]);
+    update(item: any, router: Router) {
+        // router.navigate([accountU]);
     }
 }

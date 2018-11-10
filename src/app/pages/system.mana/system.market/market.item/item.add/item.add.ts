@@ -9,9 +9,9 @@ import { MarketService } from 'src/app/service/market.service';
 const console = new Log('ItemUpdateComponent');
 
 @Component({
-    selector: 'app-item-update',
-    templateUrl: './item.update.html',
-    styleUrls: ['./item.update.less']
+    selector: 'app-item-add',
+    templateUrl: './item.add.html',
+    styleUrls: ['./item.add.less']
 })
 
 export class ItemAddComponent {
@@ -165,7 +165,7 @@ export class ItemAddComponent {
     constructor(private router: Router, private fb: FormBuilder, private msg: NzMessageService, private ms: MarketService) { }
 
     go(router: Router, url: string) {
-        router.navigate([url]);
+        router.navigate(['../']);
     }
 
     async submit() {

@@ -6,17 +6,18 @@ import { LoginService } from '../../service/login.service';
 const { userM } = Config.userMana;
 const console = new Log('Home');
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.html',
-    styleUrls: ['./home.less']
+    selector: 'app-demo',
+    templateUrl: './demo.html',
+    styleUrls: ['./demo.less']
 })
 
 
 @Injectable()
-export class HomeComponent implements OnInit {
+export class DemoComponent implements OnInit {
     constructor(private router: Router, private logins: LoginService) { }
     ngOnInit() {
-        this.setDefaultPage();
+        // this.go('/demo');
+        // this.setDefaultPage();
     }
 
     go(url: string) {
@@ -24,6 +25,6 @@ export class HomeComponent implements OnInit {
     }
 
     setDefaultPage() {
-        this.go(userM);
+        this.go('/demo');
     }
 }

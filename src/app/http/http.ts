@@ -13,7 +13,8 @@ import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Log } from '../tools/console';
-
+import { Config } from '../config/config';
+const { host } = Config;
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -29,18 +30,29 @@ export class HttpService {
 
     async request(method: string, api: string, data: any, options?: any) {
         const body = Object.assign(data, {});
-        console.logger('Method:' + method, 'sendTo:' + api, 'data:' + JSON.stringify(data));
-        const res = await this.httpc.request(method, api, { body: body || {} }).toPromise();
+        console.logger('Method:' + method, 'sendTo:' + api, 'data:' + JSON.stringify(body));
+        const req = {
+            body,
+        };
+        const res = await this.httpc.request(method, host + api, req).toPromise();
         console.logger('get:', JSON.stringify(res));
         return res;
     }
 
     async req(method: string, api: string, data: any, options?: any) {
-        const res = await this.request(method, api, data);
+        const res = await this.request(method, api, data, options);
         const respone: HttpResult = { code: res['code'], msg: res['msg'], data: res['data'] };
         return respone;
     }
 
+    getUserToken(obj) {
+        const token = this.getJson(obj).token;
+        return token ? token : '';
+    }
+
+    getJson(obj: any) {
+        return JSON.parse(JSON.stringify(obj));
+    }
     // getConfigResponse(method: string, api: string, data: any, options?: any): Observable<HttpResponse<any>> {
     //     return this.httpc.request<any>(method, api, options || {}).subscribe();}
     // async request(api: string, data: any, options?: any) {

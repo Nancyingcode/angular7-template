@@ -16,11 +16,10 @@
               <div class="input-group-prepend">
                 <span class="input-group-text input-title clear-bor">{{item.title}}</span>
               </div>
-              <input type={{item.type}} class="form-control clear-bor" placeholder={{item.placeholder}} aria-label="item.label"
-                formControlName={{item.name}}>
+              <input type={{item.type}} class="form-control clear-bor" placeholder={{item.placeholder}} formControlName={{item.name}}>
             </div>
             <div class="input-group mb-3 right">
-              <button type="button" class="btn btn-primary btn-block btn-login">{{loginBtn}}</button>
+              <button type="submit" class="btn btn-primary btn-block btn-login">{{loginBtn}}</button>
             </div>
           </form>
         </div>
@@ -28,3 +27,4 @@
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>

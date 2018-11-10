@@ -177,7 +177,7 @@ export class ItemUpdateComponent {
     async updateItem() {
         const { } = this.itemUpdateForm.value;
         const data = {};
-        const res = await this.ms.updateItem(data);
+        const res = await this.ms.updateItem(this.itemUpdateForm.value);
     }
 
     validate(values: any) {

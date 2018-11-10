@@ -11,9 +11,13 @@ import { Router } from '@angular/router';
 export class SmallButtonComponent implements OnInit {
     @Input() prop: any;
 
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit() {
+    }
+
+    select() {
+        this.prop.callback(this.router);
     }
 
 }

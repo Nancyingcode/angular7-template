@@ -11,6 +11,7 @@ import { MarketOrderComponent } from 'src/app/pages/system.mana/system.market/ma
 import { HomeCarouselComponent } from 'src/app/pages/system.mana/system.home/home.carousel/home.carousel';
 import { HomePostComponent } from 'src/app/pages/system.mana/system.home/home.post/home.post';
 import { ItemUpdateComponent } from 'src/app/pages/system.mana/system.market/market.item/item.update/item.update';
+import { OrderDetailComponent } from 'src/app/pages/system.mana/system.market/market.order/order.detail/order.detail';
 
 
 
@@ -36,6 +37,10 @@ const systemManaRoutes: Routes = [
             {
                 path: 'updateItem',
                 component: ItemUpdateComponent,
+            },
+            {
+                path: 'orderDetail',
+                component: OrderDetailComponent,
             },
             {
                 path: 'home',

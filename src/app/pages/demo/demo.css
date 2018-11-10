@@ -1,0 +1,95 @@
+.show {
+  display: inline-block !important;
+}
+.page {
+  position: relative;
+  height: 100vh;
+  letter-spacing: -3px;
+  overflow: hidden;
+}
+.template {
+  position: relative;
+  padding: 30px;
+  background: #fff;
+  height: calc(33vh);
+  overflow-y: scroll;
+}
+.template .TA {
+  scrollbar-3dlight-color: gold;
+  scrollbar-arrow-color: blue;
+  scrollbar-base-color: #fff;
+  scrollbar-darkshadow-color: blue;
+  scrollbar-face-color: #fff;
+  scrollbar-highlight-color: #fff;
+  scrollbar-shadow-color: #fff;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mc {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hover {
+  cursor: pointer;
+  background: #F4F4F4;
+  transition: background 0.3s linear;
+}
+.rlt {
+  position: relative;
+}
+.clear-pd {
+  padding: 0;
+}
+.clear-bor {
+  border: none;
+}
+.hover-rule {
+  cursor: pointer;
+}
+.ilb {
+  display: inline-block;
+  width: auto;
+}
+.flx-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mr {
+  margin-right: 30px;
+}
+.mr:last-child {
+  margin: 0;
+}
+.ct {
+  text-align: center;
+}
+.mt {
+  margin-top: 15px;
+}
+.vm {
+  vertical-align: middle;
+}
+.ml {
+  margin-left: 45px;
+}
+.vm {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wt {
+  color: #dc3545 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ofl {
+  overflow-y: scroll;
+}
+.file-input {
+  border: 1px solid #ced4da;
+}

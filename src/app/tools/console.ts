@@ -23,9 +23,9 @@ const colors = {
 };
 
 export class Log {
-    private static logOn = true;
-    private static infoOn = true;
-    private static errOn = true;
+    private static logOn = false;
+    private static infoOn = false;
+    private static errOn = false;
     private content: string;
 
     constructor(content: string) {

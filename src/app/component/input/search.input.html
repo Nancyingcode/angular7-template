@@ -9,11 +9,11 @@
 <div class="ilb">
   <div class="input-group cus-input">
     <div class="input-group-prepend">
-      <button class="btn clear-pd cus-btn" type="button" id="button-addon1">
+      <button class="btn clear-pd cus-btn" type="button" id="button-addon1" (click)='search(search.value)'>
         <img src={{searchPic}} alt="..." class="search-img">
       </button>
     </div>
     <input type="text" class="form-control cus-bor" placeholder="" aria-label="Example text with button addon"
-      aria-describedby="button-addon1">
+      aria-describedby="button-addon1" #search>
   </div>
 </div>

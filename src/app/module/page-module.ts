@@ -20,6 +20,7 @@ import { AccountDrawComponent } from '../pages/user.mana/acount.mana/account.dra
 import { AccountRechargeComponent } from '../pages/user.mana/acount.mana/account.recharge/account.recharge';
 import { SystemManaComponent } from '../pages/system.mana/system.mana';
 import { SystemMarketComponent } from '../pages/system.mana/system.market/system.market';
+
 import { SystemInvitationComponent } from '../pages/system.mana/system.invitation/system.invitation';
 import { SystemHomeComponent } from '../pages/system.mana/system.home/system.home';
 import { SystemMineComponent } from '../pages/system.mana/system.mine/system.mine';
@@ -30,6 +31,10 @@ import { HomeCarouselComponent } from '../pages/system.mana/system.home/home.car
 import { HomePostComponent } from '../pages/system.mana/system.home/home.post/home.post';
 import { SystemManaModule } from './system.mana/system.mana.module';
 import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.item/item.update/item.update';
+import { OrderDetailComponent } from '../pages/system.mana/system.market/market.order/order.detail/order.detail';
+import { ItemAddComponent } from '../pages/system.mana/system.market/market.item/item.add/item.add';
+import { WealUpdateComponent } from '../pages/user.mana/acount.mana/account.weal/weal.update/weal.update';
+import { DemoComponent } from '../pages/demo/demo';
 
 
 
@@ -44,6 +49,7 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
         AccountWealComponent,
         AccountDrawComponent,
         AccountRechargeComponent,
+        WealUpdateComponent,
         AdminManaComponent,
         AdminAddComponent,
         AdminUpdataComponent,
@@ -51,6 +57,8 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        OrderDetailComponent,
+        ItemAddComponent,
         MarketItemComponent,
         ItemUpdateComponent,
         MarketOrderComponent,
@@ -60,6 +68,7 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
         HomePostComponent,
         SystemMineComponent,
         SystemTradeComponent,
+        DemoComponent,
         AppComponent,
     ],
     imports: [
@@ -71,6 +80,7 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
     ],
     exports: [
         LoginComponent,
+        DemoComponent,
         HomeComponent,
         AppComponent,
         AccountManaComponent,
@@ -78,6 +88,7 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
         AccountManaComponent,
         AccountInfoComponent,
         AccountWealComponent,
+        WealUpdateComponent,
         AccountDrawComponent,
         AccountRechargeComponent,
         AdminManaComponent,
@@ -87,6 +98,8 @@ import { ItemUpdateComponent } from '../pages/system.mana/system.market/market.i
         AdminDeleteComponent,
         SystemManaComponent,
         SystemMarketComponent,
+        OrderDetailComponent,
+        ItemAddComponent,
         MarketItemComponent,
         ItemUpdateComponent,
         MarketOrderComponent,

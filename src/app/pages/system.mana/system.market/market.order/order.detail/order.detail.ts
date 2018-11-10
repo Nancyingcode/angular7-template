@@ -9,9 +9,9 @@ const { upload } = Config.apis;
 const { page } = Config;
 
 @Component({
-    selector: 'app-item-update',
-    templateUrl: './item.update.html',
-    styleUrls: ['./item.update.less']
+    selector: 'app-roder-detail',
+    templateUrl: './order.detail.html',
+    styleUrls: ['./order.detail.less']
 })
 
 export class OrderDetailComponent implements OnInit {

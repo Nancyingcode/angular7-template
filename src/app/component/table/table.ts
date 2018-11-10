@@ -19,8 +19,9 @@ interface Prop {
 @Injectable()
 export class TableComponent implements OnInit, AfterViewInit {
     @Input() props: any[];
-    @Input() api: string;
     @Input() buttonProps: Prop[];
+    @Input() service: any;
+    // @Input() searchButton: any;
     public tabTitles; // 表格的标题
     public tabProps: any; // 表格显示的字段
     public list: any[];

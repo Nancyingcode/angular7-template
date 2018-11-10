@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 
 export class DashComponent implements OnInit {
     @Input() props: ButtonProp[];
+    @Input() searchButton: any;
     public selectedItem: any;
 
     constructor(private router: Router) { }

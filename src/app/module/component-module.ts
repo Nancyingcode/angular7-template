@@ -28,6 +28,8 @@ import { FormsModule } from '@angular/forms';
 import { TextToastComponent } from '../component/toast/textToast/text.toast';
 import { ListComponent } from '../component/menu/list/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableListComponent } from '../component/table/table.list/table.list';
+import { ServiceModule } from './service-module';
 
 
 
@@ -38,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ButtonComponent,
         ButtonPointerComponent,
         SmallButtonComponent,
+        TableListComponent,
         ListComponent,
         MenuComponent,
         DefaultToastComponent,
@@ -57,6 +60,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
+        ServiceModule,
         ModalModule.forRoot(),
         BsDatepickerModule.forRoot(),
         TabsModule.forRoot(),
@@ -65,10 +69,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ],
     exports: [
         AppRoutingModule,
+        ServiceModule,
         NgZorroAntdModule,
         BrowserAnimationsModule,
         NavComponent,
         TableComponent,
+        TableListComponent,
         ButtonComponent,
         SmallButtonComponent,
         ButtonPointerComponent,

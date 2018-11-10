@@ -30,6 +30,6 @@ export class AdminService {
     }
 
     async updateManager(data: any) {
-        return await this.http.req('post', adminUpdate, '');
+        return await this.http.req('post', adminUpdate, data);
     }
 }

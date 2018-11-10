@@ -3,9 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from '../pages/login/login';
 import { TableComponent } from '../component/table/table';
+import { HomeComponent } from '../pages/home/home';
+import { DemoComponent } from '../pages/demo/demo';
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  // { path: 'admin-mana', component: ManagerComponent },
+  { path: 'home', component: HomeComponent },
+  // { path: 'demo', component: DemoComponent },
   {
     path: 'user-mana',
     loadChildren: './user.mana/user.mana.module#UserManaModule',

@@ -19,6 +19,7 @@ interface Prop {
 export class ButtonComponent {
     @Input() props: Prop;
     @Input() item: any; // 要操作的对象
+    @Input() service: any;
 
     /**
      * 点击的方法
@@ -28,6 +29,6 @@ export class ButtonComponent {
 
     select(button: any) {
         console.err(marketL);
-        button.callback(this.item, this.router);
+        button.callback(this.item, this.router, this.service);
     }
 }
