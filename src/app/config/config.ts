@@ -6,8 +6,6 @@ export const $url = http + host;
 
 export class Config {
     private static div = '/';
-    public static host = 'http://admin.ace.cn.com';
-    // public static host = 'http://artapi.jxxglc.cn';
     public static pathList = {
         home: 'home',
         login: 'login',
@@ -71,19 +69,19 @@ export class Config {
     };
 
     public static apis = {
-        login: '/api/bgUserManager/bgLogin',
-        reLogin: '/api/bgUserManager/bgLoginSecurity',
-        adminInfo: '/api/bgUserManager/showAllManager',
-        adminAdd: '/api/bgUserManager/createAdmin',
-        adminDelete: '/api/bgUserManager/deleteAdmin',
-        adminUpdate: '/api/bgUserManager/updateAdminPwd',
-        accountInfo: '/api/bgUserManager/userInfoManagerPageShow',
-        accountDetail: '/api/bgUserManager/userInfoDetail',
-        accountDraw: '/api/bgUserManager/coinTransactionOutPage',
-        accountRecharge: '/api/bgUserManager/coinTransactionInPage',
-        accountWeal: '/api/bgUserManager/userAssetsManagerPageShow',
-        accountWealU: '/api/bgUserManager/updateUserAssets',
-        accountWealD: '/api/bgUserManager/oneUserAssetsInfo',
+        login: '',
+        reLogin: '',
+        adminInfo: '',
+        adminAdd: '',
+        adminDelete: '',
+        adminUpdate: '',
+        accountInfo: '',
+        accountDetail: '',
+        accountDraw: '',
+        accountRecharge: '',
+        accountWeal: '',
+        accountWealU: '',
+        accountWealD: '',
         sysHome: '',
         homeCarousel: '',
         carouselU: '',
@@ -91,7 +89,7 @@ export class Config {
         homePost: '',
         sysInv: '',
         sysMarket: '',
-        sysMarketL: '/api/bgSystemManager/showGoodInfo',
+        sysMarketL: '',
         sysMine: '',
         sysMineU: '',
         upload: 'https://jsonplaceholder.typicode.com/posts/'
