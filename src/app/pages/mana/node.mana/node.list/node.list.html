@@ -1,0 +1,5 @@
+<div class="tbg">
+  <app-search-input [props]="searchButton"></app-search-input>
+  <app-href [prop]="buttonOutput" class="r-8" (click)="buttonOutput.callback()"></app-href>
+</div>
+<app-table [props]="data" [isPagination]="isPagination" [pagination]="paginationButton"></app-table>

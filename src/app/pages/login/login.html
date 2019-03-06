@@ -1,0 +1,37 @@
+<div class="container-fluid page div">
+  <div class="form-body shadow-lg rounded">
+    <div class="row cus-row">
+      <div class="col-sm-8 rlt">
+        <img src={{jumper}} class="rounded jumper center" alt="...">
+      </div>
+      <div class="col-sm-4 ct login-form-mobile">
+        <form class="form form-pill" [formGroup]="loginForm" (ngSubmit)="loadSubmit()">
+          <h1 class="title">{{title}}</h1>
+          <app-login-control *ngFor="let item of items" [hidden]="isHidden(item)">
+            <app-login-group [class.has-error]="loginForm.get(item.name).dirty && loginForm.get(item.name).errors">
+              <app-login-label>
+                <img src={{item.img}} alt="..." />
+              </app-login-label>
+              <div class="cus-div" [ngSwitch]="item.name">
+                <input type={{item.type}} placeholder={{item.placeholder}} formControlName={{item.name}}
+                  *ngSwitchDefault>
+                <ng-container *ngSwitchCase="'yzm'">
+                  <input 
+                  type={{item.type}} 
+                  class="cus-input" 
+                  placeholder={{item.placeholder}} 
+                  formControlName={{item.name}}>
+                  <app-login-code-label>
+                    <app-small-button [prop]="codeButton"></app-small-button>
+                  </app-login-code-label>
+                </ng-container>
+              </div>
+            </app-login-group>
+            <app-login-validate [explain]="item.wt" *ngIf="loginForm.get(item.name).dirty && loginForm.get(item.name).errors"></app-login-validate>
+          </app-login-control>
+          <button nz-button nzType="primary" type="submit" class="btn-login" [nzLoading]="isLoading" nzBlock>{{loginBtn}}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

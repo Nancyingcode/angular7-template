@@ -1,0 +1,57 @@
+<nz-skeleton [nzActive]="true" [hidden]="props"></nz-skeleton>
+<nz-table 
+  #nzTable
+  [nzShowPagination]="false"  
+  [nzData]="props.list" 
+  *ngIf="props">
+  <thead>
+    <tr>
+      <th nzCustomFilter *ngFor="let title of props.title; let i = index;">
+        <nz-dropdown 
+          nzTrigger="click" 
+          [nzClickHide]="false"
+          (nzVisibleChange)="setCurrentTitle($event, title, i)"
+          *ngIf="hasFilter(i)"
+          #dropdown>
+          <i 
+            nz-icon 
+            type="search"
+            theme="outline"
+            class="ant-table-filter-icon" 
+            [class.ant-table-filter-open]="dropdown.nzVisible" 
+            nz-dropdown>
+          </i>
+          <div class="custom-filter-dropdown">
+            <app-search-input [props]="searchButton" [type]="'filter'"></app-search-input>
+          </div>
+        </nz-dropdown>
+        {{title}}
+        <nz-tag 
+          [nzColor]="'geekblue'"
+          nzMode="closeable"
+          (nzOnClose)="onClose(i)"
+          *ngIf="showTag(i)">{{ searchText(i) }}
+        </nz-tag>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of props.list">
+      <td *ngFor="let tab of props.column" [innerHtml]="item[tab] ? item[tab] : '暂无'"></td>
+      <td
+      *ngIf="!checkButtons(buttonProps)">
+      <app-button-group 
+        [props]="item.buttonProps ? item.buttonProps : buttonProps" 
+        [data]="item">
+      </app-button-group>
+    </td>
+    </tr>
+  </tbody>
+</nz-table>
+<app-default-pagination 
+  [total]="props.count" 
+  [isPagination]="isPagination" 
+  [pagination]="pagination"
+  class="mt-3" 
+  *ngIf="props">
+</app-default-pagination>

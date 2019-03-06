@@ -1,0 +1,7 @@
+<form class="carousel" *ngIf="data">
+  <app-image-upload
+    [action]="action"  
+    [data]="item" 
+    *ngFor="let item of data">
+  </app-image-upload>
+</form>

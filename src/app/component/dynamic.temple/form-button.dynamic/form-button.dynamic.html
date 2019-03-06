@@ -1,0 +1,86 @@
+<div [formGroup]="form" *ngIf="form">
+  <app-form-group>
+      <app-form-label>{{item.title}}</app-form-label>
+      <app-form-control>
+        <div [ngSwitch]="item.type">
+          <ng-container *ngSwitchDefault>
+              <input 
+                type={{item.type}} 
+                [readonly]="item.readonly" 
+                [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors" 
+                (keyup)="item.callback(item)" 
+                class={{item.clz}} 
+                placeholder={{item.placeholder}} 
+                formControlName={{item.name}}
+              >
+
+              <app-form-validate 
+                [explain]="form.get(item.name).errors?.text ? form.get(item.name).errors?.text : item.wt">
+              </app-form-validate>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'password'">
+              <input 
+                type={{item.type}} 
+                [readonly]="item.readonly" 
+                [class.is-invalid]="form.errors?.identityRevealed && (form.touched || form.dirty)" 
+                (keyup)="item.callback(item)" 
+                class={{item.clz}} 
+                placeholder={{item.placeholder}} 
+                formControlName={{item.name}}
+              >
+
+              <app-form-validate 
+                [explain]="form.get(item.name).errors?.text ? form.get(item.name).errors?.text : form.errors?.text ? form.errors?.text : item.wt">
+              </app-form-validate>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'select'">
+              <select 
+              class="custom-select mr-sm-2" 
+              formControlName={{item.name}} 
+              (change)="item.callback()" 
+              [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors" 
+              >
+                <option value={{c.id}} *ngFor="let c of item.content">{{c.type}}</option>
+              </select>
+
+              <app-form-validate 
+                [explain]="item.wt">
+              </app-form-validate>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'file'">
+              <app-upload
+                [success]="item.success"
+                [action]="item.action"
+                [uploadType]="'later'"
+                [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors">
+              </app-upload>
+
+              <app-form-validate 
+                [explain]="item.wt">
+              </app-form-validate>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="'image'">
+            <app-upload
+              [success]="item.success"
+              [action]="item.action"
+              [uploadType]="'image'"
+              [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors">
+            </app-upload>
+
+            <app-form-validate 
+              [explain]="item.wt">
+            </app-form-validate>
+        </ng-container>
+        </div>
+      </app-form-control>
+      <div class="btn-container">
+          <app-small-button [prop]="button" [data]="data(item.name)"></app-small-button>
+      </div>
+      <!-- <app-form-label> -->
+      <!-- </app-form-label> -->
+    </app-form-group>
+</div>

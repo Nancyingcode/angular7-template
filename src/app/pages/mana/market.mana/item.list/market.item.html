@@ -1,0 +1,5 @@
+<div class="tr-btn">
+  <app-small-button [prop]="addButton" class="mr" (click)="add()">{{addButton.name}}</app-small-button>
+  <!-- <app-search-input class="" [props]="searchButton"></app-search-input> -->
+</div>
+<app-table [props]="data" [buttonProps]="buttonProps" [isPagination]="isPagination" [pagination]="paginationButton"></app-table>

@@ -1,0 +1,38 @@
+<div [ngSwitch]="uploadType">
+  <ng-container *ngSwitchDefault>
+    <nz-upload
+      nzAction="https://jsonplaceholder.typicode.com/posts/"
+      [nzBeforeUpload]="beforeUpload"
+      [nzCustomRequest]="customBigReq">
+      <button nz-button>
+        <i nz-icon type="upload"></i><span>Click to Upload</span>
+      </button>
+    </nz-upload>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'image'">
+      <nz-upload
+      [(nzFileList)]="fileList"
+      [nzBeforeUpload]="beforeUpload"
+      (nzChange)="handleChange($event)">
+        <button nz-button type="button">
+          <i nz-icon type="upload"></i><span>点击上传</span>
+        </button>
+      </nz-upload>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'later'">
+    <nz-upload
+      [(nzFileList)]="fileList"
+      [nzBeforeUpload]="beforeUpload"
+      (nzChange)="handleChange($event)">
+      <button nz-button type="button">
+        <i nz-icon type="upload"></i><span>点击上传</span>
+      </button>
+    </nz-upload>
+    <!-- <button nz-button [nzType]="'primary'" class="mr-15" [nzLoading]="uploading" (click)="handleUpload()" [disabled]="fileList.length == 0" style="margin-top: 16px">
+      {{ uploading ? '上传中' : '开始上传' }}
+    </button> -->
+    <!-- <nz-progress [nzPercent]="progress" nzType="circle" [nzWidth]="30"></nz-progress> -->
+  </ng-container>
+</div>

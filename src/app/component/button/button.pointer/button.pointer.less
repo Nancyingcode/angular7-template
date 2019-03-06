@@ -1,0 +1,29 @@
+@import '../../../../styles.less';
+
+.img {
+    // padding: @default-pd/2;
+    height: @img-sm;
+    width: @img-sm;
+}
+
+.cus-alert {
+    padding-left: 0;
+    color: @color-black;
+}
+
+.img:hover {
+    .hover-rule();
+}
+
+.img-btn {
+    padding: @default-pd/2;
+    margin-right: @default-pd;
+    background: @color-white;
+    .clear-bor();
+}
+
+.img-btn:hover {
+    cursor: pointer;
+    background: @table-gray;
+    transition: @transiton-bg-3;
+}

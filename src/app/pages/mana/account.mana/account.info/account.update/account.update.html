@@ -1,0 +1,21 @@
+<app-pointer-button [props]="props"></app-pointer-button>
+<form class="ml" [formGroup]="itemUpdateForm" (ngSubmit)="submit()">
+  <app-form-group *ngFor="let item of list">
+    <app-form-label>{{item.title}}</app-form-label>
+    <app-form-control>
+      <input type={{item.type}} [readonly]="item.readonly" class={{item.clz}} placeholder={{item.placeholder}}
+        [class.is-invalid]="itemUpdateForm.get(item.name).dirty && itemUpdateForm.get(item.name).errors"
+        formControlName={{item.name}} *ngIf="item.type !== 'select'">
+      <select class="custom-select mr-sm-2" formControlName={{item.name}} *ngIf="item.type === 'select'">
+        <option value={{c.id}} *ngFor="let c of item.content">{{c.type}}</option>
+      </select>
+      <app-form-validate [explain]="item.wt"></app-form-validate>
+    </app-form-control>
+  </app-form-group>
+  <app-form-group>
+    <app-form-label></app-form-label>
+    <div class="col-sm-3 ct mt">
+      <app-small-button [prop]="item" [isLoading]="isLoading" *ngFor="let item of buttons" class="mr" (click)="item.callback()">{{item.name}}</app-small-button>
+    </div>
+  </app-form-group>
+</form>

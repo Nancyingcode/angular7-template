@@ -1,0 +1,22 @@
+<nz-skeleton [nzActive]="true" [hidden]="props"></nz-skeleton>
+<table class="table even auto " *ngIf="props">
+  <thead class="">
+    <tr>
+      <th scope="col-sm-1" *ngFor="let title of tabTitles" class="mr  th">{{title}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row-pill" *ngFor="let item of list">
+      <th scope="row" *ngFor="let tab of tabProps">
+        <!-- {{item[tab] ? item[tab] : '暂无'}} -->
+        <app-small-button [data]="item" [prop]="item[tab]"></app-small-button>  
+      </th>
+      <th>
+        <app-button-group [props]="item.buttonProps ? item.buttonProps : buttonProps" [data]="item"></app-button-group>
+      </th>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<app-default-pagination [total]="total" [service]="service" [isPagination]="isPagination" [pagination]="pagination"
+  *ngIf="props"></app-default-pagination>

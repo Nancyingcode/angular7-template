@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular7-template",
+            "outputPath": "dist/client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,8 +33,7 @@
             ],
             "styles": [
               "src/styles.less",
-              "src/assets/bootstrap.less",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "src/assets/bootstrap.min.css",
               "node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": []
@@ -73,11 +72,11 @@
             }
           }
         },
-        "uni": {
+        "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/builder",
-            "main": "src/main.ts",
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
             "tsConfig": "src/tsconfig.server.json"
           }
         },
@@ -100,8 +99,7 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+              "src/assets"
             ]
           }
         },

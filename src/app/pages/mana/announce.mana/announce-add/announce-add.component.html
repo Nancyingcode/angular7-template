@@ -1,0 +1,7 @@
+<app-inline>
+    <app-small-button [prop]="buttonAdd"></app-small-button>
+</app-inline>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <textarea [readonly]="item.readonly" [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors" class={{item.clz}} placeholder={{item.placeholder}} formControlName={{item.name}} *ngFor="let item of FormItem">
+    </textarea>
+</form>

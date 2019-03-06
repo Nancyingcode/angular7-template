@@ -1,0 +1,18 @@
+<nz-skeleton [nzActive]="true" [hidden]="props"></nz-skeleton>
+<div *ngIf="props">
+  <section class="announce-table mb-3" *ngFor="let item of props.list">
+    <h6 (click)="updatePayment(item)">
+      {{item.createTime}}&nbsp;&nbsp;&nbsp;&nbsp;{{item.title}}
+      <div>
+        <app-small-button class="mr-3" [prop]="button" [data]="item" *ngFor="let button of buttonProps">{{button.name}}</app-small-button>
+      </div>
+    </h6>
+  </section>
+
+  <app-default-pagination 
+    [total]="props.count" 
+    [isPagination]="isPagination" 
+    [pagination]="pagination"
+    *ngIf="props">
+  </app-default-pagination>
+</div>

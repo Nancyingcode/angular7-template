@@ -1,0 +1,14 @@
+<form 
+  class="ml" 
+  [formGroup]="form" 
+  (ngSubmit)="update()">
+  <textarea 
+    [readonly]="item.readonly" 
+    [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors"
+    class={{item.clz}} 
+    placeholder={{item.placeholder}} 
+    formControlName={{item.name}} 
+    *ngFor="let item of FormItem">
+  </textarea>
+  <app-small-button [prop]="buttonUpdate" [isLoading]="isLoading"></app-small-button>
+</form>

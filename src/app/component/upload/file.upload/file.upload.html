@@ -1,0 +1,46 @@
+<div [ngSwitch]="uploadType">
+  <ng-container *ngSwitchDefault>
+    <nz-upload 
+      nzListType="picture-card" 
+      [(nzFileList)]="fileList" 
+      [nzShowButton]="fileList.length < 1" 
+      [nzPreview]="handlePreview" 
+      [nzFileType]="props.type ? props.type : fileType" 
+      [nzCustomRequest]="cusBannerUpload" 
+      [nzRemove]="handleRemove" 
+      *ngIf="props">
+      <i nz-icon type="plus"></i>
+    </nz-upload>
+    <nz-modal 
+      [nzVisible]="previewVisible" 
+      [nzContent]="modalContent" 
+      [nzFooter]="null" 
+      (nzOnCancel)="previewVisible=false">
+      <ng-template #modalContent>
+        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+      </ng-template>
+    </nz-modal>
+  </ng-container>
+  <ng-container *ngSwitchCase="'immediate'">
+    <nz-upload
+      nzAction={{action}} 
+      nzListType="picture-card" 
+      [(nzFileList)]="fileList"
+      [nzCustomRequest]="cusUpload" 
+      [nzShowButton]="fileList.length < 1" 
+      [nzPreview]="handlePreview" 
+      [nzRemove]="handleRemove"
+      (nzChange)="handleChange($event)">
+      <i nz-icon type="plus"></i>
+    </nz-upload>
+    <nz-modal 
+      [nzVisible]="previewVisible" 
+      [nzContent]="modalContent" 
+      [nzFooter]="null" 
+      (nzOnCancel)="previewVisible=false">
+      <ng-template #modalContent>
+        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+      </ng-template>
+    </nz-modal>
+  </ng-container>
+</div>

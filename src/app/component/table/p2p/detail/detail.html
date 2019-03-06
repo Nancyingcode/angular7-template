@@ -1,0 +1,25 @@
+<div *ngIf="props">
+  <ng-container *ngFor="let item of props.rows">
+    <section nz-row>
+      <div nz-col nzSpan="12">
+        <div class="item-wrap">
+          <p class="label">{{item.firstName}}:</p>{{item.firstValue}}
+        </div>
+      </div>
+      <div nz-col nzSpan="12">
+        <div class="item-wrap">
+          <p class="label">{{item.secondName}}:</p>{{item.secondValue}}
+        </div>
+      </div>
+    </section>
+    <nz-divider></nz-divider>
+  </ng-container>
+  <section nz-row>
+    <div nz-col nzSpan="12" *ngFor="let image of props.images; let i=index;">
+      <div class="item-wrap">
+        <p class="label">{{image.title}}:</p>
+        <img [src]="image.url" [attr.alt]="i">
+      </div>
+    </div>
+  </section>
+</div>

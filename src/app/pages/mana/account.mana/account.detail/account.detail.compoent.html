@@ -1,0 +1,9 @@
+<section>
+  <div nz-row *ngFor="let row of data">
+    <div nz-col nzSpan="12" *ngFor="let item of row">
+      <div class="item-wrap">
+        <p class="label">{{item.title}}</p>{{item.value}}
+      </div>
+    </div>
+  </div>
+</section>

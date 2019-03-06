@@ -1,0 +1,226 @@
+@import '../../../styles.less';
+.form {
+  width: 80%;
+  height: auto;
+  letter-spacing: normal;
+}
+
+.cus-row {
+  width: 100%;
+}
+
+:host ::ng-deep .ant-btn-primary {
+  background-color: #CB2CEE;
+}
+
+.div {
+  .flx-md();
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  background: @color-white;
+}
+
+.title {
+  height: @input-height;
+  line-height: @input-height;
+  color: @color-theme;
+  font-weight: bold;
+  font-family: Helvetica Neue;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.title-jumper {
+  height: 100px;
+  width: 100px;
+}
+
+.form-body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 95vh;
+  width: 98%;
+  background: @color-white;
+}
+
+.div-form {
+  text-align: center;
+}
+
+.div-right {
+  line-height: 95vh;
+}
+
+.form-pill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: @default-pd;
+  position: relative;
+  height: 40%;
+  width: 240px;
+  min-width: 300px;
+  min-height: 380px;
+  background: @color-gray;
+  border-radius: 20px;
+}
+
+.login-form-mobile {
+  width: auto;
+}
+
+.right {
+  text-align: right;
+}
+
+.jumper {
+  height: auto;
+  width: 400px;
+}
+
+.input-title {
+  background-color: @color-white
+}
+
+.text {
+  color: aliceblue;
+  background: #fff;
+}
+
+.btns {
+  background: #fff;
+}
+
+@input-pd: 12px;
+.cus-prepend {
+  .flx-md();
+  margin-bottom: 0;
+  border-top-left-radius: @radius-sm;
+  border-bottom-left-radius: @radius-sm;
+  background-color: @color-white;
+  flex: 0 0 @input-pd*2 + @img-sm-lg; //表单图标的大小
+  justify-content: center;
+  height: 38px;
+  img {
+    height: @img-sm-lg;
+    width: @img-sm-lg;
+  }
+}
+
+.cus-input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0);
+  input {
+    border-top-right-radius: @radius-sm;
+    border-bottom-right-radius: @radius-sm;
+    background: @color-white;
+    width: 189px;
+    font-size: 1rem;
+    padding: .375rem .75rem;
+    .clear-bor();
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+.w240 {
+  min-width: 240px;
+}
+
+@preopend-img-pd: @default-pd/2;
+.prepend-img {
+  height: @img-sm-lg;
+  width: @img-sm-lg;
+}
+
+.cus-prepend::after {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 4px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: @default-radius;
+  background-color: @color-gray-annouce;
+}
+
+.tooltip {
+  position: absolute;
+}
+
+.clear-bor {
+  border: none;
+}
+
+.btn-login {
+  height: 38px;
+  width: 210px;
+  padding: 0 !important;
+  background: @color-theme;
+  border: @default-border-width solid @color-theme;
+  color: @color-white;
+}
+
+.btn-login:hover {
+  background: @color-gray;
+  transition: @transiton-bg-3;
+  border-color: @color-theme;
+  color: @color-theme;
+}
+
+
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: @color-gray-text;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: @color-gray;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: @color-gray;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: @color-gray;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: @color-gray;
+  opacity: 1;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: @color-gray-text;
+  opacity: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .form-body {
+    width: 100%;
+    justify-content: center;
+    .cus-row {
+      width: auto;
+      justify-content: center;
+    }
+  }
+}

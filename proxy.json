@@ -1,0 +1,15 @@
+{
+  "/test": {
+    "targetss": "http://42.51.39.90:8095",
+    "targetssss": "http://192.168.1.111:8082",
+    "targetsssss": "http://192.168.1.132:8080",
+    "targets": "http://192.168.1.111:9999",
+    "target": "http://127.0.0.1:7001",
+    "targetsss": "http://123.207.14.240:8082",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/test": ""
+    }
+  }
+}

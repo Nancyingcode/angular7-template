@@ -1,0 +1,7 @@
+<div class="template">
+  <div class="tbg">
+    <app-dropdown class="mr-15" [props]="dropDown" [handleData]="select"></app-dropdown>
+    <app-search-input [props]="searchButton"></app-search-input>
+  </div>
+  <app-table [props]="data" [buttonProps]="buttonProps" [isPagination]="isPagination" [pagination]="paginationButton"></app-table>
+</div>

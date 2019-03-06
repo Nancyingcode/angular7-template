@@ -1,0 +1,6 @@
+<div class="template">
+  <nz-tabset [nzTabPosition]="'top'" [nzSelectedIndex]="currentIndex" *ngIf="tabItems">
+    <nz-tab [nzTitle]="titles[i]" (nzSelect)="selectComponent(i)" *ngFor="let tab of tabItems; let i=index;"></nz-tab>
+  </nz-tabset>
+  <ng-template tab-host></ng-template>
+</div>

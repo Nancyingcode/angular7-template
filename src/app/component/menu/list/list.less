@@ -1,0 +1,52 @@
+@import '../../../../styles.less';
+
+
+.pill-border {
+    border: @default-border-width solid @color-white;
+}
+
+@pill-color: rgba(0,0,0,0);
+@pill-height: @nav-height*0.6;
+.cus-pill {
+    position: relative;
+    padding: 0;
+    margin-bottom: 0;
+    text-align: center;
+    height: @pill-height;
+    line-height: @pill-height;
+    border: @default-border-width solid rgba(0,0,0,0);
+    border-radius: 0;
+    color: @color-white;
+    background: @pill-color;
+    clear: both;
+    overflow: hidden;
+}
+
+@pill-hover: #0076AE;
+.cus-pill:hover {
+    .hover-rule();
+    border: @default-border-width solid @color-white;
+    transition: @transiton-bd-3;
+}
+
+.selected::before {
+    position: absolute;
+    content: "";
+    font-size: 0;
+    letter-spacing: -3;
+    display: block;
+    left:0;
+    top: 50%;
+    height: @pill-height;
+    transform: translateY(-50%);
+    width: 5px;
+    background: @color-white;
+}
+
+.selected {
+  background: @pill-hover;
+}
+
+:host ::ng-deep .ng-star-inserted {
+  border: none;
+}

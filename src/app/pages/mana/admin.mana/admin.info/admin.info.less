@@ -1,0 +1,36 @@
+@import '../../../../../styles.less';
+
+.rule {
+    display: inline-block;
+    height: 25px;
+}
+
+.r-8 {
+    margin-right: @default-pd/2;
+}
+
+.total-btn {
+    text-align: left;
+    width: 200px;
+    background: @color-white;
+    img {
+        .rule();
+        margin-right: 10px;
+        vertical-align: middle;
+        width: 25px;
+    }
+
+    span {
+        .rule();
+        color: @color-blue;
+        font-weight: bold;
+        width: auto;
+        vertical-align: middle;
+        font-family: PingFang HK;
+        font-size: 15px;
+    }
+}
+
+:host ::ng-deep .table th {
+  min-width: 125px !important;
+}

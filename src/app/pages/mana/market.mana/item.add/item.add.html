@@ -1,0 +1,21 @@
+<app-pointer-button [props]="props"></app-pointer-button>
+<form class="ml" [formGroup]="itemAddForm" (ngSubmit)="submit()">
+  <app-form-group *ngFor="let item of list">
+    <app-form-label>{{item.title}}</app-form-label>
+    <app-form-control>
+      <input type={{item.type}} [readonly]="item.readonly" [class.is-invalid]="itemAddForm.get(item.name).dirty && itemAddForm.get(item.name).errors"
+        [class.file-input]="item.type === 'file'" class={{item.clz}} placeholder={{item.placeholder}} formControlName={{item.name}}
+        *ngIf="item.type !== 'file'">
+      <app-image-upload [props]="uploadProps" [data]="item" [class.is-invalid]="itemAddForm.get(item.name).dirty && itemAddForm.get(item.name).errors"
+        *ngIf="item.type === 'file'">
+      </app-image-upload>
+      <app-form-validate [explain]="item.wt"></app-form-validate>
+    </app-form-control>
+  </app-form-group>
+  <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-3 ct mt">
+      <app-small-button [prop]="item" *ngFor="let item of buttons" class="mr" (click)="item.callback()">{{item.name}}</app-small-button>
+    </div>
+  </div>
+</form>

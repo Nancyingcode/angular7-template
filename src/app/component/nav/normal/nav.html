@@ -1,0 +1,35 @@
+<!-- <ul class="nav justify-content-end shadow-sm">
+  <li class="nav-item mid">
+    <app-nav-button>asdada</app-nav-button>
+  </li>
+  <li class="nav-item mid">
+    <a class="navbar-brand item vm" (click)="loginOut()">
+      <img src={{img}} width="30" height="30" alt="" class="mr-15" *ngIf="img">
+      <span class="lo-btn">{{logOut}}</span>
+    </a>
+  </li>
+</ul> -->
+
+
+<nav class="nav navbar navbar-expand-lg shadow-sm">
+  <!-- <a class="navbar-brand" href="#">{{title}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> -->
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" *ngIf="list">
+      <li class="nav-item active mr" *ngFor="let item of list">
+        {{item.name}}
+        <nz-divider nzType="vertical"></nz-divider>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a class="navbar-brand item vm" (click)="loginOut()">
+        <img src={{img}} width="30" height="30" alt="" class="mr-15" *ngIf="img">
+        <span class="lo-btn">{{logOut}}</span>
+      </a>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+<ul nz-menu [nzMode]="'inline'" nzTheme='dark' style="width: 100%" *ngIf="list">
+  <li nz-submenu [nzOpen]="menuMap[item.label]" (nzOpenChange)="changeOpenStatus(item)" *ngFor="let item of list">
+    <span title><i nz-icon type="setting"></i>{{item.name}}</span>
+    <ul>
+      <div *ngFor="let pill of item.children" [ngSwitch]="hasChildren(pill)">
+        <li nz-menu-item [nzSelected]="selectedList.url === pill.url" (click)="select(pill)" *ngSwitchCase="false">{{pill.name}}</li>
+        <ng-container *ngSwitchCase="true">
+          <li nz-submenu [nzOpen]="pill.open" (nzOpenChange)="changeOpenStatus(pill)">
+            <span title><i nz-icon type="setting"></i>{{pill.name}}</span>
+            <ul>
+              <li nz-menu-item [nzSelected]="selectedList.url === children.url" *ngFor="let children of pill.children"
+                (click)="select(children)">{{children.name}}</li>
+            </ul>
+          </li>
+        </ng-container>
+      </div>
+    </ul>
+  </li>
+</ul>

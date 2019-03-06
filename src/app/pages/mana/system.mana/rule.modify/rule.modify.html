@@ -1,0 +1,49 @@
+<div class="template" *ngIf="forms && list">
+  <section class="section mb-3">
+    <nz-divider [nzText]="titleList[0]" nzOrientation="left"></nz-divider>
+    <form 
+      class="ml"
+      [formGroup]="formOne"
+      (ngSubmit)="submit(0)">
+      <app-dynamic-form-item
+        [item]="item"
+        [form]="formOne"
+        *ngFor="let item of listOne">
+      </app-dynamic-form-item>
+      <app-form-group>
+        <app-form-label></app-form-label>
+        <div class="col-sm-3 mt">
+          <app-small-button 
+            [prop]="button"
+            [isLoading]="isLoadingOne" 
+            class="mr">
+          </app-small-button>
+        </div>
+      </app-form-group>
+    </form>
+  </section>
+
+  <section class="section mb-3">
+    <nz-divider [nzText]="titleList[1]" nzOrientation="left"></nz-divider>
+    <form 
+      class="ml"
+      [formGroup]="formTwo"
+      (ngSubmit)="submit(1)">
+      <app-dynamic-form-item
+        [item]="item"
+        [form]="formTwo"
+        *ngFor="let item of listTwo">
+      </app-dynamic-form-item>
+      <app-form-group>
+        <app-form-label></app-form-label>
+        <div class="col-sm-3 mt">
+          <app-small-button 
+            [prop]="button"
+            [isLoading]="isLoadingTwo" 
+            class="mr">
+          </app-small-button>
+        </div>
+      </app-form-group>
+    </form>
+  </section>
+</div>

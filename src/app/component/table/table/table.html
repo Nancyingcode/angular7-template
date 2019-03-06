@@ -1,0 +1,85 @@
+<nz-skeleton [nzActive]="true" [hidden]="props"></nz-skeleton>
+<div *ngIf="props">
+    <nz-table 
+    #nzTable
+    [nzShowPagination]="false"  
+    [nzData]="props.list">
+      <thead>
+        <tr>
+          <!-- 输入筛选 -->
+            <th nzCustomFilter *ngFor="let title of props.title; let i = index;">
+              <ng-container [ngSwitch]="props.types ? props.types[i] : ''">
+                <div *ngSwitchDefault>
+                    <nz-dropdown 
+                    nzTrigger="click" 
+                    [nzClickHide]="false"
+                    (nzVisibleChange)="setCurrentTitle($event, title, i)"
+                    *ngIf="hasFilter(i)"
+                    #dropdown>
+                    <i 
+                      nz-icon 
+                      type="search"
+                      theme="outline"
+                      class="ant-table-filter-icon" 
+                      [class.ant-table-filter-open]="dropdown.nzVisible" 
+                      nz-dropdown>
+                    </i>
+                    <div class="custom-filter-dropdown">
+                      <app-search-input [props]="searchButton" [type]="'filter'"></app-search-input>
+                    </div>
+                  </nz-dropdown>
+                </div>
+                <div *ngSwitchCase="'select'">
+                    <nz-dropdown 
+                    nzTrigger="click" 
+                    [nzClickHide]="false"
+                    (nzVisibleChange)="setCurrentTitle($event, title, i)"
+                    *ngIf="hasFilter(i)"
+                    #dropdown>
+                    <i 
+                      nz-icon 
+                      type="down"
+                      theme="outline"
+                      class="ant-table-filter-icon" 
+                      [class.ant-table-filter-open]="dropdown.nzVisible" 
+                      nz-dropdown>
+                    </i>
+                    <div class="custom-filter-select-dropdown">
+                      <ul nz-menu>
+                        <li nz-menu-item *ngFor="let select of props.selecters" (click)="selectFilter(dropdown, select, i)">{{select.text}}</li>
+                      </ul>
+                    </div>
+                  </nz-dropdown>
+                </div>
+              </ng-container>
+              {{title}}
+              <nz-tag 
+                [nzColor]="'geekblue'"
+                nzMode="closeable"
+                (nzOnClose)="onClose(i)"
+                *ngIf="showTag(i)">{{ searchText(i) }}
+              </nz-tag>
+            </th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of props.list">
+          <td *ngFor="let tab of props.column" [innerHtml]="item[tab] ? item[tab] : '暂无'"></td>
+          <td
+          *ngIf="!checkButtons(buttonProps)">
+          <app-button-group 
+            [props]="item.buttonProps ? item.buttonProps : buttonProps" 
+            [data]="item">
+          </app-button-group>
+        </td>
+        </tr>
+      </tbody>
+  </nz-table>
+  <app-default-pagination 
+  [total]="props.count" 
+  [isPagination]="isPagination" 
+  [pagination]="pagination"
+  class="mt-3" >
+  </app-default-pagination>
+</div>

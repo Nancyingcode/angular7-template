@@ -1,0 +1,3 @@
+<select class="custom-select mr-sm-2" *ngIf="props" (change)="change(select.value)" #select>
+  <option value={{c.id}} *ngFor="let c of props.content">{{c.type}}</option>
+</select>

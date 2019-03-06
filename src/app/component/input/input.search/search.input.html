@@ -1,0 +1,21 @@
+<div [ngSwitch]="type">
+  <ng-container *ngSwitchCase="'filter'">
+    <div>
+        <input type="text" nz-input placeholder={{placeholder}} (keyup.enter)="submit(searchOne.value)" #searchOne>
+        <button nz-button [nzType]="'primary'" (click)="submit(searchOne.value)">搜索</button>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <div class="ilb">
+      <div class="input-group cus-input">
+        <div class="input-group-prepend">
+          <button class="btn clear-pd cus-btn" type="button" id="button-addon1" (click)="submit(search.value)">
+            <img src={{searchPic}} alt="..." class="search-img">
+          </button>
+        </div>
+        <input type="text" class="form-control cus-bor" placeholder="" aria-label="Example text with button addon"
+          aria-describedby="button-addon1" placeholder={{placeholder}} (keyup.enter)="submit(search.value)" #search>
+      </div>
+    </div>
+  </ng-container>
+</div>

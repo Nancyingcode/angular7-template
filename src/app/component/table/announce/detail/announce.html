@@ -1,0 +1,25 @@
+<div [ngSwitch]="type">
+  <div *ngSwitchDefault>
+    <nz-divider nzText="标题"></nz-divider>
+    <h6 class="title">{{data.title}}</h6>
+    <nz-divider nzText="创建时间"></nz-divider>
+    <h6 class="title">{{data.createTime}}</h6>
+    <nz-divider nzText="内容"></nz-divider>
+    <div [ngSwitch]="contentType">
+      <textarea [readonly]="true" class="textarea">{{data.content}}</textarea>
+    </div>
+  </div>
+
+  <div *ngSwitchCase="'artical'">
+    <nz-divider nzText="标题"></nz-divider>
+    <h6 class="title">{{data.title}}</h6>
+    <nz-divider nzText="创建时间"></nz-divider>
+    <h6 class="title">{{data.createTime}}</h6>
+    <nz-divider nzText="大图"></nz-divider>
+    <img [src]="data.imageBig" alt="...">
+    <nz-divider nzText="缩略图"></nz-divider>
+    <img [src]="data.imageSmall" alt="">
+    <nz-divider nzText="资讯内容"></nz-divider>
+    <h6 class="title">{{data.content}}</h6>
+  </div>
+</div>

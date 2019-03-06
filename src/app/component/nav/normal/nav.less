@@ -1,0 +1,48 @@
+@import '../../../styles.less';
+.nav {
+  background: @color-white;
+  height: @nav-height;
+}
+
+.lo-btn {
+  color: rgba(0, 0, 0, .65);
+  font-weight: 400;
+  font-size: @default-fontz;
+  font-family: @default-font;
+}
+
+// .lo-btn:hover {
+//     color: @color-blue-d;
+//     transition: @transiton-cl-3;
+// }
+.mr-15 {
+  margin-right: 15px;
+}
+
+.mid {
+  line-height: @nav-height;
+  font-size: 0;
+}
+
+.item {
+  line-height: normal;
+  padding: @default-pd/2;
+  margin-right: (100vw - @menu-width) * (1 - @base-width-n)/2;
+}
+
+.item:hover {
+  background: @table-gray;
+  .transition-default();
+  span {
+    color: @color-theme  !important;
+  }
+}
+
+.img-content {
+  height: 50px;
+  width: 50px;
+}
+
+ul {
+  padding-left: @default-pd/2;
+}

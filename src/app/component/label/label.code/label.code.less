@@ -1,0 +1,16 @@
+@import '../../../../styles.less';
+@input-pd: 12px;
+.cus-after {
+  .flx-md();
+  margin-bottom: 0;
+  border-top-left-radius: @radius-sm;
+  border-bottom-left-radius: @radius-sm;
+  background-color: @color-gray;
+  flex: 0 0 @input-pd*2 + @img-sm-lg; //表单图标的大小
+  justify-content: center;
+  height: 38px;
+  img {
+    height: @img-sm-lg;
+    width: @img-sm-lg;
+  }
+}

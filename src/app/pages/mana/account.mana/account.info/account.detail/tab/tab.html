@@ -1,0 +1,9 @@
+<section class="card-container">
+  <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'" [nzSelectedIndex]="currentIndex" *ngIf="tabItems">
+    <nz-tab [nzTitle]="titles[i]" (nzSelect)="selectComponent(i)" *ngFor="let tab of tabItems; let i=index;"></nz-tab>
+  </nz-tabset>
+  <ng-template tab-host></ng-template>
+</section>
+
+
+ 

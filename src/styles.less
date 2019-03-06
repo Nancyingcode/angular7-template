@@ -1,0 +1,257 @@
+@color-white: #fff;
+@color-white-s: #f5f5f9;
+@color-gray: #F4F4F4;
+@color-gray-text: #838383;
+@color-gray-annouce: #f6f8fa;
+@color-gray-border: #d9d9d9;
+@font-color: #515151;
+@color-orange: #FF8A21;
+@color-orange-d: rgb(185, 96, 18);
+@color-theme: #E5BA7E;
+@color-theme-d: rgb(161, 129, 84);
+@color-blue: #20BDFF;
+@color-blue-d: rgb(17, 140, 192);
+@table-gray: rgba(0, 0, 0, 0.05);
+@color-red: #dc3545;
+@color-validate: #f5222d;
+@color-open: rgba(0, 0, 0, 0);
+@nav-height: 10vh;
+@color-black: #292929;
+@default-pd: 30px;
+@default-radius: 250px;
+@theme-color: rgb(250, 250, 250);
+@radius-sm: 4px;
+@transiton-bg-3: background 0.3s ease-in-out;
+@transiton-cl-3: color 0.3s ease-in-out;
+@transiton-bd-3: border 0.5s ease-in-out;
+@default-fontw: 400;
+@default-fontz: 14px;
+@default-border-width: 3px;
+@default-font: 'Helvetica Neue',
+Helvetica,
+'PingFang SC',
+'Hiragino Sans GB',
+'Microsoft YaHei',
+SimSun,
+sans-serif;
+@radius: 5px;
+@img-sm: 15px;
+@input-height: 38px;
+@img-sm-lg: 25px;
+@menu-width: 20vw;
+@base-width: 95%;
+@base-width-n: (19/20);
+li {
+  list-style: none;
+}
+
+.show {
+  display: inline-block !important;
+}
+
+.page {
+  position: relative;
+  height: 100vh; // letter-spacing: -3px;
+  overflow: hidden;
+}
+
+.template {
+  position: relative;
+  padding: @default-pd;
+  // background-color: @color-white;
+  height: calc(100vh - @nav-height - 2*@default-pd);
+  overflow-y: scroll;
+  // overflow-x: scroll;
+  min-width: 1200px;
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 1px;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: @color-gray;
+    border: none;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: @color-white;
+    border: none;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hover {
+  cursor: pointer;
+  background: @color-gray;
+  transition: background 0.3s linear;
+}
+
+.rlt {
+  position: relative;
+}
+
+.clear-pd {
+  padding: 0;
+}
+
+.clear-bor {
+  border: none;
+}
+
+.hover-rule {
+  cursor: pointer;
+}
+
+.ilb {
+  display: inline-block;
+  width: auto;
+}
+
+.flx-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flx-hor-md {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-vrt-md {
+  display: flex;
+  align-items: center;
+}
+
+.mr {
+  margin-right: @default-pd;
+}
+
+.mr-15 {
+  margin-right: @default-pd/2;
+}
+
+.mr:last-child {
+  margin: 0;
+}
+
+.ct {
+  text-align: center;
+}
+
+.mt {
+  margin-top: @default-pd/2;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+//右侧顶部的按钮组
+.tr-btn {
+  position: absolute;
+  right: @default-pd;
+  top: @default-pd;
+  z-index: 1000;
+}
+
+.tr-btn-g {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  right: @default-pd;
+  top: @default-pd;
+  z-index: 1000;
+}
+
+.r-btn {
+  right: @default-pd;
+}
+
+.tbg {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: @default-pd/2;
+}
+
+.has-error {
+  border: 1px solid @color-red  !important;
+  border-radius: @radius-sm;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+// 适配 boostrap 和 ng zood 的样式区别 修改消息弹窗的图片和文字垂直对齐问题
+// .anticon .ant-message-notice-content
+.anticon {
+  vertical-align: unset !important;
+}
+
+.ant-message-notice-content {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.default-shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.default-shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.transition-sd-3 {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+// form
+.ml {
+  margin-left: @default-pd + @img-sm;
+}
+
+.vm {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.wt {
+  color: @color-red  !important;
+  .flx-md();
+}
+
+.ofl {
+  overflow-y: scroll;
+}
+
+.transition-default {
+  transition-property: color, background, border, ;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+@height-lg: 472px;
+.table-preview-image {
+  height: @height-lg;
+  width: @height-lg;
+}

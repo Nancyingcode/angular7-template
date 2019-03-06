@@ -1,0 +1,4 @@
+<div class="cus-pagination" *ngIf="isPagination">
+    <nz-pagination [nzPageIndex]="currentPage" [nzTotal]="total" [nzPageSize]="nzPageSize" (nzPageIndexChange)="change(pagina)"
+        nzShowQuickJumper #pagina></nz-pagination>
+</div>

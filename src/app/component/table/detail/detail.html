@@ -1,0 +1,17 @@
+<nz-skeleton [nzActive]="true" [hidden]="props"></nz-skeleton>
+<table class="table even auto" *ngIf="props">
+  <tbody>
+    <tr class="row-pill" *ngFor="let item of props.column; let i = index">
+      <th scope="row">{{props.title[i]}}</th>
+      <th scope="row data">{{props.data[item] ? props.data[item] : '暂无'}}</th>
+      <td></td>
+    </tr>
+    <tr class="row-pill" *ngFor="let button of buttons">
+      <th scope="row">{{button.title}}</th>
+      <th scope="row">
+        <app-small-button (click)="button.callback()">{{button.name}}</app-small-button>
+      </th>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

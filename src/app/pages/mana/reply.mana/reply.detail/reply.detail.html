@@ -1,0 +1,12 @@
+<app-pointer-button [props]="props"></app-pointer-button>
+<form class="ml" [formGroup]="form" (ngSubmit)="submit()">
+  <textarea [readonly]=" item.readonly" [class.is-invalid]="form.get(item.name).dirty && form.get(item.name).errors"
+    class={{item.clz}} placeholder={{item.placeholder}} formControlName={{item.name}} *ngFor="let item of formItem">
+  </textarea>
+  <app-form-group>
+    <div class="col-sm-3 mt">
+      <app-small-button [prop]="item" [hidden]="item.hidden" [isLoading]="isLoading" *ngFor="let item of buttons" class="mr"
+        (click)="item.callback()">{{item.name}}</app-small-button>
+    </div>
+  </app-form-group>
+</form>

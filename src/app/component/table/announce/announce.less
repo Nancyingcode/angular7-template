@@ -1,0 +1,67 @@
+@import '../../../../styles.less';
+
+.cus-container {
+  width: 100%;
+  padding: @default-pd/2;
+  font-size: @default-fontz;
+  font-family: @default-font;
+  font-weight: @default-fontw;
+  color: @color-gray-text;
+  background: @color-gray-annouce;
+  border-radius: @radius-sm;
+}
+
+.textarea {
+  .cus-container();
+    padding: @default-pd/2;
+    height: 300px;
+    resize: none;
+    border-radius: @radius-sm;
+    border: none;
+    scroll-behavior: unset;
+    overflow: visible;
+    outline: none;
+}
+
+.title {
+  .cus-container();
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  div {
+    height: auto;
+    width: auto;
+  }
+}
+
+.announce-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(0,0,0,0);
+  border: none;
+
+  h6 {
+    .title();
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  textarea {
+    .textarea();
+  }
+}
+
+iframe {
+  border: none;
+  height: 700px;
+  width: 100%;
+}

@@ -1,0 +1,105 @@
+@import './styles.less';
+@container-height: calc(100vh - @nav-height);
+.selectedText {
+  color: @color-black  !important;
+}
+
+.h6 {
+  color: #C7C7C7;
+}
+
+.t {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap; // justify-content: space-between;
+  width: 100%;
+  height: auto; // overflow: hidden;
+  margin-right: 0;
+  margin-left: 0;
+  background-color: @color-gray;
+}
+
+.cus-tab {
+  text-align: center;
+}
+
+.cus-tab img {
+  display: inline-block;
+  height: @img-sm-lg;
+  width: @img-sm-lg;
+}
+
+.cus-tab-pill {
+  position: relative;
+  width: 50%;
+  height: 2*@nav-height;
+  h6 {
+    font-size: @default-fontz;
+  }
+}
+
+.cus-tab-pill:hover {
+  .hover-rule();
+}
+
+@icon-pd: @nav-height/2;
+.cus-img {
+  text-align: center;
+  margin-top: @icon-pd;
+  margin-bottom: @icon-pd;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.base-body {
+  width: @base-width;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: @default-pd;
+  background: @color-gray;
+  border-radius: 20px !important;
+}
+
+.col-left {
+  // display: inline-block;
+  width: @menu-width;
+  height: 100vh;
+  background: @color-theme;
+}
+
+.col-right {
+  // display: inline-block;
+  width: 100vw - @menu-width;
+  height: 100vh;
+  background-color: @color-white-s;
+}
+
+// 修改 nz-zood的配色
+:host ::ng-deep .ant-menu {
+  color: @color-white;
+  background: rgba(0, 0, 0, 0);
+}
+
+:host ::ng-deep .nz-menu-item {
+  background: @color-theme-d  !important;
+}
+
+:host ::ng-deep .ant-menu-dark .ant-menu-sub {
+  background: @color-theme-d;
+}
+
+:host ::ng-deep .ant-menu:hover {
+  color: #eee;
+}
+
+:host ::ng-deep .ant-menu-submenu-title {
+  background: @color-theme;
+  border-color: @color-theme;
+}
+
+:host ::ng-deep .ant-menu {
+  background: @color-theme;
+}

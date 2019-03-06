@@ -1,0 +1,15 @@
+<!-- <button type={{buttonType}} class={{clz}}>
+  <ng-content></ng-content>
+</button> -->
+<ng-container [ngSwitch]="choose">
+  <button type={{buttonType}} class={{clz}} (click)="select($event)" *ngSwitchDefault>
+    {{prop.name}}
+  </button>
+  <button nz-button nzType="primary" [nzLoading]="isLoading" (click)="select($event)" *ngSwitchCase="'loading'">
+    {{prop.name}}
+  </button>
+  <button type={{buttonType}} class={{clz}} (click)="select($event)" [innerHtml]="prop.name" *ngSwitchCase="'inner'"></button>
+  <button type={{buttonType}} class={{clz}} (click)="select($event)" *ngSwitchCase="'img'">
+    <img class="table-button-image rounded" src={{prop.name}} alt="...">
+  </button>
+</ng-container>

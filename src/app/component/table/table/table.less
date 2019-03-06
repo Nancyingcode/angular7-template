@@ -1,0 +1,157 @@
+@import '../../../styles.less';
+@color-hover: rgb(201, 229, 245);
+.flex-col {
+  display: flex;
+}
+
+.row-pill {
+  background: @color-white;
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-radius: @radius;
+  // border-bottom: 2px solid @color-gray;
+}
+
+.row-pill:hover {
+  .hover-rule();
+  background: @color-hover;
+  transition: @transiton-bg-3;
+}
+
+.row-pill th:last-child {
+  width: 100%;
+}
+
+.cus-btn {
+  background: rgba(0, 0, 0, 0);
+  color: @color-blue;
+  font-size: @default-fontz;
+  border: none;
+}
+
+.cus-btn:hover {
+  color: @color-white;
+  transition: @transiton-cl-3;
+}
+
+.table th,
+.table td { 
+  margin: 0;
+  vertical-align: middle;
+  width: auto;
+  border-top: none;
+}
+
+.table thead th {
+  // border-bottom: none !important;
+}
+
+// 设置单元格最小间距
+@color-table-bor: #e6ebf5;
+.table th {
+  min-width: 100px;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  height: 56px; // border-bottom: 1px solid @color-table-bor;
+}
+
+// .table th:last-child {
+//   width: auto;
+//   text-align: left;
+//   white-space: nowrap
+// }
+
+.table td {
+  width: 100%;
+  text-align: left; // border-bottom: 1px solid @color-table-bor;
+  border: none;
+}
+
+.blank {
+  width: 100% !important;
+  text-align: left; // border-bottom: 1px solid @color-table-bor;
+  border: none;
+}
+
+.even tbody tr:nth-of-type(even) {
+  background: @table-gray;
+}
+
+.even tbody tr:nth-of-type(even):hover {
+  background: @color-hover;
+  transition: @transiton-bg-3;
+}
+
+.table {
+  text-align: center;
+  font-family: @default-font;
+  font-size: @default-fontz;
+  font-weight: 400 !important;
+}
+
+.auto {
+  border-collapse: collapse;
+  width: auto;
+}
+
+@height: 50px;
+.table-image {
+  height: 50px;
+  width: 50px;
+}
+
+.mt-3 {
+  margin-top: @default-pd;
+}
+
+thead {
+  th {
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: space-between;
+  }
+}
+
+.header {
+  tr {
+    background: #fff !important;
+    border-top-left-radius: @default-radius;
+    border-top-right-radius: @default-radius;
+  }
+  
+  th {
+    background: #fff !important;
+  }
+}
+
+:host .ant-table-thead {
+  tr {
+    background: #fff !important;
+  }
+
+  th {
+    background: #fff !important;
+  }
+  // background: #fff !important;
+}
+
+th {
+  color: rgba(0,0,0,.65);
+  font-weight: 400;
+  font-family: "Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+
+.custom-filter-dropdown {
+  padding: 8px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+}
+
+.custom-filter-select-dropdown {
+  padding: 8px;
+  border-radius: 6px;
+}

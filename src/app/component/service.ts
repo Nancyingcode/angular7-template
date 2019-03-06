@@ -1,0 +1,2 @@
+// service
+export * from '../service';

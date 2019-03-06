@@ -1,0 +1,86 @@
+@import '../../../styles.less';
+@color-hover: rgb(201, 229, 245);
+.flex-col {
+  display: flex;
+}
+
+.row-pill {
+  background: @color-white;
+  width: 100%; // border-bottom: 2px solid @color-gray;
+  border-left: none;
+  border-right: none;
+  border-radius: @radius;
+}
+
+.row-pill:hover {
+  .hover-rule();
+  background: @color-hover;
+  transition: @transiton-bg-3;
+}
+
+.cus-btn {
+  background: rgba(0, 0, 0, 0);
+  color: @color-blue;
+  font-size: @default-fontz;
+  border: none;
+}
+
+.cus-btn:hover {
+  color: @color-white;
+  transition: @transiton-cl-3;
+}
+
+.table th,
+.table td {
+  margin: 0;
+  vertical-align: middle;
+  width: auto;
+  border-top: none;
+}
+
+.table thead th {
+  border-bottom: none !important;
+}
+
+// 设置单元格最小间距
+@color-table-bor: #e6ebf5;
+.table th {
+  min-width: 150px;
+  height: 56px; // border-bottom: 1px solid @color-table-bor;
+}
+
+.table td {
+  width: 100%;
+  text-align: left; // border-bottom: 1px solid @color-table-bor;
+}
+
+thead {
+  // border-bottom: 1px solid @color-table-bor;
+}
+
+.even tbody tr:nth-of-type(even) {
+  background: @table-gray;
+}
+
+.even tbody tr:nth-of-type(even):hover {
+  background: @color-hover;
+  transition: @transiton-bg-3;
+}
+
+.table {
+  text-align: center;
+  font-family: @default-font;
+  font-size: @default-fontz;
+  font-weight: 400 !important;
+}
+
+.auto {
+  border-collapse: collapse;
+  width: auto;
+}
+
+@height: 25px;
+.table-button-image {
+  height: @height;
+  width: @height;
+}

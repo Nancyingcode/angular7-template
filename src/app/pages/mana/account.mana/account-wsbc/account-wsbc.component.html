@@ -1,0 +1,18 @@
+<app-inline>
+  <app-inline [type]="'start'">
+    <nz-alert 
+      nzType="info" 
+      nzMessage="总收益"
+      nzDescription={{total}}
+    >
+    </nz-alert>
+    <nz-alert 
+      nzType="info" 
+      nzMessage="今日收益"
+      nzDescription={{today}}
+    >
+    </nz-alert>
+  </app-inline>  
+  <app-small-button [prop]="buttonAdd"></app-small-button>
+</app-inline>
+<app-table [props]="data" [buttonProps]="buttonProps" [isPagination]="isPagination" [pagination]="paginationButton"></app-table>

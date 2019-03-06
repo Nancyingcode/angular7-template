@@ -1,0 +1,30 @@
+<div class="template">
+  <form 
+    class="ml" 
+    [formGroup]="accountAddForm"
+    (ngSubmit)="submit()">
+      <app-dynamic-form-item
+        [item]="item"
+        [form]="accountAddForm"
+        *ngFor="let item of list">
+      </app-dynamic-form-item>
+
+      <app-form-group>
+        <app-form-label></app-form-label>
+        <div class="col-sm-3 mt">
+          <app-small-button 
+            [prop]="item" 
+            [isLoading]="isLoading" 
+            *ngFor="let item of buttons" 
+            class="mr">{{item.name}}
+          </app-small-button>
+          <button 
+            nz-button 
+            nzType="default" 
+            (click)="backBtn.callback()"
+          >{{backBtn.name}}
+          </button>
+        </div>
+      </app-form-group>
+  </form>
+</div>

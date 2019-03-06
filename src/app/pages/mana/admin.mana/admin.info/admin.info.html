@@ -1,0 +1,12 @@
+
+  <app-inline>
+    <app-small-button [prop]="buttonAdd"></app-small-button>
+  </app-inline>
+  <app-table
+    [type]="'filter'"
+    [props]="data"
+    [buttonProps]="buttonProps"
+    [isPagination]="isPagination"
+    [pagination]="paginationButton"
+    [filter]="filter"
+  ></app-table>

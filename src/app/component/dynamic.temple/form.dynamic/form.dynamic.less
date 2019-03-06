@@ -1,0 +1,21 @@
+@import '../styles.less';
+.cus-container {
+  width: 400px;
+  padding: @default-pd/2;
+  font-size: @default-fontz;
+  font-family: @default-font;
+  font-weight: @default-fontw;
+  color: @color-gray-text;
+  border-radius: @radius-sm;
+}
+
+textarea {
+  .cus-container();
+    padding: @default-pd/2;
+    height: 300px;
+    resize: none;
+    border-radius: @radius-sm;
+    scroll-behavior: unset;
+    overflow: visible;
+    outline: none;
+}

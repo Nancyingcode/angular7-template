@@ -1,0 +1,21 @@
+<div class="t">
+  <div class="clear-pd col-left">
+    <div class="cus-img">
+      <img src={{jumper}} alt="...">
+    </div>
+    <div>
+      <app-list [list]="list"></app-list>
+    </div>
+  </div>
+  <div class="clear-pd col-right">
+    <nz-affix [nzOffsetTop]="0">
+      <app-nav></app-nav>
+      <div class="base-body bg-white rounded">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-affix>
+    <!-- <div class="base-body shadow-lg bg-white rounded">
+      <router-outlet></router-outlet>
+    </div> -->
+  </div>
+</div>
