@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-import { ButtonModule } from '../component';
-import { NavComponent } from './nav';
+import { ButtonModule } from '../button/button.module';
+import { NavComponent } from './normal/nav';
 
 @NgModule({
   declarations: [ NavComponent ],

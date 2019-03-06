@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-import { ButtonModule } from '../component';
-import { DashboradComponent } from './dashborad';
+import { ButtonModule } from '../button/button.module';
+import { DashboradComponent } from './normal/dash';
 
 @NgModule({
   declarations: [ DashboradComponent ],

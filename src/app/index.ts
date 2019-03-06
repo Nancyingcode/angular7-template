@@ -157,67 +157,126 @@ export const adminLevel = {
 export const menu = {
   0: [
     {
-      label: 'account',
-      name: '用户管理',
+      label: 'admin',
+      name: '管理员管理',
       open: true,
       children: [
         {
-          name: '用户列表',
+          name: '管理员列表',
+          url: admin
+        }
+      ]
+    },
+    {
+      label: 'info',
+      name: '用户信息管理',
+      open: true,
+      children: [
+        {
+          name: '用户信息',
           url: accountI
+        },
+        {
+          name: '用户邀请码',
+          url: ''
+        },
+        {
+          name: '用户收款信息',
+          url: accountPayment
         }
       ]
     },
     {
-      label: 'weal',
-      name: '钱包管理',
-      open: true,
-      children: [
-        // {
-        //   name: '充币记录',
-        //   url: accountRecharge
-        // },
-        // {
-        //   name: '提币记录',
-        //   url: accountDraw
-        // },
-        {
-          name: '交易记录',
-          url: accountTransfer
-        }
-      ]
-    },
-    {
-      label: 'p2p',
-      name: '排单管理',
+      label: 'right',
+      name: '用户权限管理',
       open: true,
       children: [
         {
-          name: '排单列表',
+          name: '冻结用户交易权限',
+          url: order
+        },
+        {
+          name: '冻结用户列表',
           url: order
         }
       ]
     },
     {
-      label: 'sys',
-      name: '平台管理',
+      label: 'comunicate',
+      name: '交易订单',
       open: false,
       children: [
         {
           label: 'announce',
-          name: '平台统计',
+          name: '寄售中',
+          url: currencySellingUsdt
+        },
+        {
+          name: '已锁定',
+          url: currencyLockUsdt
+        },
+        {
+          name: '审核中',
+          url: currencyCheckUsdt
+        },
+        {
+          name: '审核失败',
+          url: currencyCheckUsdt
+        },
+        {
+          name: '已完成',
+          url: currencyDoneUsdt
+        }
+      ]
+    },
+    {
+      label: 'request',
+      name: '申述订单',
+      open: false,
+      children: [
+        {
+          label: 'announce',
+          name: '申述中',
+          url: currencyRequestUsdt
+        },
+        {
+          name: '申述成功',
+          url: currencyRequestUsdt,
+        },
+        {
+          name: '申述失败',
+          url: currencyRequestUsdt
+        }
+      ]
+    },
+    {
+      label: 'exchange',
+      name: '兑换码管理',
+      open: false,
+      children: [
+        {
+          label: 'announce',
+          name: '生成兑换码',
           url: total
         },
         {
-          name: '公告管理',
+          name: '未使用兑换码',
           url: announcement
         },
         {
-          name: '规则设置',
+          name: '已使用兑换码',
           url: ruleModify
-        },
+        }
+      ]
+    },
+    {
+      label: 'announce',
+      name: '通知栏管理',
+      open: false,
+      children: [
         {
-          name: '员工管理',
-          url: admin
+          name: '公告管理',
+          url: announcement
         }
       ]
     }

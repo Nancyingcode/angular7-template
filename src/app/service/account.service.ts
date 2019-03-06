@@ -100,7 +100,7 @@ export class AccountService {
       map((res: AccountResult) => {
         const { userData, count } = res.data;
         const list = userData.map(item => {
-          return { ...item, phone: item.mobilePhone, createTimeStr: formDate(parseInt(item.createTime, 10)) };
+          return { ...item, phone: item.mobilePhone };
         });
 
         return { list, count };

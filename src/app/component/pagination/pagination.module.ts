@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-import { DefaultPaginationComponent } from './pagination';
+import { DefaultPaginationComponent } from './default.pagination/default.pagination';
 
 @NgModule({
   declarations: [ DefaultPaginationComponent ],

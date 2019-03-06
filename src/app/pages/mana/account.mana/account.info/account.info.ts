@@ -104,7 +104,7 @@ export class AccountInfoComponent implements OnInit {
   patchValue({ list, count }: DefaultDataFormate): void {
     this.data = {
       title: ['手机号', '钱包地址', '创建时间', '操作'],
-      column: [ 'phone', 'receiveAddress', 'createTimeStr'],
+      column: [ 'phone', 'receiveAddress', 'createTime'],
       filters: ['phone'],
       list,
       count

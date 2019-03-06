@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
-import { ListComponent } from './menu';
+import { ListComponent } from './list/list';
 
 @NgModule({
   declarations: [ ListComponent ],
